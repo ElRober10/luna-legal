@@ -5,24 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Luna de Cuentos · Legal</title>
   <style>
-    :root { --bg: #ffffff; --fg: #1f1b2e; --accent: #5b3fd4; }
-    @media (prefers-color-scheme: dark) {
-      :root { --bg: #14102a; --fg: #ece9f7; --accent: #a58cff; }
+    :root { --card: #ffffff; --fg: #1f1b2e; --muted: #5d5873; --accent: #6a3fe0; --line: #e6e0f5; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh; color: var(--fg);
+      font: 16px/1.65 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+      background: #2D1B69 linear-gradient(180deg, #2D1B69 0%, #7C4DFF 55%, #FF7A59 100%) fixed;
     }
-    body { margin: 0; background: var(--bg); color: var(--fg); font: 16px/1.65 system-ui, sans-serif; }
-    main { max-width: 640px; margin: 0 auto; padding: 48px 16px; }
-    a { color: var(--accent); font-weight: 600; }
+    main { max-width: 780px; margin: 0 auto; padding: 24px 16px 56px; }
+    .brand { text-align: center; padding: 8px 0 20px; }
+    .brand img { width: 140px; height: auto; }
+    .card { background: var(--card); border-radius: 24px; padding: 8px 28px 28px; box-shadow: 0 12px 40px rgba(20, 10, 60, .35); }
+    nav { text-align: center; margin-bottom: 8px; }
+    nav a { display: inline-block; margin: 4px 6px; padding: 6px 16px; border-radius: 999px; background: #efeaff; text-decoration: none; font-weight: 600; font-size: .9rem; }
+    h1 { font-size: 1.9rem; margin: 24px 0 4px; color: #2D1B69; }
+    h2 { font-size: 1.2rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: #4b2fb0; }
+    a { color: var(--accent); }
+    .muted { color: var(--muted); font-size: .9rem; }
+    table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+    th, td { text-align: left; padding: 8px; border-bottom: 1px solid var(--line); font-size: .95rem; vertical-align: top; }
+    th { color: #4b2fb0; }
+    footer { margin-top: 2.5rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .9rem; color: var(--muted); }
+    ul.links { list-style: none; padding: 0; }
+    ul.links li { margin: 10px 0; }
+    ul.links a { display: block; padding: 14px 18px; border-radius: 16px; background: #efeaff; text-decoration: none; font-weight: 600; }
   </style>
 </head>
 <body>
 <main>
+  <header class="brand"><img src="logo.png" alt="Luna de Cuentos"></header>
+  <div class="card">
   <h1>Luna de Cuentos</h1>
   <p>Documentos legales de la app. / Legal documents for the app.</p>
-  <ul>
+  <ul class="links">
     <li><a href="terminos.html">Términos y condiciones de uso · Terms and conditions</a></li>
     <li><a href="privacidad.html">Política de privacidad · Privacy policy</a></li>
     <li><a href="eliminar-cuenta.html">Eliminar cuenta · Delete account</a></li>
   </ul>
+</div>
 </main>
 </body>
 </html>
