@@ -16,8 +16,13 @@
     .brand { text-align: center; padding: 8px 0 20px; }
     .brand img { width: 140px; height: auto; }
     .card { background: var(--card); border-radius: 24px; padding: 8px 28px 28px; box-shadow: 0 12px 40px rgba(20, 10, 60, .35); }
-    nav { text-align: center; margin-bottom: 8px; }
-    nav a { display: inline-block; margin: 4px 6px; padding: 6px 16px; border-radius: 999px; background: #efeaff; text-decoration: none; font-weight: 600; font-size: .9rem; }
+    .langbar { display: flex; justify-content: flex-end; padding-top: 16px; }
+    .langbar label { display: inline-flex; align-items: center; gap: 8px; }
+    select#lang { font: inherit; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: #efeaff; color: var(--fg); }
+    section[hidden] { display: none; }
+    section[dir="rtl"] { text-align: right; }
+    section[dir="rtl"] th, section[dir="rtl"] td { text-align: right; }
+    .notice { margin: 16px 0 0; padding: 10px 14px; border: 1px solid #f1d9a8; border-radius: 12px; background: #fff7e6; color: #6b4e00; font-size: .9rem; }
     h1 { font-size: 1.9rem; margin: 24px 0 4px; color: #2D1B69; }
     h2 { font-size: 1.2rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: #4b2fb0; }
     a { color: var(--accent); }
@@ -35,14 +40,185 @@
 <main>
   <header class="brand"><img src="logo.png" alt="Luna de Cuentos"></header>
   <div class="card">
-  <h1>Luna de Cuentos</h1>
-  <p>Documentos legales de la app. / Legal documents for the app.</p>
-  <ul class="links">
-    <li><a href="terminos.html">Términos y condiciones de uso · Terms and conditions</a></li>
-    <li><a href="privacidad.html">Política de privacidad · Privacy policy</a></li>
-    <li><a href="eliminar-cuenta.html">Eliminar cuenta · Delete account</a></li>
-  </ul>
-</div>
+    <div class="langbar"><label>🌐 <select id="lang" aria-label="Idioma / Language"><option value="es">Español</option><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="it">Italiano</option><option value="pt">Português</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Română</option><option value="ru">Русский</option><option value="zh">中文</option><option value="ar">العربية</option></select></label></div>
+    <section data-lang="es" lang="es" data-title="Luna de Cuentos · Legal">
+      <h1>Luna de Cuentos</h1>
+      <p>Documentos legales de la app.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Política de privacidad</a></li>
+        <li><a href="terminos.html">Términos y condiciones de uso</a></li>
+        <li><a href="eliminar-cuenta.html">Eliminar tu cuenta de Luna de Cuentos</a></li>
+      </ul>
+    </section>
+    <section data-lang="en" lang="en" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">This translation is provided for information only. If there is any difference, the Spanish version prevails.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Legal documents for the app.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Privacy Policy</a></li>
+        <li><a href="terminos.html">Terms and Conditions of Use</a></li>
+        <li><a href="eliminar-cuenta.html">Delete your Luna de Cuentos account</a></li>
+      </ul>
+    </section>
+    <section data-lang="de" lang="de" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">Diese Übersetzung dient nur zur Information. Bei Abweichungen gilt die spanische Fassung.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Rechtliche Dokumente der App.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Datenschutzerklärung</a></li>
+        <li><a href="terminos.html">Nutzungsbedingungen</a></li>
+        <li><a href="eliminar-cuenta.html">Ihr Luna-de-Cuentos-Konto löschen</a></li>
+      </ul>
+    </section>
+    <section data-lang="fr" lang="fr" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">Cette traduction est fournie à titre informatif. En cas de divergence, la version espagnole prévaut.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Documents juridiques de l’application.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Politique de confidentialité</a></li>
+        <li><a href="terminos.html">Conditions générales d’utilisation</a></li>
+        <li><a href="eliminar-cuenta.html">Supprimer votre compte Luna de Cuentos</a></li>
+      </ul>
+    </section>
+    <section data-lang="it" lang="it" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">Questa traduzione è fornita solo a titolo informativo. In caso di differenze prevale la versione spagnola.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Documenti legali dell’app.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Informativa sulla privacy</a></li>
+        <li><a href="terminos.html">Termini e condizioni d’uso</a></li>
+        <li><a href="eliminar-cuenta.html">Elimina il tuo account Luna de Cuentos</a></li>
+      </ul>
+    </section>
+    <section data-lang="pt" lang="pt" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">Esta tradução é apenas informativa. Em caso de diferenças, prevalece a versão em espanhol.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Documentos legais da app.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Política de privacidade</a></li>
+        <li><a href="terminos.html">Termos e condições de utilização</a></li>
+        <li><a href="eliminar-cuenta.html">Eliminar a sua conta Luna de Cuentos</a></li>
+      </ul>
+    </section>
+    <section data-lang="nl" lang="nl" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">Deze vertaling is alleen ter informatie. Bij verschillen prevaleert de Spaanse versie.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Juridische documenten van de app.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Privacybeleid</a></li>
+        <li><a href="terminos.html">Algemene voorwaarden</a></li>
+        <li><a href="eliminar-cuenta.html">Je Luna de Cuentos-account verwijderen</a></li>
+      </ul>
+    </section>
+    <section data-lang="pl" lang="pl" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">To tłumaczenie ma charakter wyłącznie informacyjny. W razie rozbieżności obowiązuje wersja hiszpańska.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Dokumenty prawne aplikacji.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Polityka prywatności</a></li>
+        <li><a href="terminos.html">Regulamin korzystania</a></li>
+        <li><a href="eliminar-cuenta.html">Usuń swoje konto Luna de Cuentos</a></li>
+      </ul>
+    </section>
+    <section data-lang="ro" lang="ro" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">Această traducere are doar scop informativ. În caz de diferențe, prevalează versiunea în spaniolă.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Documentele legale ale aplicației.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Politica de confidențialitate</a></li>
+        <li><a href="terminos.html">Termeni și condiții de utilizare</a></li>
+        <li><a href="eliminar-cuenta.html">Șterge-ți contul Luna de Cuentos</a></li>
+      </ul>
+    </section>
+    <section data-lang="ru" lang="ru" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">Этот перевод приводится только для информации. При расхождениях преимущество имеет испанская версия.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>Юридические документы приложения.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">Политика конфиденциальности</a></li>
+        <li><a href="terminos.html">Условия использования</a></li>
+        <li><a href="eliminar-cuenta.html">Удаление вашей учётной записи Luna de Cuentos</a></li>
+      </ul>
+    </section>
+    <section data-lang="zh" lang="zh-Hans" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">本译文仅供参考。如有差异，以西班牙语版本为准。</p>
+      <h1>Luna de Cuentos</h1>
+      <p>应用的法律文件。</p>
+      <ul class="links">
+        <li><a href="privacidad.html">隐私政策</a></li>
+        <li><a href="terminos.html">使用条款</a></li>
+        <li><a href="eliminar-cuenta.html">删除您的 Luna de Cuentos 账户</a></li>
+      </ul>
+    </section>
+    <section data-lang="ar" lang="ar" dir="rtl" data-title="Luna de Cuentos · Legal" hidden>
+      <p class="notice">هذه الترجمة لأغراض إعلامية فقط. وفي حال وجود اختلاف، تُعتمد النسخة الإسبانية.</p>
+      <h1>Luna de Cuentos</h1>
+      <p>المستندات القانونية للتطبيق.</p>
+      <ul class="links">
+        <li><a href="privacidad.html">سياسة الخصوصية</a></li>
+        <li><a href="terminos.html">شروط الاستخدام</a></li>
+        <li><a href="eliminar-cuenta.html">حذف حسابك في Luna de Cuentos</a></li>
+      </ul>
+    </section>
+  </div>
 </main>
+<script>
+(function () {
+  var codes = ["es","en","de","fr","it","pt","nl","pl","ro","ru","zh","ar"];
+  var KEY = 'luna-legal-lang';
+
+  function normalize(value) {
+    var code = String(value || '').toLowerCase().split(/[-_]/)[0];
+    return codes.indexOf(code) >= 0 ? code : null;
+  }
+
+  function stored() {
+    try { return normalize(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  function initial() {
+    var fromQuery = normalize(new URLSearchParams(location.search).get('lang'));
+    if (fromQuery) return fromQuery;
+    var fromHash = normalize(location.hash.slice(1));
+    if (fromHash) return fromHash;
+    var fromStore = stored();
+    if (fromStore) return fromStore;
+    var preferred = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    for (var i = 0; i < preferred.length; i++) {
+      var fromBrowser = normalize(preferred[i]);
+      if (fromBrowser) return fromBrowser;
+    }
+    return 'es';
+  }
+
+  function show(code, remember) {
+    var sections = document.querySelectorAll('main section[data-lang]');
+    for (var i = 0; i < sections.length; i++) {
+      var section = sections[i];
+      var active = section.getAttribute('data-lang') === code;
+      section.hidden = !active;
+      if (active) {
+        document.documentElement.lang = section.getAttribute('lang');
+        document.title = section.getAttribute('data-title');
+      }
+    }
+    document.getElementById('lang').value = code;
+    var links = document.querySelectorAll('main a[href]');
+    for (var j = 0; j < links.length; j++) {
+      var href = links[j].getAttribute('href');
+      if (/^[a-z-]+\.html/.test(href)) links[j].setAttribute('href', href.split('?')[0] + '?lang=' + code);
+    }
+    if (remember) {
+      try { localStorage.setItem(KEY, code); } catch (e) {}
+      if (history.replaceState) history.replaceState(null, '', location.pathname + '?lang=' + code);
+    }
+  }
+
+  document.getElementById('lang').addEventListener('change', function (event) {
+    show(event.target.value, true);
+  });
+  show(initial(), false);
+})();
+</script>
 </body>
 </html>
