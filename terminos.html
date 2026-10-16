@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luna de Cuentos · Términos y condiciones</title>
+  <title>Luna de Cuentos · Términos y condiciones de uso</title>
   <style>
     :root { --card: #ffffff; --fg: #1f1b2e; --muted: #5d5873; --accent: #6a3fe0; --line: #e6e0f5; }
     * { box-sizing: border-box; }
@@ -16,8 +16,13 @@
     .brand { text-align: center; padding: 8px 0 20px; }
     .brand img { width: 140px; height: auto; }
     .card { background: var(--card); border-radius: 24px; padding: 8px 28px 28px; box-shadow: 0 12px 40px rgba(20, 10, 60, .35); }
-    nav { text-align: center; margin-bottom: 8px; }
-    nav a { display: inline-block; margin: 4px 6px; padding: 6px 16px; border-radius: 999px; background: #efeaff; text-decoration: none; font-weight: 600; font-size: .9rem; }
+    .langbar { display: flex; justify-content: flex-end; padding-top: 16px; }
+    .langbar label { display: inline-flex; align-items: center; gap: 8px; }
+    select#lang { font: inherit; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: #efeaff; color: var(--fg); }
+    section[hidden] { display: none; }
+    section[dir="rtl"] { text-align: right; }
+    section[dir="rtl"] th, section[dir="rtl"] td { text-align: right; }
+    .notice { margin: 16px 0 0; padding: 10px 14px; border: 1px solid #f1d9a8; border-radius: 12px; background: #fff7e6; color: #6b4e00; font-size: .9rem; }
     h1 { font-size: 1.9rem; margin: 24px 0 4px; color: #2D1B69; }
     h2 { font-size: 1.2rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: #4b2fb0; }
     a { color: var(--accent); }
@@ -35,164 +40,989 @@
 <main>
   <header class="brand"><img src="logo.png" alt="Luna de Cuentos"></header>
   <div class="card">
-  <nav><a href="#es">Español</a><a href="#en">English</a></nav>
+    <div class="langbar"><label>🌐 <select id="lang" aria-label="Idioma / Language"><option value="es">Español</option><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="it">Italiano</option><option value="pt">Português</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Română</option><option value="ru">Русский</option><option value="zh">中文</option><option value="ar">العربية</option></select></label></div>
+    <section data-lang="es" lang="es" data-title="Luna de Cuentos · Términos y condiciones de uso">
+      <h1>Términos y condiciones de uso</h1>
+      <p class="muted">Aplicación «Luna de Cuentos» · Última actualización: 5 de octubre de 2026</p>
 
-  <!-- ===================== ESPAÑOL ===================== -->
-  <section id="es">
-    <h1>Términos y condiciones de uso</h1>
-    <p class="muted">Aplicación «Luna de Cuentos» · Última actualización: 5 de octubre de 2026</p>
+      <h2>1. Quiénes somos</h2>
+      <p>«Luna de Cuentos» (en adelante, «la App») es una aplicación móvil que genera cuentos infantiles personalizados mediante inteligencia artificial. Su titular es Roberto Sanz Fernández, con domicilio en España (en adelante, «el Titular»). Contacto: <strong>lunadecuentosapp@gmail.com</strong>.</p>
 
-    <h2>1. Quiénes somos</h2>
-    <p>«Luna de Cuentos» (en adelante, «la App») es una aplicación móvil que genera cuentos infantiles personalizados mediante inteligencia artificial. Su titular es Roberto Sanz Fernández, con domicilio en España (en adelante, «el Titular»). Contacto: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+      <h2>2. Aceptación de los términos</h2>
+      <p>Al instalar o usar la App aceptas estos términos. Si no estás de acuerdo con ellos, no uses la App. La App está pensada para ser utilizada por personas adultas (madres, padres, tutores o educadores), que son quienes la manejan y deciden qué cuentos leer a los niños. Si tienes menos de 18 años, solo puedes usarla con el permiso y la supervisión de tu madre, padre o tutor.</p>
 
-    <h2>2. Aceptación de los términos</h2>
-    <p>Al instalar o usar la App aceptas estos términos. Si no estás de acuerdo con ellos, no uses la App. La App está pensada para ser utilizada por personas adultas (madres, padres, tutores o educadores), que son quienes la manejan y deciden qué cuentos leer a los niños. Si tienes menos de 18 años, solo puedes usarla con el permiso y la supervisión de tu madre, padre o tutor.</p>
+      <h2>3. Qué hace la App</h2>
+      <p>La persona adulta crea uno o varios perfiles de niño (nombre y edad), elige una temática, una duración y un idioma, y la App entrega un cuento. Los cuentos pueden generarse de nuevo con IA o reutilizarse de una biblioteca común, sustituyendo el nombre del niño. También puedes dejar la temática vacía para recibir un cuento sorpresa y guardar tus cuentos favoritos.</p>
 
-    <h2>3. Qué hace la App</h2>
-    <p>La persona adulta crea uno o varios perfiles de niño (nombre y edad), elige una temática, una duración y un idioma, y la App entrega un cuento. Los cuentos pueden generarse de nuevo con IA o reutilizarse de una biblioteca común, sustituyendo el nombre del niño. También puedes dejar la temática vacía para recibir un cuento sorpresa y guardar tus cuentos favoritos.</p>
+      <h2>4. Uso sin cuenta y con cuenta</h2>
+      <ul>
+        <li><strong>Sin cuenta.</strong> Puedes usar la App de forma anónima. Se asocia a tu dispositivo un identificador técnico para guardar tus perfiles de niño y tu historial.</li>
+        <li><strong>Con cuenta.</strong> Puedes crear una cuenta con tu nombre, correo electrónico y contraseña, o con tu cuenta de Google o de Apple. Con ella puedes conservar tus datos al cambiar de móvil y acceder desde varios dispositivos.</li>
+        <li>Eres responsable de mantener la confidencialidad de tus credenciales y de la actividad realizada desde tu cuenta. Avísanos si sospechas un uso no autorizado.</li>
+        <li>La información que facilites debe ser veraz. No debes suplantar a otras personas.</li>
+      </ul>
 
-    <h2>4. Uso sin cuenta y con cuenta</h2>
-    <ul>
-      <li><strong>Sin cuenta.</strong> Puedes usar la App de forma anónima. Se asocia a tu dispositivo un identificador técnico para guardar tus perfiles de niño y tu historial.</li>
-      <li><strong>Con cuenta.</strong> Puedes crear una cuenta con tu nombre, correo electrónico y contraseña, o con tu cuenta de Google o de Apple. Con ella puedes conservar tus datos al cambiar de móvil y acceder desde varios dispositivos.</li>
-      <li>Eres responsable de mantener la confidencialidad de tus credenciales y de la actividad realizada desde tu cuenta. Avísanos si sospechas un uso no autorizado.</li>
-      <li>La información que facilites debe ser veraz. No debes suplantar a otras personas.</li>
-    </ul>
+      <h2>5. Contenido generado con inteligencia artificial</h2>
+      <ul>
+        <li>Los cuentos se generan mediante sistemas de IA de terceros (actualmente, Google Gemini). Aunque aplicamos instrucciones para que el contenido sea adecuado para niños, <strong>no podemos garantizar que cada cuento sea perfecto, exacto o adecuado para todos los niños</strong>.</li>
+        <li>Te recomendamos que, como persona adulta, leas el cuento antes de leérselo o mostrárselo a un niño, especialmente si has escrito una temática libre.</li>
+        <li>Si encuentras un cuento inapropiado, puedes comunicárnoslo en <strong>lunadecuentosapp@gmail.com</strong> y lo revisaremos.</li>
+        <li>Los cuentos son obras de ficción y no constituyen consejo médico, psicológico, educativo ni de ningún otro tipo profesional.</li>
+        <li>El texto que escribes como temática se envía al proveedor de IA para generar el cuento. No incluyas datos personales, datos de contacto ni información sensible en la temática.</li>
+      </ul>
 
-    <h2>5. Contenido generado con inteligencia artificial</h2>
-    <ul>
-      <li>Los cuentos se generan mediante sistemas de IA de terceros (actualmente, Google Gemini). Aunque aplicamos instrucciones para que el contenido sea adecuado para niños, <strong>no podemos garantizar que cada cuento sea perfecto, exacto o adecuado para todos los niños</strong>.</li>
-      <li>Te recomendamos que, como persona adulta, leas el cuento antes de leérselo o mostrárselo a un niño, especialmente si has escrito una temática libre.</li>
-      <li>Si encuentras un cuento inapropiado, puedes comunicárnoslo en <strong>lunadecuentosapp@gmail.com</strong> y lo revisaremos.</li>
-      <li>Los cuentos son obras de ficción y no constituyen consejo médico, psicológico, educativo ni de ningún otro tipo profesional.</li>
-      <li>El texto que escribes como temática se envía al proveedor de IA para generar el cuento. No incluyas datos personales, datos de contacto ni información sensible en la temática.</li>
-    </ul>
+      <h2>6. Uso permitido</h2>
+      <p>Te comprometes a no usar la App para:</p>
+      <ul>
+        <li>Intentar generar contenido ilegal, violento, sexual, discriminatorio, que fomente el odio o que pueda dañar a menores.</li>
+        <li>Intentar saltarte los límites técnicos, los anuncios o las restricciones de la App, ni acceder a ella de forma automatizada (bots, scraping).</li>
+        <li>Alterar, descompilar o interferir en el funcionamiento de la App o de sus servidores.</li>
+        <li>Usar la App con fines comerciales sin autorización por escrito del Titular.</li>
+      </ul>
+      <p>Podemos limitar o suspender el acceso a quien incumpla estas normas.</p>
 
-    <h2>6. Uso permitido</h2>
-    <p>Te comprometes a no usar la App para:</p>
-    <ul>
-      <li>Intentar generar contenido ilegal, violento, sexual, discriminatorio, que fomente el odio o que pueda dañar a menores.</li>
-      <li>Intentar saltarte los límites técnicos, los anuncios o las restricciones de la App, ni acceder a ella de forma automatizada (bots, scraping).</li>
-      <li>Alterar, descompilar o interferir en el funcionamiento de la App o de sus servidores.</li>
-      <li>Usar la App con fines comerciales sin autorización por escrito del Titular.</li>
-    </ul>
-    <p>Podemos limitar o suspender el acceso a quien incumpla estas normas.</p>
+      <h2>7. Plan gratuito, anuncios y suscripción premium</h2>
+      <ul>
+        <li><strong>Plan gratuito.</strong> Para recibir un cuento se muestra un anuncio. Los anuncios los sirve Google AdMob y se configuran para público infantil: sin publicidad personalizada ni seguimiento del comportamiento.</li>
+        <li><strong>Suscripción premium.</strong> Elimina los anuncios y da acceso a las ventajas premium que se indiquen en la App. El precio, la periodicidad y la moneda se muestran en la App y en la tienda (Google Play o App Store) antes de confirmar la compra.</li>
+        <li><strong>Pago y renovación.</strong> El pago lo gestiona Google Play o Apple, no el Titular. La suscripción se renueva automáticamente al final de cada periodo salvo que la canceles, al menos 24 horas antes de que termine, desde los ajustes de suscripciones de tu cuenta de Google o de Apple.</li>
+        <li><strong>Cancelación.</strong> Puedes cancelar cuando quieras. Seguirás con las ventajas premium hasta el final del periodo ya pagado. Borrar la cuenta de la App <strong>no cancela</strong> la suscripción: debes cancelarla tú en la tienda.</li>
+        <li><strong>Reembolsos.</strong> Las solicitudes de reembolso se tramitan con la tienda correspondiente, según sus propias políticas. Si eres consumidor en la Unión Europea, conservas los derechos que te otorga la ley, incluido el derecho de desistimiento en los casos y plazos que esta establezca.</li>
+        <li>Podemos modificar los precios o las ventajas del plan premium. Te lo comunicaremos con antelación razonable y el cambio de precio no se aplicará a tu suscripción en curso sin que la tienda te lo notifique y, cuando proceda, lo aceptes.</li>
+      </ul>
 
-    <h2>7. Plan gratuito, anuncios y suscripción premium</h2>
-    <ul>
-      <li><strong>Plan gratuito.</strong> Para recibir un cuento se muestra un anuncio. Los anuncios los sirve Google AdMob y se configuran para público infantil: sin publicidad personalizada ni seguimiento del comportamiento.</li>
-      <li><strong>Suscripción premium.</strong> Elimina los anuncios y da acceso a las ventajas premium que se indiquen en la App. El precio, la periodicidad y la moneda se muestran en la App y en la tienda (Google Play o App Store) antes de confirmar la compra.</li>
-      <li><strong>Pago y renovación.</strong> El pago lo gestiona Google Play o Apple, no el Titular. La suscripción se renueva automáticamente al final de cada periodo salvo que la canceles, al menos 24 horas antes de que termine, desde los ajustes de suscripciones de tu cuenta de Google o de Apple.</li>
-      <li><strong>Cancelación.</strong> Puedes cancelar cuando quieras. Seguirás con las ventajas premium hasta el final del periodo ya pagado. Borrar la cuenta de la App <strong>no cancela</strong> la suscripción: debes cancelarla tú en la tienda.</li>
-      <li><strong>Reembolsos.</strong> Las solicitudes de reembolso se tramitan con la tienda correspondiente, según sus propias políticas. Si eres consumidor en la Unión Europea, conservas los derechos que te otorga la ley, incluido el derecho de desistimiento en los casos y plazos que esta establezca.</li>
-      <li>Podemos modificar los precios o las ventajas del plan premium. Te lo comunicaremos con antelación razonable y el cambio de precio no se aplicará a tu suscripción en curso sin que la tienda te lo notifique y, cuando proceda, lo aceptes.</li>
-    </ul>
+      <h2>8. Propiedad intelectual</h2>
+      <ul>
+        <li>La App, su diseño, su logotipo, su código y su marca son del Titular o se usan con licencia, y están protegidos por la ley.</li>
+        <li>Puedes leer los cuentos para uso personal y familiar y compartirlos sin ánimo de lucro con tu entorno. No puedes vender, publicar masivamente ni explotar comercialmente los cuentos ni la biblioteca de la App.</li>
+        <li>Dado que los cuentos pueden reutilizarse entre usuarios, no se garantiza que un cuento sea único ni exclusivo.</li>
+      </ul>
 
-    <h2>8. Propiedad intelectual</h2>
-    <ul>
-      <li>La App, su diseño, su logotipo, su código y su marca son del Titular o se usan con licencia, y están protegidos por la ley.</li>
-      <li>Puedes leer los cuentos para uso personal y familiar y compartirlos sin ánimo de lucro con tu entorno. No puedes vender, publicar masivamente ni explotar comercialmente los cuentos ni la biblioteca de la App.</li>
-      <li>Dado que los cuentos pueden reutilizarse entre usuarios, no se garantiza que un cuento sea único ni exclusivo.</li>
-    </ul>
+      <h2>9. Privacidad y datos personales</h2>
+      <p>Tratamos solo los datos necesarios para que la App funcione: el identificador del dispositivo, el nombre y la edad de los niños que registres, tus cuentos solicitados y favoritos y, si creas una cuenta, tu nombre, correo electrónico y contraseña (guardada de forma cifrada) o los datos básicos de tu cuenta de Google o de Apple. No vendemos tus datos, no hacemos seguimiento publicitario y no pedimos fotos ni fecha de nacimiento completa de los niños. Los detalles están en nuestra <a href="privacidad.html">Política de privacidad</a>.</p>
+      <p>Puedes eliminar tu cuenta y todos los datos asociados desde la propia App, en la pantalla de cuenta.</p>
 
-    <h2>9. Privacidad y datos personales</h2>
-    <p>Tratamos solo los datos necesarios para que la App funcione: el identificador del dispositivo, el nombre y la edad de los niños que registres, tus cuentos solicitados y favoritos y, si creas una cuenta, tu nombre, correo electrónico y contraseña (guardada de forma cifrada) o los datos básicos de tu cuenta de Google o de Apple. No vendemos tus datos, no hacemos seguimiento publicitario y no pedimos fotos ni fecha de nacimiento completa de los niños. Los detalles están en nuestra <a href="privacidad.html">Política de privacidad</a>.</p>
-    <p>Puedes eliminar tu cuenta y todos los datos asociados desde la propia App, en la pantalla de cuenta.</p>
+      <h2>10. Disponibilidad del servicio</h2>
+      <p>Hacemos lo posible por mantener la App disponible, pero no garantizamos que funcione sin interrupciones ni errores. El servicio depende de terceros (servicios de IA, tiendas de aplicaciones, conexión a internet) y puede verse afectado por ellos. Podemos actualizar, modificar o retirar funciones, o cesar el servicio, avisando con antelación razonable siempre que sea posible.</p>
 
-    <h2>10. Disponibilidad del servicio</h2>
-    <p>Hacemos lo posible por mantener la App disponible, pero no garantizamos que funcione sin interrupciones ni errores. El servicio depende de terceros (servicios de IA, tiendas de aplicaciones, conexión a internet) y puede verse afectado por ellos. Podemos actualizar, modificar o retirar funciones, o cesar el servicio, avisando con antelación razonable siempre que sea posible.</p>
+      <h2>11. Limitación de responsabilidad</h2>
+      <p>La App se ofrece «tal cual». En la medida máxima permitida por la ley, el Titular no responde de los daños indirectos derivados del uso de la App ni del contenido de los cuentos generados por IA, ni de la falta de disponibilidad del servicio. Esto no limita la responsabilidad que la ley no permita excluir, ni los derechos irrenunciables que tengas como consumidor.</p>
 
-    <h2>11. Limitación de responsabilidad</h2>
-    <p>La App se ofrece «tal cual». En la medida máxima permitida por la ley, el Titular no responde de los daños indirectos derivados del uso de la App ni del contenido de los cuentos generados por IA, ni de la falta de disponibilidad del servicio. Esto no limita la responsabilidad que la ley no permita excluir, ni los derechos irrenunciables que tengas como consumidor.</p>
+      <h2>12. Cambios en estos términos</h2>
+      <p>Podemos actualizar estos términos. Publicaremos la versión nueva con su fecha y, si el cambio es importante, te avisaremos en la App. Si sigues usando la App después, se entiende que aceptas los cambios.</p>
 
-    <h2>12. Cambios en estos términos</h2>
-    <p>Podemos actualizar estos términos. Publicaremos la versión nueva con su fecha y, si el cambio es importante, te avisaremos en la App. Si sigues usando la App después, se entiende que aceptas los cambios.</p>
+      <h2>13. Ley aplicable y jurisdicción</h2>
+      <p>Estos términos se rigen por la legislación española. Si eres consumidor, se aplicarán además las normas imperativas de protección de consumidores de tu país de residencia, y podrás acudir a los tribunales que te correspondan según la ley. Para consumidores de la UE existe además la plataforma de resolución de litigios en línea de la Comisión Europea.</p>
 
-    <h2>13. Ley aplicable y jurisdicción</h2>
-    <p>Estos términos se rigen por la legislación española. Si eres consumidor, se aplicarán además las normas imperativas de protección de consumidores de tu país de residencia, y podrás acudir a los tribunales que te correspondan según la ley. Para consumidores de la UE existe además la plataforma de resolución de litigios en línea de la Comisión Europea.</p>
+      <h2>14. Contacto</h2>
+      <p>Para dudas, reclamaciones o para ejercer tus derechos sobre tus datos, escribe a <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="en" lang="en" data-title="Luna de Cuentos · Terms and Conditions of Use" hidden>
+      <p class="notice">This translation is provided for information only. If there is any difference, the Spanish version prevails.</p>
+      <h1>Terms and Conditions of Use</h1>
+      <p class="muted">“Luna de Cuentos” app · Last updated: October 5, 2026</p>
 
-    <h2>14. Contacto</h2>
-    <p>Para dudas, reclamaciones o para ejercer tus derechos sobre tus datos, escribe a <strong>lunadecuentosapp@gmail.com</strong>.</p>
-  </section>
+      <h2>1. Who we are</h2>
+      <p>“Luna de Cuentos” (the “App”) is a mobile application that generates personalized children’s stories using artificial intelligence. It is operated by Roberto Sanz Fernández, based in Spain (the “Operator”). Contact: <strong>lunadecuentosapp@gmail.com</strong>.</p>
 
-  <!-- ===================== ENGLISH ===================== -->
-  <section id="en" lang="en">
-    <h1>Terms and Conditions of Use</h1>
-    <p class="muted">“Luna de Cuentos” app · Last updated: October 5, 2026</p>
+      <h2>2. Acceptance of these terms</h2>
+      <p>By installing or using the App you agree to these terms. If you do not agree, do not use the App. The App is intended for adults (parents, guardians or educators), who operate it and decide which stories to read to children. If you are under 18, you may use it only with the permission and supervision of a parent or guardian.</p>
 
-    <h2>1. Who we are</h2>
-    <p>“Luna de Cuentos” (the “App”) is a mobile application that generates personalized children’s stories using artificial intelligence. It is operated by Roberto Sanz Fernández, based in Spain (the “Operator”). Contact: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+      <h2>3. What the App does</h2>
+      <p>An adult creates one or more child profiles (name and age), chooses a theme, a length and a language, and the App delivers a story. Stories may be newly generated by AI or reused from a shared library, replacing the child’s name. You can also leave the theme empty to get a surprise story and save your favorite stories.</p>
 
-    <h2>2. Acceptance of these terms</h2>
-    <p>By installing or using the App you agree to these terms. If you do not agree, do not use the App. The App is intended for adults (parents, guardians or educators), who operate it and decide which stories to read to children. If you are under 18, you may use it only with the permission and supervision of a parent or guardian.</p>
+      <h2>4. Using the App without and with an account</h2>
+      <ul>
+        <li><strong>Without an account.</strong> You can use the App anonymously. A technical identifier is linked to your device to keep your child profiles and history.</li>
+        <li><strong>With an account.</strong> You can create an account with your name, email and password, or with your Google or Apple account. This lets you keep your data when you change phones and use several devices.</li>
+        <li>You are responsible for keeping your credentials confidential and for activity under your account. Tell us if you suspect unauthorized use.</li>
+        <li>The information you provide must be truthful. You must not impersonate others.</li>
+      </ul>
 
-    <h2>3. What the App does</h2>
-    <p>An adult creates one or more child profiles (name and age), chooses a theme, a length and a language, and the App delivers a story. Stories may be newly generated by AI or reused from a shared library, replacing the child’s name. You can also leave the theme empty to get a surprise story and save your favorite stories.</p>
+      <h2>5. AI-generated content</h2>
+      <ul>
+        <li>Stories are generated by third-party AI systems (currently Google Gemini). Although we instruct the AI to produce child-appropriate content, <strong>we cannot guarantee that every story is perfect, accurate or suitable for every child</strong>.</li>
+        <li>We recommend that, as an adult, you read a story before reading or showing it to a child, especially if you wrote a free-form theme.</li>
+        <li>If you find an inappropriate story, tell us at <strong>lunadecuentosapp@gmail.com</strong> and we will review it.</li>
+        <li>Stories are works of fiction and are not medical, psychological, educational or any other professional advice.</li>
+        <li>The theme text you type is sent to the AI provider to generate the story. Do not include personal data, contact details or sensitive information in the theme.</li>
+      </ul>
 
-    <h2>4. Using the App without and with an account</h2>
-    <ul>
-      <li><strong>Without an account.</strong> You can use the App anonymously. A technical identifier is linked to your device to keep your child profiles and history.</li>
-      <li><strong>With an account.</strong> You can create an account with your name, email and password, or with your Google or Apple account. This lets you keep your data when you change phones and use several devices.</li>
-      <li>You are responsible for keeping your credentials confidential and for activity under your account. Tell us if you suspect unauthorized use.</li>
-      <li>The information you provide must be truthful. You must not impersonate others.</li>
-    </ul>
+      <h2>6. Acceptable use</h2>
+      <p>You agree not to use the App to:</p>
+      <ul>
+        <li>Attempt to generate illegal, violent, sexual or discriminatory content, content that promotes hatred, or content that could harm minors.</li>
+        <li>Bypass the App’s technical limits, ads or restrictions, or access it by automated means (bots, scraping).</li>
+        <li>Modify, decompile or interfere with the App or its servers.</li>
+        <li>Use the App commercially without the Operator’s written permission.</li>
+      </ul>
+      <p>We may limit or suspend access for anyone who breaks these rules.</p>
 
-    <h2>5. AI-generated content</h2>
-    <ul>
-      <li>Stories are generated by third-party AI systems (currently Google Gemini). Although we instruct the AI to produce child-appropriate content, <strong>we cannot guarantee that every story is perfect, accurate or suitable for every child</strong>.</li>
-      <li>We recommend that, as an adult, you read a story before reading or showing it to a child, especially if you wrote a free-form theme.</li>
-      <li>If you find an inappropriate story, tell us at <strong>lunadecuentosapp@gmail.com</strong> and we will review it.</li>
-      <li>Stories are works of fiction and are not medical, psychological, educational or any other professional advice.</li>
-      <li>The theme text you type is sent to the AI provider to generate the story. Do not include personal data, contact details or sensitive information in the theme.</li>
-    </ul>
+      <h2>7. Free plan, ads and premium subscription</h2>
+      <ul>
+        <li><strong>Free plan.</strong> An ad is shown before a story is delivered. Ads are served by Google AdMob and configured for a child audience: no personalized advertising and no behavioral tracking.</li>
+        <li><strong>Premium subscription.</strong> It removes ads and gives access to the premium benefits shown in the App. The price, billing period and currency are shown in the App and in the store (Google Play or the App Store) before you confirm the purchase.</li>
+        <li><strong>Payment and renewal.</strong> Payment is handled by Google Play or Apple, not by the Operator. The subscription renews automatically at the end of each period unless you cancel at least 24 hours before it ends, from the subscription settings of your Google or Apple account.</li>
+        <li><strong>Cancellation.</strong> You can cancel at any time. You keep the premium benefits until the end of the period you have already paid for. Deleting your account in the App <strong>does not cancel</strong> the subscription: you must cancel it in the store.</li>
+        <li><strong>Refunds.</strong> Refund requests are handled by the relevant store under its own policies. If you are a consumer in the European Union, you keep the rights granted by law, including the right of withdrawal in the cases and periods it establishes.</li>
+        <li>We may change premium prices or benefits. We will tell you with reasonable notice, and a price change will not apply to your current subscription without the store notifying you and, where required, your acceptance.</li>
+      </ul>
 
-    <h2>6. Acceptable use</h2>
-    <p>You agree not to use the App to:</p>
-    <ul>
-      <li>Attempt to generate illegal, violent, sexual or discriminatory content, content that promotes hatred, or content that could harm minors.</li>
-      <li>Bypass the App’s technical limits, ads or restrictions, or access it by automated means (bots, scraping).</li>
-      <li>Modify, decompile or interfere with the App or its servers.</li>
-      <li>Use the App commercially without the Operator’s written permission.</li>
-    </ul>
-    <p>We may limit or suspend access for anyone who breaks these rules.</p>
+      <h2>8. Intellectual property</h2>
+      <ul>
+        <li>The App, its design, logo, code and brand belong to the Operator or are used under license, and are protected by law.</li>
+        <li>You may read the stories for personal and family use and share them non-commercially with those around you. You may not sell, mass-publish or commercially exploit the stories or the App’s library.</li>
+        <li>Because stories may be reused across users, a story is not guaranteed to be unique or exclusive.</li>
+      </ul>
 
-    <h2>7. Free plan, ads and premium subscription</h2>
-    <ul>
-      <li><strong>Free plan.</strong> An ad is shown before a story is delivered. Ads are served by Google AdMob and configured for a child audience: no personalized advertising and no behavioral tracking.</li>
-      <li><strong>Premium subscription.</strong> It removes ads and gives access to the premium benefits shown in the App. The price, billing period and currency are shown in the App and in the store (Google Play or the App Store) before you confirm the purchase.</li>
-      <li><strong>Payment and renewal.</strong> Payment is handled by Google Play or Apple, not by the Operator. The subscription renews automatically at the end of each period unless you cancel at least 24 hours before it ends, from the subscription settings of your Google or Apple account.</li>
-      <li><strong>Cancellation.</strong> You can cancel at any time. You keep the premium benefits until the end of the period you have already paid for. Deleting your account in the App <strong>does not cancel</strong> the subscription: you must cancel it in the store.</li>
-      <li><strong>Refunds.</strong> Refund requests are handled by the relevant store under its own policies. If you are a consumer in the European Union, you keep the rights granted by law, including the right of withdrawal in the cases and periods it establishes.</li>
-      <li>We may change premium prices or benefits. We will tell you with reasonable notice, and a price change will not apply to your current subscription without the store notifying you and, where required, your acceptance.</li>
-    </ul>
+      <h2>9. Privacy and personal data</h2>
+      <p>We process only the data needed for the App to work: the device identifier, the name and age of the children you register, your requested and favorite stories and, if you create an account, your name, email and password (stored encrypted) or the basic data from your Google or Apple account. We do not sell your data, we do not do advertising tracking, and we do not ask for photos or a child’s full date of birth. Details are in our <a href="privacidad.html">Privacy Policy</a>.</p>
+      <p>You can delete your account and all associated data from within the App, on the account screen.</p>
 
-    <h2>8. Intellectual property</h2>
-    <ul>
-      <li>The App, its design, logo, code and brand belong to the Operator or are used under license, and are protected by law.</li>
-      <li>You may read the stories for personal and family use and share them non-commercially with those around you. You may not sell, mass-publish or commercially exploit the stories or the App’s library.</li>
-      <li>Because stories may be reused across users, a story is not guaranteed to be unique or exclusive.</li>
-    </ul>
+      <h2>10. Service availability</h2>
+      <p>We do our best to keep the App available, but we do not guarantee that it will work without interruptions or errors. The service depends on third parties (AI services, app stores, internet connection) and may be affected by them. We may update, change or withdraw features, or stop the service, giving reasonable notice whenever possible.</p>
 
-    <h2>9. Privacy and personal data</h2>
-    <p>We process only the data needed for the App to work: the device identifier, the name and age of the children you register, your requested and favorite stories and, if you create an account, your name, email and password (stored encrypted) or the basic data from your Google or Apple account. We do not sell your data, we do not do advertising tracking, and we do not ask for photos or a child’s full date of birth. Details are in our <a href="privacidad.html">Privacy Policy</a>.</p>
-    <p>You can delete your account and all associated data from within the App, on the account screen.</p>
+      <h2>11. Limitation of liability</h2>
+      <p>The App is provided “as is”. To the maximum extent permitted by law, the Operator is not liable for indirect damages arising from use of the App or from AI-generated story content, or for service unavailability. This does not limit liability that cannot be excluded by law, nor any non-waivable consumer rights you have.</p>
 
-    <h2>10. Service availability</h2>
-    <p>We do our best to keep the App available, but we do not guarantee that it will work without interruptions or errors. The service depends on third parties (AI services, app stores, internet connection) and may be affected by them. We may update, change or withdraw features, or stop the service, giving reasonable notice whenever possible.</p>
+      <h2>12. Changes to these terms</h2>
+      <p>We may update these terms. We will publish the new version with its date and, if the change is important, notify you in the App. If you keep using the App afterwards, you are deemed to accept the changes.</p>
 
-    <h2>11. Limitation of liability</h2>
-    <p>The App is provided “as is”. To the maximum extent permitted by law, the Operator is not liable for indirect damages arising from use of the App or from AI-generated story content, or for service unavailability. This does not limit liability that cannot be excluded by law, nor any non-waivable consumer rights you have.</p>
+      <h2>13. Governing law and jurisdiction</h2>
+      <p>These terms are governed by Spanish law. If you are a consumer, the mandatory consumer-protection rules of your country of residence also apply, and you may go to the courts that correspond to you under the law. EU consumers can also use the European Commission’s online dispute resolution platform.</p>
 
-    <h2>12. Changes to these terms</h2>
-    <p>We may update these terms. We will publish the new version with its date and, if the change is important, notify you in the App. If you keep using the App afterwards, you are deemed to accept the changes.</p>
+      <h2>14. Contact</h2>
+      <p>For questions, complaints or to exercise your data rights, write to <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="de" lang="de" data-title="Luna de Cuentos · Nutzungsbedingungen" hidden>
+      <p class="notice">Diese Übersetzung dient nur zur Information. Bei Abweichungen gilt die spanische Fassung.</p>
+      <h1>Nutzungsbedingungen</h1>
+      <p class="muted">App „Luna de Cuentos“ · Zuletzt aktualisiert: 5. Oktober 2026</p>
 
-    <h2>13. Governing law and jurisdiction</h2>
-    <p>These terms are governed by Spanish law. If you are a consumer, the mandatory consumer-protection rules of your country of residence also apply, and you may go to the courts that correspond to you under the law. EU consumers can also use the European Commission’s online dispute resolution platform.</p>
+      <h2>1. Wer wir sind</h2>
+      <p>„Luna de Cuentos“ (im Folgenden „die App“) ist eine mobile Anwendung, die mithilfe künstlicher Intelligenz personalisierte Kindergeschichten erstellt. Inhaber ist Roberto Sanz Fernández mit Wohnsitz in Spanien (im Folgenden „der Inhaber“). Kontakt: <strong>lunadecuentosapp@gmail.com</strong>.</p>
 
-    <h2>14. Contact</h2>
-    <p>For questions, complaints or to exercise your data rights, write to <strong>lunadecuentosapp@gmail.com</strong>.</p>
-  </section>
-</div>
+      <h2>2. Annahme der Bedingungen</h2>
+      <p>Mit der Installation oder Nutzung der App akzeptieren Sie diese Bedingungen. Wenn Sie nicht einverstanden sind, nutzen Sie die App nicht. Die App ist für Erwachsene gedacht (Mütter, Väter, Erziehungsberechtigte oder Pädagogen), die sie bedienen und entscheiden, welche Geschichten sie den Kindern vorlesen. Wenn Sie unter 18 Jahre alt sind, dürfen Sie sie nur mit Erlaubnis und unter Aufsicht Ihrer Mutter, Ihres Vaters oder Ihres Erziehungsberechtigten nutzen.</p>
+
+      <h2>3. Was die App tut</h2>
+      <p>Die erwachsene Person legt ein oder mehrere Kinderprofile an (Name und Alter), wählt ein Thema, eine Länge und eine Sprache, und die App liefert eine Geschichte. Geschichten können neu mit KI erstellt oder aus einer gemeinsamen Bibliothek wiederverwendet werden, wobei der Name des Kindes eingesetzt wird. Sie können das Thema auch leer lassen, um eine Überraschungsgeschichte zu erhalten, und Ihre Lieblingsgeschichten speichern.</p>
+
+      <h2>4. Nutzung ohne und mit Konto</h2>
+      <ul>
+        <li><strong>Ohne Konto.</strong> Sie können die App anonym nutzen. Ihrem Gerät wird eine technische Kennung zugeordnet, um Ihre Kinderprofile und Ihren Verlauf zu speichern.</li>
+        <li><strong>Mit Konto.</strong> Sie können ein Konto mit Ihrem Namen, Ihrer E-Mail-Adresse und einem Passwort oder mit Ihrem Google- oder Apple-Konto erstellen. Damit behalten Sie Ihre Daten beim Handywechsel und können von mehreren Geräten zugreifen.</li>
+        <li>Sie sind dafür verantwortlich, Ihre Zugangsdaten vertraulich zu behandeln, und für die Aktivität über Ihr Konto. Informieren Sie uns, wenn Sie eine unbefugte Nutzung vermuten.</li>
+        <li>Die von Ihnen angegebenen Informationen müssen wahrheitsgemäß sein. Sie dürfen sich nicht als andere Personen ausgeben.</li>
+      </ul>
+
+      <h2>5. Mit künstlicher Intelligenz erstellte Inhalte</h2>
+      <ul>
+        <li>Die Geschichten werden von KI-Systemen Dritter erzeugt (derzeit Google Gemini). Obwohl wir Anweisungen geben, damit die Inhalte kindgerecht sind, <strong>können wir nicht garantieren, dass jede Geschichte perfekt, richtig oder für jedes Kind geeignet ist</strong>.</li>
+        <li>Wir empfehlen Ihnen, als erwachsene Person die Geschichte zu lesen, bevor Sie sie einem Kind vorlesen oder zeigen, besonders wenn Sie ein freies Thema eingegeben haben.</li>
+        <li>Wenn Sie eine unangemessene Geschichte finden, teilen Sie uns dies unter <strong>lunadecuentosapp@gmail.com</strong> mit, und wir prüfen sie.</li>
+        <li>Die Geschichten sind fiktive Werke und stellen keine medizinische, psychologische, pädagogische oder sonstige fachliche Beratung dar.</li>
+        <li>Der Text, den Sie als Thema eingeben, wird an den KI-Anbieter gesendet, um die Geschichte zu erstellen. Geben Sie im Thema keine personenbezogenen Daten, Kontaktdaten oder sensiblen Informationen an.</li>
+      </ul>
+
+      <h2>6. Zulässige Nutzung</h2>
+      <p>Sie verpflichten sich, die App nicht zu nutzen, um:</p>
+      <ul>
+        <li>zu versuchen, rechtswidrige, gewalttätige, sexuelle oder diskriminierende Inhalte, Inhalte, die zu Hass aufstacheln, oder Inhalte zu erzeugen, die Minderjährigen schaden könnten.</li>
+        <li>zu versuchen, die technischen Grenzen, die Werbung oder die Einschränkungen der App zu umgehen oder automatisiert darauf zuzugreifen (Bots, Scraping).</li>
+        <li>die App oder ihre Server zu verändern, zu dekompilieren oder in ihrem Betrieb zu stören.</li>
+        <li>die App ohne schriftliche Genehmigung des Inhabers kommerziell zu nutzen.</li>
+      </ul>
+      <p>Wir können den Zugang von Personen, die gegen diese Regeln verstoßen, einschränken oder sperren.</p>
+
+      <h2>7. Kostenloser Tarif, Werbung und Premium-Abonnement</h2>
+      <ul>
+        <li><strong>Kostenloser Tarif.</strong> Um eine Geschichte zu erhalten, wird eine Werbung angezeigt. Die Werbung liefert Google AdMob und sie ist für ein kindliches Publikum konfiguriert: keine personalisierte Werbung und kein Verhaltens-Tracking.</li>
+        <li><strong>Premium-Abonnement.</strong> Es entfernt die Werbung und gibt Zugang zu den in der App angegebenen Premium-Vorteilen. Preis, Abrechnungszeitraum und Währung werden in der App und im Store (Google Play oder App Store) angezeigt, bevor Sie den Kauf bestätigen.</li>
+        <li><strong>Zahlung und Verlängerung.</strong> Die Zahlung wickelt Google Play oder Apple ab, nicht der Inhaber. Das Abonnement verlängert sich am Ende jedes Zeitraums automatisch, es sei denn, Sie kündigen mindestens 24 Stunden vor dem Ende in den Abonnement-Einstellungen Ihres Google- oder Apple-Kontos.</li>
+        <li><strong>Kündigung.</strong> Sie können jederzeit kündigen. Sie behalten die Premium-Vorteile bis zum Ende des bereits bezahlten Zeitraums. Das Löschen des Kontos in der App <strong>kündigt das Abonnement nicht</strong>: Sie müssen es selbst im Store kündigen.</li>
+        <li><strong>Erstattungen.</strong> Erstattungsanträge werden mit dem jeweiligen Store nach dessen eigenen Richtlinien bearbeitet. Wenn Sie Verbraucher in der Europäischen Union sind, behalten Sie die Ihnen gesetzlich zustehenden Rechte, einschließlich des Widerrufsrechts in den gesetzlich vorgesehenen Fällen und Fristen.</li>
+        <li>Wir können die Preise oder Vorteile des Premium-Tarifs ändern. Wir teilen Ihnen dies mit angemessener Frist mit, und eine Preisänderung gilt für Ihr laufendes Abonnement erst, wenn der Store Sie benachrichtigt und Sie, soweit erforderlich, zugestimmt haben.</li>
+      </ul>
+
+      <h2>8. Geistiges Eigentum</h2>
+      <ul>
+        <li>Die App, ihr Design, ihr Logo, ihr Code und ihre Marke gehören dem Inhaber oder werden mit Lizenz genutzt und sind gesetzlich geschützt.</li>
+        <li>Sie dürfen die Geschichten für den persönlichen und familiären Gebrauch lesen und nicht gewerblich mit Ihrem Umfeld teilen. Sie dürfen die Geschichten und die Bibliothek der App weder verkaufen noch massenhaft veröffentlichen oder kommerziell verwerten.</li>
+        <li>Da Geschichten zwischen Nutzern wiederverwendet werden können, wird nicht garantiert, dass eine Geschichte einzigartig oder exklusiv ist.</li>
+      </ul>
+
+      <h2>9. Datenschutz und personenbezogene Daten</h2>
+      <p>Wir verarbeiten nur die Daten, die für den Betrieb der App nötig sind: die Gerätekennung, Name und Alter der von Ihnen registrierten Kinder, Ihre angefragten und favorisierten Geschichten und, wenn Sie ein Konto erstellen, Ihren Namen, Ihre E-Mail-Adresse und Ihr Passwort (verschlüsselt gespeichert) oder die Grunddaten Ihres Google- oder Apple-Kontos. Wir verkaufen Ihre Daten nicht, betreiben kein Werbe-Tracking und fragen weder nach Fotos noch nach dem vollständigen Geburtsdatum der Kinder. Einzelheiten finden Sie in unserer <a href="privacidad.html">Datenschutzerklärung</a>.</p>
+      <p>Sie können Ihr Konto und alle zugehörigen Daten direkt in der App löschen, auf dem Konto-Bildschirm.</p>
+
+      <h2>10. Verfügbarkeit des Dienstes</h2>
+      <p>Wir tun unser Möglichstes, die App verfügbar zu halten, garantieren aber nicht, dass sie ohne Unterbrechungen oder Fehler funktioniert. Der Dienst hängt von Dritten ab (KI-Dienste, App-Stores, Internetverbindung) und kann von ihnen beeinträchtigt werden. Wir können Funktionen aktualisieren, ändern oder entfernen oder den Dienst einstellen und kündigen dies, wenn möglich, mit angemessener Frist an.</p>
+
+      <h2>11. Haftungsbeschränkung</h2>
+      <p>Die App wird „wie besehen“ angeboten. Im größtmöglichen gesetzlich zulässigen Umfang haftet der Inhaber nicht für mittelbare Schäden aus der Nutzung der App oder aus dem Inhalt der mit KI erzeugten Geschichten, noch für die Nichtverfügbarkeit des Dienstes. Dies schränkt keine Haftung ein, die gesetzlich nicht ausgeschlossen werden darf, und auch nicht unverzichtbare Verbraucherrechte, die Ihnen zustehen.</p>
+
+      <h2>12. Änderungen dieser Bedingungen</h2>
+      <p>Wir können diese Bedingungen aktualisieren. Wir veröffentlichen die neue Fassung mit Datum und informieren Sie bei wesentlichen Änderungen in der App. Wenn Sie die App danach weiter nutzen, gelten die Änderungen als akzeptiert.</p>
+
+      <h2>13. Anwendbares Recht und Gerichtsstand</h2>
+      <p>Diese Bedingungen unterliegen spanischem Recht. Wenn Sie Verbraucher sind, gelten zusätzlich die zwingenden Verbraucherschutzvorschriften Ihres Wohnsitzlandes, und Sie können sich an die nach dem Gesetz für Sie zuständigen Gerichte wenden. Für Verbraucher in der EU gibt es außerdem die Online-Streitbeilegungsplattform der Europäischen Kommission.</p>
+
+      <h2>14. Kontakt</h2>
+      <p>Bei Fragen, Beschwerden oder zur Ausübung Ihrer Datenrechte schreiben Sie an <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="fr" lang="fr" data-title="Luna de Cuentos · Conditions générales d’utilisation" hidden>
+      <p class="notice">Cette traduction est fournie à titre informatif. En cas de divergence, la version espagnole prévaut.</p>
+      <h1>Conditions générales d’utilisation</h1>
+      <p class="muted">Application « Luna de Cuentos » · Dernière mise à jour : 5 octobre 2026</p>
+
+      <h2>1. Qui nous sommes</h2>
+      <p>« Luna de Cuentos » (ci-après « l’Application ») est une application mobile qui génère des histoires pour enfants personnalisées grâce à l’intelligence artificielle. Son titulaire est Roberto Sanz Fernández, domicilié en Espagne (ci-après « le Titulaire »). Contact : <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. Acceptation des conditions</h2>
+      <p>En installant ou en utilisant l’Application, vous acceptez ces conditions. Si vous n’êtes pas d’accord, n’utilisez pas l’Application. Elle est conçue pour être utilisée par des adultes (mères, pères, tuteurs ou éducateurs), qui la manipulent et décident quelles histoires lire aux enfants. Si vous avez moins de 18 ans, vous ne pouvez l’utiliser qu’avec l’autorisation et sous la supervision de votre mère, de votre père ou de votre tuteur.</p>
+
+      <h2>3. Ce que fait l’Application</h2>
+      <p>L’adulte crée un ou plusieurs profils d’enfant (prénom et âge), choisit un thème, une durée et une langue, et l’Application remet une histoire. Les histoires peuvent être générées de nouveau par IA ou réutilisées depuis une bibliothèque commune, en remplaçant le prénom de l’enfant. Vous pouvez aussi laisser le thème vide pour recevoir une histoire surprise et enregistrer vos histoires favorites.</p>
+
+      <h2>4. Utilisation sans compte et avec compte</h2>
+      <ul>
+        <li><strong>Sans compte.</strong> Vous pouvez utiliser l’Application de manière anonyme. Un identifiant technique est associé à votre appareil pour conserver vos profils d’enfant et votre historique.</li>
+        <li><strong>Avec compte.</strong> Vous pouvez créer un compte avec votre nom, votre adresse e-mail et un mot de passe, ou avec votre compte Google ou Apple. Cela vous permet de conserver vos données en changeant de téléphone et d’accéder depuis plusieurs appareils.</li>
+        <li>Vous êtes responsable de la confidentialité de vos identifiants et de l’activité réalisée depuis votre compte. Prévenez-nous si vous soupçonnez une utilisation non autorisée.</li>
+        <li>Les informations que vous fournissez doivent être exactes. Vous ne devez pas usurper l’identité d’autrui.</li>
+      </ul>
+
+      <h2>5. Contenu généré par intelligence artificielle</h2>
+      <ul>
+        <li>Les histoires sont générées par des systèmes d’IA de tiers (actuellement Google Gemini). Bien que nous donnions des instructions pour que le contenu soit adapté aux enfants, <strong>nous ne pouvons pas garantir que chaque histoire soit parfaite, exacte ou adaptée à tous les enfants</strong>.</li>
+        <li>Nous vous recommandons, en tant qu’adulte, de lire l’histoire avant de la lire ou de la montrer à un enfant, surtout si vous avez saisi un thème libre.</li>
+        <li>Si vous trouvez une histoire inappropriée, signalez-la-nous à <strong>lunadecuentosapp@gmail.com</strong> et nous l’examinerons.</li>
+        <li>Les histoires sont des œuvres de fiction et ne constituent pas un conseil médical, psychologique, éducatif ni de tout autre type professionnel.</li>
+        <li>Le texte que vous saisissez comme thème est envoyé au fournisseur d’IA pour générer l’histoire. N’incluez dans le thème ni données personnelles, ni coordonnées, ni informations sensibles.</li>
+      </ul>
+
+      <h2>6. Utilisation autorisée</h2>
+      <p>Vous vous engagez à ne pas utiliser l’Application pour :</p>
+      <ul>
+        <li>Essayer de générer un contenu illégal, violent, sexuel, discriminatoire, incitant à la haine ou pouvant nuire aux mineurs.</li>
+        <li>Essayer de contourner les limites techniques, les publicités ou les restrictions de l’Application, ni y accéder de manière automatisée (robots, scraping).</li>
+        <li>Altérer, décompiler ou perturber le fonctionnement de l’Application ou de ses serveurs.</li>
+        <li>Utiliser l’Application à des fins commerciales sans l’autorisation écrite du Titulaire.</li>
+      </ul>
+      <p>Nous pouvons limiter ou suspendre l’accès de toute personne qui ne respecte pas ces règles.</p>
+
+      <h2>7. Offre gratuite, publicités et abonnement premium</h2>
+      <ul>
+        <li><strong>Offre gratuite.</strong> Pour recevoir une histoire, une publicité est affichée. Les publicités sont diffusées par Google AdMob et configurées pour un public enfant : pas de publicité personnalisée ni de suivi du comportement.</li>
+        <li><strong>Abonnement premium.</strong> Il supprime les publicités et donne accès aux avantages premium indiqués dans l’Application. Le prix, la périodicité et la devise sont affichés dans l’Application et dans la boutique (Google Play ou App Store) avant que vous ne confirmiez l’achat.</li>
+        <li><strong>Paiement et renouvellement.</strong> Le paiement est géré par Google Play ou Apple, et non par le Titulaire. L’abonnement se renouvelle automatiquement à la fin de chaque période, sauf si vous l’annulez, au moins 24 heures avant son terme, depuis les réglages des abonnements de votre compte Google ou Apple.</li>
+        <li><strong>Annulation.</strong> Vous pouvez annuler à tout moment. Vous conserverez les avantages premium jusqu’à la fin de la période déjà payée. Supprimer le compte de l’Application <strong>n’annule pas</strong> l’abonnement : vous devez l’annuler vous-même dans la boutique.</li>
+        <li><strong>Remboursements.</strong> Les demandes de remboursement sont traitées avec la boutique concernée, selon ses propres politiques. Si vous êtes consommateur dans l’Union européenne, vous conservez les droits que vous accorde la loi, y compris le droit de rétractation dans les cas et délais qu’elle prévoit.</li>
+        <li>Nous pouvons modifier les prix ou les avantages de l’offre premium. Nous vous en informerons avec un préavis raisonnable, et un changement de prix ne s’appliquera pas à votre abonnement en cours sans que la boutique vous le notifie et, le cas échéant, que vous l’acceptiez.</li>
+      </ul>
+
+      <h2>8. Propriété intellectuelle</h2>
+      <ul>
+        <li>L’Application, son design, son logo, son code et sa marque appartiennent au Titulaire ou sont utilisés sous licence, et sont protégés par la loi.</li>
+        <li>Vous pouvez lire les histoires pour un usage personnel et familial et les partager sans but lucratif avec votre entourage. Vous ne pouvez ni vendre, ni publier massivement, ni exploiter commercialement les histoires ou la bibliothèque de l’Application.</li>
+        <li>Comme les histoires peuvent être réutilisées entre utilisateurs, il n’est pas garanti qu’une histoire soit unique ni exclusive.</li>
+      </ul>
+
+      <h2>9. Confidentialité et données personnelles</h2>
+      <p>Nous ne traitons que les données nécessaires au fonctionnement de l’Application : l’identifiant de l’appareil, le prénom et l’âge des enfants que vous enregistrez, vos histoires demandées et favorites et, si vous créez un compte, votre nom, votre adresse e-mail et votre mot de passe (stocké chiffré) ou les données de base de votre compte Google ou Apple. Nous ne vendons pas vos données, nous ne faisons pas de suivi publicitaire et nous ne demandons ni photo ni date de naissance complète des enfants. Les détails figurent dans notre <a href="privacidad.html">Politique de confidentialité</a>.</p>
+      <p>Vous pouvez supprimer votre compte et toutes les données associées depuis l’Application, sur l’écran du compte.</p>
+
+      <h2>10. Disponibilité du service</h2>
+      <p>Nous faisons notre possible pour maintenir l’Application disponible, mais nous ne garantissons pas qu’elle fonctionne sans interruption ni erreur. Le service dépend de tiers (services d’IA, boutiques d’applications, connexion internet) et peut en être affecté. Nous pouvons mettre à jour, modifier ou retirer des fonctions, ou cesser le service, en prévenant avec un préavis raisonnable chaque fois que possible.</p>
+
+      <h2>11. Limitation de responsabilité</h2>
+      <p>L’Application est fournie « en l’état ». Dans la mesure maximale permise par la loi, le Titulaire ne répond pas des dommages indirects découlant de l’utilisation de l’Application ou du contenu des histoires générées par IA, ni de l’indisponibilité du service. Cela ne limite pas la responsabilité que la loi ne permet pas d’exclure, ni les droits irrenonçables dont vous disposez en tant que consommateur.</p>
+
+      <h2>12. Modifications de ces conditions</h2>
+      <p>Nous pouvons mettre à jour ces conditions. Nous publierons la nouvelle version avec sa date et, si le changement est important, nous vous en avertirons dans l’Application. Si vous continuez à utiliser l’Application ensuite, vous êtes réputé accepter les modifications.</p>
+
+      <h2>13. Droit applicable et juridiction</h2>
+      <p>Ces conditions sont régies par le droit espagnol. Si vous êtes consommateur, les règles impératives de protection des consommateurs de votre pays de résidence s’appliquent en outre, et vous pourrez saisir les tribunaux qui vous correspondent selon la loi. Pour les consommateurs de l’UE, la plateforme de règlement en ligne des litiges de la Commission européenne est également disponible.</p>
+
+      <h2>14. Contact</h2>
+      <p>Pour toute question, réclamation ou pour exercer vos droits sur vos données, écrivez à <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="it" lang="it" data-title="Luna de Cuentos · Termini e condizioni d’uso" hidden>
+      <p class="notice">Questa traduzione è fornita solo a titolo informativo. In caso di differenze prevale la versione spagnola.</p>
+      <h1>Termini e condizioni d’uso</h1>
+      <p class="muted">App «Luna de Cuentos» · Ultimo aggiornamento: 5 ottobre 2026</p>
+
+      <h2>1. Chi siamo</h2>
+      <p>«Luna de Cuentos» (di seguito «l’App») è un’applicazione mobile che genera storie per bambini personalizzate mediante intelligenza artificiale. Il titolare è Roberto Sanz Fernández, con domicilio in Spagna (di seguito «il Titolare»). Contatto: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. Accettazione dei termini</h2>
+      <p>Installando o usando l’App accetti questi termini. Se non sei d’accordo, non usare l’App. L’App è pensata per essere usata da adulti (madri, padri, tutori o educatori), che la gestiscono e decidono quali storie leggere ai bambini. Se hai meno di 18 anni, puoi usarla solo con il permesso e la supervisione di tua madre, tuo padre o del tuo tutore.</p>
+
+      <h2>3. Cosa fa l’App</h2>
+      <p>L’adulto crea uno o più profili di bambino (nome ed età), sceglie un tema, una durata e una lingua, e l’App consegna una storia. Le storie possono essere generate di nuovo con l’IA o riutilizzate da una biblioteca comune, sostituendo il nome del bambino. Puoi anche lasciare vuoto il tema per ricevere una storia a sorpresa e salvare le tue storie preferite.</p>
+
+      <h2>4. Uso senza account e con account</h2>
+      <ul>
+        <li><strong>Senza account.</strong> Puoi usare l’App in modo anonimo. Al tuo dispositivo viene associato un identificativo tecnico per conservare i tuoi profili dei bambini e la cronologia.</li>
+        <li><strong>Con account.</strong> Puoi creare un account con il tuo nome, la tua email e una password, oppure con il tuo account Google o Apple. Con esso puoi conservare i tuoi dati quando cambi telefono e accedere da più dispositivi.</li>
+        <li>Sei responsabile della riservatezza delle tue credenziali e dell’attività svolta dal tuo account. Avvisaci se sospetti un uso non autorizzato.</li>
+        <li>Le informazioni che fornisci devono essere veritiere. Non devi impersonare altre persone.</li>
+      </ul>
+
+      <h2>5. Contenuti generati con intelligenza artificiale</h2>
+      <ul>
+        <li>Le storie sono generate da sistemi di IA di terzi (attualmente Google Gemini). Anche se diamo istruzioni perché il contenuto sia adatto ai bambini, <strong>non possiamo garantire che ogni storia sia perfetta, esatta o adatta a tutti i bambini</strong>.</li>
+        <li>Ti consigliamo, in quanto adulto, di leggere la storia prima di leggerla o mostrarla a un bambino, soprattutto se hai scritto un tema libero.</li>
+        <li>Se trovi una storia inappropriata, segnalacelo a <strong>lunadecuentosapp@gmail.com</strong> e la esamineremo.</li>
+        <li>Le storie sono opere di fantasia e non costituiscono consulenza medica, psicologica, educativa né di altro tipo professionale.</li>
+        <li>Il testo che scrivi come tema viene inviato al fornitore di IA per generare la storia. Non includere nel tema dati personali, dati di contatto né informazioni sensibili.</li>
+      </ul>
+
+      <h2>6. Uso consentito</h2>
+      <p>Ti impegni a non usare l’App per:</p>
+      <ul>
+        <li>Cercare di generare contenuti illegali, violenti, sessuali, discriminatori, che incitino all’odio o che possano danneggiare i minori.</li>
+        <li>Cercare di aggirare i limiti tecnici, gli annunci o le restrizioni dell’App, né accedervi in modo automatizzato (bot, scraping).</li>
+        <li>Alterare, decompilare o interferire con il funzionamento dell’App o dei suoi server.</li>
+        <li>Usare l’App a fini commerciali senza l’autorizzazione scritta del Titolare.</li>
+      </ul>
+      <p>Possiamo limitare o sospendere l’accesso a chi non rispetta queste regole.</p>
+
+      <h2>7. Piano gratuito, pubblicità e abbonamento premium</h2>
+      <ul>
+        <li><strong>Piano gratuito.</strong> Per ricevere una storia viene mostrato un annuncio. Gli annunci sono forniti da Google AdMob e configurati per un pubblico di minori: nessuna pubblicità personalizzata né tracciamento del comportamento.</li>
+        <li><strong>Abbonamento premium.</strong> Rimuove gli annunci e dà accesso ai vantaggi premium indicati nell’App. Il prezzo, la periodicità e la valuta sono mostrati nell’App e nello store (Google Play o App Store) prima di confermare l’acquisto.</li>
+        <li><strong>Pagamento e rinnovo.</strong> Il pagamento è gestito da Google Play o Apple, non dal Titolare. L’abbonamento si rinnova automaticamente alla fine di ogni periodo, a meno che tu non lo annulli, almeno 24 ore prima della scadenza, dalle impostazioni degli abbonamenti del tuo account Google o Apple.</li>
+        <li><strong>Annullamento.</strong> Puoi annullare quando vuoi. Manterrai i vantaggi premium fino alla fine del periodo già pagato. Eliminare l’account dall’App <strong>non annulla</strong> l’abbonamento: devi annullarlo tu nello store.</li>
+        <li><strong>Rimborsi.</strong> Le richieste di rimborso sono gestite con lo store corrispondente, secondo le sue politiche. Se sei un consumatore nell’Unione europea, conservi i diritti che la legge ti riconosce, compreso il diritto di recesso nei casi e nei termini da essa previsti.</li>
+        <li>Possiamo modificare i prezzi o i vantaggi del piano premium. Te lo comunicheremo con ragionevole preavviso e la modifica del prezzo non si applicherà al tuo abbonamento in corso senza che lo store te lo notifichi e, ove necessario, tu lo accetti.</li>
+      </ul>
+
+      <h2>8. Proprietà intellettuale</h2>
+      <ul>
+        <li>L’App, il suo design, il suo logo, il suo codice e il suo marchio appartengono al Titolare o sono usati con licenza e sono protetti dalla legge.</li>
+        <li>Puoi leggere le storie per uso personale e familiare e condividerle senza scopo di lucro con le persone a te vicine. Non puoi vendere, pubblicare in massa né sfruttare commercialmente le storie o la biblioteca dell’App.</li>
+        <li>Poiché le storie possono essere riutilizzate tra utenti, non si garantisce che una storia sia unica o esclusiva.</li>
+      </ul>
+
+      <h2>9. Privacy e dati personali</h2>
+      <p>Trattiamo solo i dati necessari al funzionamento dell’App: l’identificativo del dispositivo, il nome e l’età dei bambini che registri, le tue storie richieste e preferite e, se crei un account, il tuo nome, la tua email e la tua password (memorizzata cifrata) oppure i dati di base del tuo account Google o Apple. Non vendiamo i tuoi dati, non facciamo tracciamento pubblicitario e non chiediamo foto né la data di nascita completa dei bambini. I dettagli sono nella nostra <a href="privacidad.html">Informativa sulla privacy</a>.</p>
+      <p>Puoi eliminare il tuo account e tutti i dati associati dall’App stessa, nella schermata dell’account.</p>
+
+      <h2>10. Disponibilità del servizio</h2>
+      <p>Facciamo il possibile per mantenere l’App disponibile, ma non garantiamo che funzioni senza interruzioni né errori. Il servizio dipende da terzi (servizi di IA, store di app, connessione a internet) e può esserne influenzato. Possiamo aggiornare, modificare o ritirare funzioni, o cessare il servizio, avvisando con ragionevole preavviso quando possibile.</p>
+
+      <h2>11. Limitazione di responsabilità</h2>
+      <p>L’App è offerta «così com’è». Nella misura massima consentita dalla legge, il Titolare non risponde dei danni indiretti derivanti dall’uso dell’App né dal contenuto delle storie generate dall’IA, né dalla mancata disponibilità del servizio. Ciò non limita la responsabilità che la legge non consente di escludere, né i diritti irrinunciabili che hai come consumatore.</p>
+
+      <h2>12. Modifiche a questi termini</h2>
+      <p>Possiamo aggiornare questi termini. Pubblicheremo la nuova versione con la sua data e, se la modifica è importante, ti avviseremo nell’App. Se continui a usare l’App dopo, si intende che accetti le modifiche.</p>
+
+      <h2>13. Legge applicabile e foro competente</h2>
+      <p>Questi termini sono regolati dalla legge spagnola. Se sei un consumatore, si applicano inoltre le norme imperative di tutela dei consumatori del tuo paese di residenza e potrai rivolgerti ai tribunali che ti spettano secondo la legge. Per i consumatori dell’UE esiste inoltre la piattaforma di risoluzione online delle controversie della Commissione europea.</p>
+
+      <h2>14. Contatto</h2>
+      <p>Per dubbi, reclami o per esercitare i tuoi diritti sui tuoi dati, scrivi a <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="pt" lang="pt" data-title="Luna de Cuentos · Termos e condições de utilização" hidden>
+      <p class="notice">Esta tradução é apenas informativa. Em caso de diferenças, prevalece a versão em espanhol.</p>
+      <h1>Termos e condições de utilização</h1>
+      <p class="muted">Aplicação «Luna de Cuentos» · Última atualização: 5 de outubro de 2026</p>
+
+      <h2>1. Quem somos</h2>
+      <p>«Luna de Cuentos» (doravante, «a Aplicação») é uma aplicação móvel que gera histórias infantis personalizadas através de inteligência artificial. O seu titular é Roberto Sanz Fernández, com domicílio em Espanha (doravante, «o Titular»). Contacto: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. Aceitação dos termos</h2>
+      <p>Ao instalar ou usar a Aplicação, aceita estes termos. Se não concordar, não use a Aplicação. Foi pensada para ser usada por adultos (mães, pais, tutores ou educadores), que a manuseiam e decidem que histórias ler às crianças. Se tiver menos de 18 anos, só pode usá-la com a autorização e a supervisão da sua mãe, do seu pai ou do seu tutor.</p>
+
+      <h2>3. O que faz a Aplicação</h2>
+      <p>O adulto cria um ou vários perfis de criança (nome e idade), escolhe um tema, uma duração e um idioma, e a Aplicação entrega uma história. As histórias podem ser geradas de novo com IA ou reutilizadas de uma biblioteca comum, substituindo o nome da criança. Também pode deixar o tema vazio para receber uma história surpresa e guardar as suas histórias favoritas.</p>
+
+      <h2>4. Utilização sem conta e com conta</h2>
+      <ul>
+        <li><strong>Sem conta.</strong> Pode usar a Aplicação de forma anónima. É associado ao seu dispositivo um identificador técnico para guardar os seus perfis de criança e o histórico.</li>
+        <li><strong>Com conta.</strong> Pode criar uma conta com o seu nome, email e palavra-passe, ou com a sua conta Google ou Apple. Com ela pode manter os seus dados ao mudar de telemóvel e aceder a partir de vários dispositivos.</li>
+        <li>É responsável por manter a confidencialidade das suas credenciais e pela atividade realizada a partir da sua conta. Avise-nos se suspeitar de uma utilização não autorizada.</li>
+        <li>A informação que fornecer deve ser verdadeira. Não deve fazer-se passar por outras pessoas.</li>
+      </ul>
+
+      <h2>5. Conteúdo gerado com inteligência artificial</h2>
+      <ul>
+        <li>As histórias são geradas por sistemas de IA de terceiros (atualmente, o Google Gemini). Embora demos instruções para que o conteúdo seja adequado a crianças, <strong>não podemos garantir que cada história seja perfeita, exata ou adequada a todas as crianças</strong>.</li>
+        <li>Recomendamos que, como adulto, leia a história antes de a ler ou mostrar a uma criança, especialmente se escreveu um tema livre.</li>
+        <li>Se encontrar uma história inadequada, comunique-nos em <strong>lunadecuentosapp@gmail.com</strong> e analisá-la-emos.</li>
+        <li>As histórias são obras de ficção e não constituem aconselhamento médico, psicológico, educativo nem de qualquer outro tipo profissional.</li>
+        <li>O texto que escrever como tema é enviado ao fornecedor de IA para gerar a história. Não inclua no tema dados pessoais, dados de contacto nem informação sensível.</li>
+      </ul>
+
+      <h2>6. Utilização permitida</h2>
+      <p>Compromete-se a não usar a Aplicação para:</p>
+      <ul>
+        <li>Tentar gerar conteúdo ilegal, violento, sexual, discriminatório, que incite ao ódio ou que possa prejudicar menores.</li>
+        <li>Tentar contornar os limites técnicos, os anúncios ou as restrições da Aplicação, nem aceder a ela de forma automatizada (bots, scraping).</li>
+        <li>Alterar, descompilar ou interferir no funcionamento da Aplicação ou dos seus servidores.</li>
+        <li>Usar a Aplicação para fins comerciais sem autorização escrita do Titular.</li>
+      </ul>
+      <p>Podemos limitar ou suspender o acesso a quem não cumprir estas regras.</p>
+
+      <h2>7. Plano gratuito, anúncios e subscrição premium</h2>
+      <ul>
+        <li><strong>Plano gratuito.</strong> Para receber uma história é mostrado um anúncio. Os anúncios são servidos pelo Google AdMob e configurados para público infantil: sem publicidade personalizada nem seguimento do comportamento.</li>
+        <li><strong>Subscrição premium.</strong> Retira os anúncios e dá acesso às vantagens premium indicadas na Aplicação. O preço, a periodicidade e a moeda são mostrados na Aplicação e na loja (Google Play ou App Store) antes de confirmar a compra.</li>
+        <li><strong>Pagamento e renovação.</strong> O pagamento é gerido pela Google Play ou pela Apple, não pelo Titular. A subscrição renova-se automaticamente no fim de cada período, a menos que a cancele, pelo menos 24 horas antes de terminar, nas definições de subscrições da sua conta Google ou Apple.</li>
+        <li><strong>Cancelamento.</strong> Pode cancelar quando quiser. Continuará com as vantagens premium até ao fim do período já pago. Eliminar a conta da Aplicação <strong>não cancela</strong> a subscrição: tem de a cancelar na loja.</li>
+        <li><strong>Reembolsos.</strong> Os pedidos de reembolso são tratados com a loja correspondente, segundo as suas próprias políticas. Se for consumidor na União Europeia, mantém os direitos que a lei lhe confere, incluindo o direito de livre resolução nos casos e prazos que esta estabelece.</li>
+        <li>Podemos alterar os preços ou as vantagens do plano premium. Comunicá-lo-emos com antecedência razoável e a alteração de preço não se aplicará à sua subscrição em curso sem que a loja lho notifique e, quando aplicável, o aceite.</li>
+      </ul>
+
+      <h2>8. Propriedade intelectual</h2>
+      <ul>
+        <li>A Aplicação, o seu design, o seu logótipo, o seu código e a sua marca pertencem ao Titular ou são usados com licença, e estão protegidos por lei.</li>
+        <li>Pode ler as histórias para uso pessoal e familiar e partilhá-las sem fins lucrativos com o seu círculo. Não pode vender, publicar em massa nem explorar comercialmente as histórias nem a biblioteca da Aplicação.</li>
+        <li>Dado que as histórias podem ser reutilizadas entre utilizadores, não se garante que uma história seja única nem exclusiva.</li>
+      </ul>
+
+      <h2>9. Privacidade e dados pessoais</h2>
+      <p>Tratamos apenas os dados necessários para que a Aplicação funcione: o identificador do dispositivo, o nome e a idade das crianças que registar, as suas histórias pedidas e favoritas e, se criar uma conta, o seu nome, email e palavra-passe (guardada cifrada) ou os dados básicos da sua conta Google ou Apple. Não vendemos os seus dados, não fazemos seguimento publicitário e não pedimos fotografias nem a data de nascimento completa das crianças. Os detalhes estão na nossa <a href="privacidad.html">Política de privacidade</a>.</p>
+      <p>Pode eliminar a sua conta e todos os dados associados na própria Aplicação, no ecrã da conta.</p>
+
+      <h2>10. Disponibilidade do serviço</h2>
+      <p>Fazemos o possível para manter a Aplicação disponível, mas não garantimos que funcione sem interrupções nem erros. O serviço depende de terceiros (serviços de IA, lojas de aplicações, ligação à internet) e pode ser afetado por eles. Podemos atualizar, modificar ou retirar funções, ou cessar o serviço, avisando com antecedência razoável sempre que possível.</p>
+
+      <h2>11. Limitação de responsabilidade</h2>
+      <p>A Aplicação é oferecida «tal como está». Na máxima medida permitida por lei, o Titular não responde pelos danos indiretos decorrentes da utilização da Aplicação nem do conteúdo das histórias geradas por IA, nem pela indisponibilidade do serviço. Isto não limita a responsabilidade que a lei não permita excluir, nem os direitos irrenunciáveis que tenha como consumidor.</p>
+
+      <h2>12. Alterações a estes termos</h2>
+      <p>Podemos atualizar estes termos. Publicaremos a nova versão com a sua data e, se a alteração for importante, avisá-lo-emos na Aplicação. Se continuar a usar a Aplicação depois, entende-se que aceita as alterações.</p>
+
+      <h2>13. Lei aplicável e jurisdição</h2>
+      <p>Estes termos regem-se pela legislação espanhola. Se for consumidor, aplicam-se também as normas imperativas de proteção dos consumidores do seu país de residência, e poderá recorrer aos tribunais que lhe correspondam segundo a lei. Para os consumidores da UE existe ainda a plataforma de resolução de litígios em linha da Comissão Europeia.</p>
+
+      <h2>14. Contacto</h2>
+      <p>Para dúvidas, reclamações ou para exercer os seus direitos sobre os seus dados, escreva para <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="nl" lang="nl" data-title="Luna de Cuentos · Algemene voorwaarden" hidden>
+      <p class="notice">Deze vertaling is alleen ter informatie. Bij verschillen prevaleert de Spaanse versie.</p>
+      <h1>Algemene voorwaarden</h1>
+      <p class="muted">App ‘Luna de Cuentos’ · Laatst bijgewerkt: 5 oktober 2026</p>
+
+      <h2>1. Wie we zijn</h2>
+      <p>‘Luna de Cuentos’ (hierna ‘de App’) is een mobiele applicatie die met kunstmatige intelligentie gepersonaliseerde kinderverhalen maakt. De houder is Roberto Sanz Fernández, gevestigd in Spanje (hierna ‘de Houder’). Contact: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. Aanvaarding van de voorwaarden</h2>
+      <p>Door de App te installeren of te gebruiken, aanvaard je deze voorwaarden. Als je het er niet mee eens bent, gebruik de App dan niet. De App is bedoeld voor volwassenen (moeders, vaders, voogden of opvoeders), die haar bedienen en beslissen welke verhalen ze aan de kinderen voorlezen. Als je jonger bent dan 18, mag je de App alleen gebruiken met toestemming en onder toezicht van je moeder, vader of voogd.</p>
+
+      <h2>3. Wat de App doet</h2>
+      <p>De volwassene maakt een of meer kinderprofielen aan (naam en leeftijd), kiest een thema, een lengte en een taal, en de App levert een verhaal. Verhalen kunnen opnieuw met AI worden gemaakt of worden hergebruikt uit een gedeelde bibliotheek, waarbij de naam van het kind wordt vervangen. Je kunt het thema ook leeg laten om een verrassingsverhaal te krijgen en je favoriete verhalen opslaan.</p>
+
+      <h2>4. Gebruik zonder en met account</h2>
+      <ul>
+        <li><strong>Zonder account.</strong> Je kunt de App anoniem gebruiken. Aan je apparaat wordt een technische ID gekoppeld om je kinderprofielen en geschiedenis te bewaren.</li>
+        <li><strong>Met account.</strong> Je kunt een account aanmaken met je naam, e-mailadres en wachtwoord, of met je Google- of Apple-account. Daarmee behoud je je gegevens als je van telefoon wisselt en kun je vanaf meerdere apparaten inloggen.</li>
+        <li>Je bent verantwoordelijk voor de vertrouwelijkheid van je inloggegevens en voor de activiteit vanuit je account. Laat het ons weten als je onbevoegd gebruik vermoedt.</li>
+        <li>De informatie die je geeft moet waarheidsgetrouw zijn. Je mag je niet voor iemand anders uitgeven.</li>
+      </ul>
+
+      <h2>5. Met kunstmatige intelligentie gemaakte inhoud</h2>
+      <ul>
+        <li>De verhalen worden gemaakt door AI-systemen van derden (momenteel Google Gemini). Hoewel we instructies geven zodat de inhoud geschikt is voor kinderen, <strong>kunnen we niet garanderen dat elk verhaal perfect, juist of geschikt is voor alle kinderen</strong>.</li>
+        <li>We raden je aan om als volwassene het verhaal te lezen voordat je het aan een kind voorleest of laat zien, vooral als je een vrij thema hebt getypt.</li>
+        <li>Als je een ongepast verhaal vindt, meld het ons dan via <strong>lunadecuentosapp@gmail.com</strong> en we bekijken het.</li>
+        <li>De verhalen zijn fictie en vormen geen medisch, psychologisch, pedagogisch of enig ander professioneel advies.</li>
+        <li>De tekst die je als thema typt, wordt naar de AI-aanbieder gestuurd om het verhaal te maken. Neem in het thema geen persoonsgegevens, contactgegevens of gevoelige informatie op.</li>
+      </ul>
+
+      <h2>6. Toegestaan gebruik</h2>
+      <p>Je verbindt je ertoe de App niet te gebruiken om:</p>
+      <ul>
+        <li>Te proberen illegale, gewelddadige, seksuele of discriminerende inhoud te maken, inhoud die aanzet tot haat of die minderjarigen kan schaden.</li>
+        <li>Te proberen de technische grenzen, de advertenties of de beperkingen van de App te omzeilen, of er geautomatiseerd toegang toe te krijgen (bots, scraping).</li>
+        <li>De werking van de App of haar servers te wijzigen, te decompileren of te verstoren.</li>
+        <li>De App commercieel te gebruiken zonder schriftelijke toestemming van de Houder.</li>
+      </ul>
+      <p>We kunnen de toegang beperken of opschorten voor wie deze regels overtreedt.</p>
+
+      <h2>7. Gratis abonnement, advertenties en premium-abonnement</h2>
+      <ul>
+        <li><strong>Gratis abonnement.</strong> Om een verhaal te ontvangen wordt een advertentie getoond. De advertenties worden geleverd door Google AdMob en zijn ingesteld voor een kinderpubliek: geen gepersonaliseerde advertenties en geen gedragstracking.</li>
+        <li><strong>Premium-abonnement.</strong> Het verwijdert de advertenties en geeft toegang tot de premiumvoordelen die in de App worden vermeld. De prijs, de periode en de valuta worden in de App en in de winkel (Google Play of App Store) getoond voordat je de aankoop bevestigt.</li>
+        <li><strong>Betaling en verlenging.</strong> De betaling wordt afgehandeld door Google Play of Apple, niet door de Houder. Het abonnement wordt aan het einde van elke periode automatisch verlengd, tenzij je minstens 24 uur voor het einde opzegt in de abonnementsinstellingen van je Google- of Apple-account.</li>
+        <li><strong>Opzegging.</strong> Je kunt op elk moment opzeggen. Je behoudt de premiumvoordelen tot het einde van de al betaalde periode. Het verwijderen van het account in de App <strong>zegt het abonnement niet op</strong>: je moet het zelf in de winkel opzeggen.</li>
+        <li><strong>Terugbetalingen.</strong> Verzoeken om terugbetaling worden afgehandeld met de betreffende winkel, volgens haar eigen beleid. Als je consument bent in de Europese Unie, behoud je de rechten die de wet je geeft, inclusief het herroepingsrecht in de gevallen en termijnen die de wet bepaalt.</li>
+        <li>We kunnen de prijzen of voordelen van het premium-abonnement wijzigen. We laten het je met redelijke termijn weten en een prijswijziging geldt niet voor je lopende abonnement zonder dat de winkel je dat meldt en je, waar nodig, akkoord gaat.</li>
+      </ul>
+
+      <h2>8. Intellectueel eigendom</h2>
+      <ul>
+        <li>De App, haar ontwerp, logo, code en merk zijn van de Houder of worden onder licentie gebruikt en zijn wettelijk beschermd.</li>
+        <li>Je mag de verhalen lezen voor persoonlijk en gezinsgebruik en niet-commercieel delen met je omgeving. Je mag de verhalen of de bibliotheek van de App niet verkopen, massaal publiceren of commercieel exploiteren.</li>
+        <li>Omdat verhalen tussen gebruikers kunnen worden hergebruikt, wordt niet gegarandeerd dat een verhaal uniek of exclusief is.</li>
+      </ul>
+
+      <h2>9. Privacy en persoonsgegevens</h2>
+      <p>We verwerken alleen de gegevens die nodig zijn om de App te laten werken: de apparaat-ID, de naam en leeftijd van de kinderen die je registreert, je aangevraagde en favoriete verhalen en, als je een account aanmaakt, je naam, e-mailadres en wachtwoord (versleuteld opgeslagen) of de basisgegevens van je Google- of Apple-account. We verkopen je gegevens niet, doen geen advertentietracking en vragen niet om foto’s of de volledige geboortedatum van de kinderen. De details staan in ons <a href="privacidad.html">Privacybeleid</a>.</p>
+      <p>Je kunt je account en alle bijbehorende gegevens verwijderen in de App zelf, op het accountscherm.</p>
+
+      <h2>10. Beschikbaarheid van de dienst</h2>
+      <p>We doen ons best om de App beschikbaar te houden, maar we garanderen niet dat ze zonder onderbrekingen of fouten werkt. De dienst hangt af van derden (AI-diensten, app-winkels, internetverbinding) en kan daardoor worden beïnvloed. We kunnen functies bijwerken, wijzigen of verwijderen, of de dienst stopzetten, met een redelijke aankondigingstermijn wanneer dat mogelijk is.</p>
+
+      <h2>11. Beperking van aansprakelijkheid</h2>
+      <p>De App wordt aangeboden ‘zoals ze is’. Voor zover de wet toelaat is de Houder niet aansprakelijk voor indirecte schade door het gebruik van de App of de inhoud van de met AI gemaakte verhalen, noch voor het niet beschikbaar zijn van de dienst. Dit beperkt niet de aansprakelijkheid die de wet niet toestaat uit te sluiten, noch de onvervreemdbare consumentenrechten die je hebt.</p>
+
+      <h2>12. Wijzigingen in deze voorwaarden</h2>
+      <p>We kunnen deze voorwaarden bijwerken. We publiceren de nieuwe versie met datum en laten het je, als de wijziging belangrijk is, weten in de App. Als je de App daarna blijft gebruiken, word je geacht de wijzigingen te aanvaarden.</p>
+
+      <h2>13. Toepasselijk recht en bevoegde rechter</h2>
+      <p>Op deze voorwaarden is Spaans recht van toepassing. Als je consument bent, gelden daarnaast de dwingende consumentenbeschermingsregels van je land van verblijf en kun je naar de rechtbanken gaan die volgens de wet voor jou bevoegd zijn. Voor consumenten in de EU bestaat bovendien het online platform voor geschillenbeslechting van de Europese Commissie.</p>
+
+      <h2>14. Contact</h2>
+      <p>Voor vragen, klachten of om je rechten over je gegevens uit te oefenen, schrijf naar <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="pl" lang="pl" data-title="Luna de Cuentos · Regulamin korzystania" hidden>
+      <p class="notice">To tłumaczenie ma charakter wyłącznie informacyjny. W razie rozbieżności obowiązuje wersja hiszpańska.</p>
+      <h1>Regulamin korzystania</h1>
+      <p class="muted">Aplikacja „Luna de Cuentos” · Ostatnia aktualizacja: 5 października 2026</p>
+
+      <h2>1. Kim jesteśmy</h2>
+      <p>„Luna de Cuentos” (dalej „Aplikacja”) to aplikacja mobilna, która tworzy spersonalizowane bajki dla dzieci za pomocą sztucznej inteligencji. Jej właścicielem jest Roberto Sanz Fernández, z siedzibą w Hiszpanii (dalej „Właściciel”). Kontakt: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. Akceptacja regulaminu</h2>
+      <p>Instalując lub używając Aplikacji, akceptujesz niniejszy regulamin. Jeśli się z nim nie zgadzasz, nie korzystaj z Aplikacji. Aplikacja jest przeznaczona dla dorosłych (matek, ojców, opiekunów lub wychowawców), którzy nią się posługują i decydują, które bajki czytać dzieciom. Jeśli masz mniej niż 18 lat, możesz z niej korzystać tylko za zgodą i pod nadzorem matki, ojca lub opiekuna.</p>
+
+      <h2>3. Co robi Aplikacja</h2>
+      <p>Osoba dorosła tworzy jeden lub kilka profili dzieci (imię i wiek), wybiera temat, długość i język, a Aplikacja dostarcza bajkę. Bajki mogą być generowane od nowa przez AI lub ponownie wykorzystywane ze wspólnej biblioteki, z podmianą imienia dziecka. Możesz też zostawić temat pusty, aby dostać bajkę-niespodziankę, i zapisywać ulubione bajki.</p>
+
+      <h2>4. Korzystanie bez konta i z kontem</h2>
+      <ul>
+        <li><strong>Bez konta.</strong> Możesz korzystać z Aplikacji anonimowo. Do Twojego urządzenia przypisywany jest techniczny identyfikator, aby zachować profile dzieci i historię.</li>
+        <li><strong>Z kontem.</strong> Możesz założyć konto, podając imię i nazwisko, e-mail i hasło, albo użyć konta Google lub Apple. Dzięki temu zachowasz dane po zmianie telefonu i będziesz mieć dostęp z kilku urządzeń.</li>
+        <li>Odpowiadasz za poufność swoich danych logowania i za aktywność z Twojego konta. Powiadom nas, jeśli podejrzewasz nieuprawnione użycie.</li>
+        <li>Podawane informacje muszą być prawdziwe. Nie wolno podszywać się pod inne osoby.</li>
+      </ul>
+
+      <h2>5. Treści generowane przez sztuczną inteligencję</h2>
+      <ul>
+        <li>Bajki są generowane przez systemy AI osób trzecich (obecnie Google Gemini). Chociaż dajemy instrukcje, aby treść była odpowiednia dla dzieci, <strong>nie możemy zagwarantować, że każda bajka będzie doskonała, trafna lub odpowiednia dla wszystkich dzieci</strong>.</li>
+        <li>Zalecamy, aby jako osoba dorosła przeczytać bajkę, zanim przeczytasz ją lub pokażesz dziecku, zwłaszcza jeśli wpisano dowolny temat.</li>
+        <li>Jeśli znajdziesz nieodpowiednią bajkę, zgłoś to na <strong>lunadecuentosapp@gmail.com</strong>, a ją sprawdzimy.</li>
+        <li>Bajki są utworami fikcyjnymi i nie stanowią porady medycznej, psychologicznej, edukacyjnej ani żadnej innej porady zawodowej.</li>
+        <li>Tekst, który wpisujesz jako temat, jest wysyłany do dostawcy AI w celu wygenerowania bajki. Nie umieszczaj w temacie danych osobowych, danych kontaktowych ani informacji wrażliwych.</li>
+      </ul>
+
+      <h2>6. Dozwolone korzystanie</h2>
+      <p>Zobowiązujesz się nie używać Aplikacji do:</p>
+      <ul>
+        <li>Prób generowania treści nielegalnych, przemocowych, seksualnych, dyskryminujących, podżegających do nienawiści lub mogących zaszkodzić nieletnim.</li>
+        <li>Prób obejścia technicznych ograniczeń, reklam lub restrykcji Aplikacji ani uzyskiwania do niej dostępu w sposób zautomatyzowany (boty, scraping).</li>
+        <li>Zmieniania, dekompilowania ani zakłócania działania Aplikacji lub jej serwerów.</li>
+        <li>Wykorzystywania Aplikacji w celach komercyjnych bez pisemnej zgody Właściciela.</li>
+      </ul>
+      <p>Możemy ograniczyć lub zawiesić dostęp osobie, która naruszy te zasady.</p>
+
+      <h2>7. Plan bezpłatny, reklamy i subskrypcja premium</h2>
+      <ul>
+        <li><strong>Plan bezpłatny.</strong> Aby otrzymać bajkę, wyświetlana jest reklama. Reklamy dostarcza Google AdMob i są skonfigurowane dla odbiorców dziecięcych: bez reklam spersonalizowanych i bez śledzenia zachowania.</li>
+        <li><strong>Subskrypcja premium.</strong> Usuwa reklamy i daje dostęp do korzyści premium wskazanych w Aplikacji. Cena, okres rozliczeniowy i waluta są pokazywane w Aplikacji i w sklepie (Google Play lub App Store) przed potwierdzeniem zakupu.</li>
+        <li><strong>Płatność i odnowienie.</strong> Płatność obsługuje Google Play lub Apple, nie Właściciel. Subskrypcja odnawia się automatycznie na koniec każdego okresu, chyba że ją anulujesz, co najmniej 24 godziny przed jego końcem, w ustawieniach subskrypcji Twojego konta Google lub Apple.</li>
+        <li><strong>Anulowanie.</strong> Możesz anulować w dowolnym momencie. Korzyści premium zachowasz do końca już opłaconego okresu. Usunięcie konta w Aplikacji <strong>nie anuluje</strong> subskrypcji: musisz ją anulować samodzielnie w sklepie.</li>
+        <li><strong>Zwroty.</strong> Wnioski o zwrot są rozpatrywane przez odpowiedni sklep, zgodnie z jego własnymi zasadami. Jeśli jesteś konsumentem w Unii Europejskiej, zachowujesz prawa przyznane Ci przez prawo, w tym prawo odstąpienia od umowy w przypadkach i terminach przez nie określonych.</li>
+        <li>Możemy zmieniać ceny lub korzyści planu premium. Powiadomimy Cię z rozsądnym wyprzedzeniem, a zmiana ceny nie będzie dotyczyć Twojej bieżącej subskrypcji bez powiadomienia przez sklep i, w stosownych przypadkach, Twojej akceptacji.</li>
+      </ul>
+
+      <h2>8. Własność intelektualna</h2>
+      <ul>
+        <li>Aplikacja, jej projekt, logo, kod i marka należą do Właściciela lub są używane na podstawie licencji i są chronione prawem.</li>
+        <li>Możesz czytać bajki do użytku osobistego i rodzinnego oraz udostępniać je niekomercyjnie osobom z Twojego otoczenia. Nie wolno sprzedawać, masowo publikować ani komercyjnie wykorzystywać bajek ani biblioteki Aplikacji.</li>
+        <li>Ponieważ bajki mogą być ponownie wykorzystywane między użytkownikami, nie gwarantuje się, że bajka jest unikalna ani wyłączna.</li>
+      </ul>
+
+      <h2>9. Prywatność i dane osobowe</h2>
+      <p>Przetwarzamy tylko dane niezbędne do działania Aplikacji: identyfikator urządzenia, imię i wiek rejestrowanych dzieci, Twoje zamówione i ulubione bajki oraz, jeśli założysz konto, imię i nazwisko, e-mail i hasło (przechowywane w formie zaszyfrowanej) lub podstawowe dane Twojego konta Google lub Apple. Nie sprzedajemy Twoich danych, nie prowadzimy śledzenia reklamowego i nie prosimy o zdjęcia ani pełną datę urodzenia dzieci. Szczegóły znajdują się w naszej <a href="privacidad.html">Polityce prywatności</a>.</p>
+      <p>Możesz usunąć konto i wszystkie powiązane dane w samej Aplikacji, na ekranie konta.</p>
+
+      <h2>10. Dostępność usługi</h2>
+      <p>Dokładamy starań, aby Aplikacja była dostępna, ale nie gwarantujemy, że będzie działać bez przerw i błędów. Usługa zależy od osób trzecich (usługi AI, sklepy z aplikacjami, połączenie z internetem) i może być przez nie zakłócona. Możemy aktualizować, zmieniać lub wycofywać funkcje albo zakończyć usługę, uprzedzając z rozsądnym wyprzedzeniem, gdy tylko to możliwe.</p>
+
+      <h2>11. Ograniczenie odpowiedzialności</h2>
+      <p>Aplikacja jest oferowana „tak jak jest”. W maksymalnym zakresie dozwolonym przez prawo Właściciel nie odpowiada za szkody pośrednie wynikające z korzystania z Aplikacji ani z treści bajek generowanych przez AI, ani za brak dostępności usługi. Nie ogranicza to odpowiedzialności, której prawo nie pozwala wyłączyć, ani niezbywalnych praw przysługujących Ci jako konsumentowi.</p>
+
+      <h2>12. Zmiany regulaminu</h2>
+      <p>Możemy aktualizować ten regulamin. Opublikujemy nową wersję z datą, a jeśli zmiana jest istotna, powiadomimy Cię w Aplikacji. Jeśli nadal korzystasz z Aplikacji, uznaje się, że akceptujesz zmiany.</p>
+
+      <h2>13. Prawo właściwe i jurysdykcja</h2>
+      <p>Niniejszy regulamin podlega prawu hiszpańskiemu. Jeśli jesteś konsumentem, dodatkowo obowiązują bezwzględnie wiążące przepisy o ochronie konsumentów kraju Twojego zamieszkania i możesz zwrócić się do sądów, które są dla Ciebie właściwe według prawa. Dla konsumentów z UE dostępna jest ponadto internetowa platforma rozstrzygania sporów Komisji Europejskiej.</p>
+
+      <h2>14. Kontakt</h2>
+      <p>W razie pytań, reklamacji lub aby skorzystać z praw dotyczących swoich danych, napisz na <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="ro" lang="ro" data-title="Luna de Cuentos · Termeni și condiții de utilizare" hidden>
+      <p class="notice">Această traducere are doar scop informativ. În caz de diferențe, prevalează versiunea în spaniolă.</p>
+      <h1>Termeni și condiții de utilizare</h1>
+      <p class="muted">Aplicația „Luna de Cuentos” · Ultima actualizare: 5 octombrie 2026</p>
+
+      <h2>1. Cine suntem</h2>
+      <p>„Luna de Cuentos” (în continuare, „Aplicația”) este o aplicație mobilă care generează povești personalizate pentru copii prin inteligență artificială. Titularul ei este Roberto Sanz Fernández, cu domiciliul în Spania (în continuare, „Titularul”). Contact: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. Acceptarea termenilor</h2>
+      <p>Instalând sau folosind Aplicația, accepți acești termeni. Dacă nu ești de acord, nu folosi Aplicația. Aplicația este gândită pentru a fi folosită de adulți (mame, tați, tutori sau educatori), care o manevrează și decid ce povești să citească copiilor. Dacă ai sub 18 ani, o poți folosi doar cu permisiunea și sub supravegherea mamei, a tatălui sau a tutorelui tău.</p>
+
+      <h2>3. Ce face Aplicația</h2>
+      <p>Adultul creează unul sau mai multe profiluri de copil (nume și vârstă), alege o temă, o durată și o limbă, iar Aplicația livrează o poveste. Poveștile pot fi generate din nou cu IA sau reutilizate dintr-o bibliotecă comună, înlocuind numele copilului. Poți lăsa și tema goală pentru a primi o poveste-surpriză și poți salva poveștile favorite.</p>
+
+      <h2>4. Utilizare fără cont și cu cont</h2>
+      <ul>
+        <li><strong>Fără cont.</strong> Poți folosi Aplicația anonim. Dispozitivului tău i se asociază un identificator tehnic pentru a păstra profilurile copiilor și istoricul.</li>
+        <li><strong>Cu cont.</strong> Poți crea un cont cu numele, e-mailul și parola ta, sau cu contul tău Google ori Apple. Astfel îți păstrezi datele la schimbarea telefonului și poți accesa din mai multe dispozitive.</li>
+        <li>Ești responsabil de confidențialitatea datelor tale de autentificare și de activitatea desfășurată din contul tău. Anunță-ne dacă bănuiești o utilizare neautorizată.</li>
+        <li>Informațiile pe care le furnizezi trebuie să fie reale. Nu trebuie să te dai drept alte persoane.</li>
+      </ul>
+
+      <h2>5. Conținut generat cu inteligență artificială</h2>
+      <ul>
+        <li>Poveștile sunt generate de sisteme de IA ale unor terți (în prezent, Google Gemini). Deși dăm instrucțiuni pentru ca conținutul să fie potrivit pentru copii, <strong>nu putem garanta că fiecare poveste este perfectă, exactă sau potrivită pentru toți copiii</strong>.</li>
+        <li>Îți recomandăm ca, în calitate de adult, să citești povestea înainte de a o citi sau a o arăta unui copil, mai ales dacă ai scris o temă liberă.</li>
+        <li>Dacă găsești o poveste nepotrivită, anunță-ne la <strong>lunadecuentosapp@gmail.com</strong> și o vom analiza.</li>
+        <li>Poveștile sunt opere de ficțiune și nu constituie sfaturi medicale, psihologice, educaționale sau de alt tip profesional.</li>
+        <li>Textul pe care îl scrii ca temă este trimis furnizorului de IA pentru a genera povestea. Nu include în temă date personale, date de contact sau informații sensibile.</li>
+      </ul>
+
+      <h2>6. Utilizare permisă</h2>
+      <p>Te angajezi să nu folosești Aplicația pentru:</p>
+      <ul>
+        <li>A încerca să generezi conținut ilegal, violent, sexual, discriminatoriu, care incită la ură sau care ar putea dăuna minorilor.</li>
+        <li>A încerca să ocolești limitele tehnice, reclamele sau restricțiile Aplicației, nici a o accesa în mod automatizat (boți, scraping).</li>
+        <li>A modifica, a decompila sau a interfera cu funcționarea Aplicației ori a serverelor ei.</li>
+        <li>A folosi Aplicația în scopuri comerciale fără autorizarea scrisă a Titularului.</li>
+      </ul>
+      <p>Putem limita sau suspenda accesul celor care încalcă aceste reguli.</p>
+
+      <h2>7. Plan gratuit, reclame și abonament premium</h2>
+      <ul>
+        <li><strong>Plan gratuit.</strong> Pentru a primi o poveste se afișează o reclamă. Reclamele sunt difuzate de Google AdMob și configurate pentru public de copii: fără publicitate personalizată și fără urmărirea comportamentului.</li>
+        <li><strong>Abonament premium.</strong> Elimină reclamele și dă acces la avantajele premium indicate în Aplicație. Prețul, periodicitatea și moneda sunt afișate în Aplicație și în magazin (Google Play sau App Store) înainte de a confirma achiziția.</li>
+        <li><strong>Plată și reînnoire.</strong> Plata este gestionată de Google Play sau Apple, nu de Titular. Abonamentul se reînnoiește automat la sfârșitul fiecărei perioade, dacă nu îl anulezi, cu cel puțin 24 de ore înainte de încheiere, din setările abonamentelor contului tău Google sau Apple.</li>
+        <li><strong>Anulare.</strong> Poți anula oricând. Vei păstra avantajele premium până la sfârșitul perioadei deja plătite. Ștergerea contului din Aplicație <strong>nu anulează</strong> abonamentul: trebuie să îl anulezi tu în magazin.</li>
+        <li><strong>Rambursări.</strong> Cererile de rambursare se gestionează cu magazinul respectiv, conform propriilor politici. Dacă ești consumator în Uniunea Europeană, îți păstrezi drepturile acordate de lege, inclusiv dreptul de retragere în cazurile și termenele pe care le stabilește aceasta.</li>
+        <li>Putem modifica prețurile sau avantajele planului premium. Te vom anunța cu un preaviz rezonabil, iar modificarea prețului nu se va aplica abonamentului tău în curs fără ca magazinul să te notifice și, atunci când este cazul, să accepți.</li>
+      </ul>
+
+      <h2>8. Proprietate intelectuală</h2>
+      <ul>
+        <li>Aplicația, designul, logoul, codul și marca ei aparțin Titularului sau sunt folosite sub licență și sunt protejate de lege.</li>
+        <li>Poți citi poveștile pentru uz personal și familial și le poți împărtăși necomercial cu cei din jurul tău. Nu poți vinde, publica în masă sau exploata comercial poveștile ori biblioteca Aplicației.</li>
+        <li>Deoarece poveștile pot fi reutilizate între utilizatori, nu se garantează că o poveste este unică sau exclusivă.</li>
+      </ul>
+
+      <h2>9. Confidențialitate și date personale</h2>
+      <p>Prelucrăm doar datele necesare funcționării Aplicației: identificatorul dispozitivului, numele și vârsta copiilor pe care îi înregistrezi, poveștile tale cerute și favorite și, dacă îți creezi un cont, numele, e-mailul și parola (stocată criptat) sau datele de bază ale contului tău Google ori Apple. Nu îți vindem datele, nu facem urmărire publicitară și nu cerem fotografii sau data nașterii complete a copiilor. Detaliile se găsesc în <a href="privacidad.html">Politica de confidențialitate</a>.</p>
+      <p>Îți poți șterge contul și toate datele asociate chiar din Aplicație, pe ecranul contului.</p>
+
+      <h2>10. Disponibilitatea serviciului</h2>
+      <p>Facem tot posibilul pentru a menține Aplicația disponibilă, dar nu garantăm că va funcționa fără întreruperi sau erori. Serviciul depinde de terți (servicii de IA, magazine de aplicații, conexiunea la internet) și poate fi afectat de aceștia. Putem actualiza, modifica sau retrage funcții ori înceta serviciul, anunțând cu un preaviz rezonabil ori de câte ori este posibil.</p>
+
+      <h2>11. Limitarea răspunderii</h2>
+      <p>Aplicația este oferită „ca atare”. În măsura maximă permisă de lege, Titularul nu răspunde pentru daunele indirecte care decurg din utilizarea Aplicației sau din conținutul poveștilor generate de IA, nici pentru lipsa de disponibilitate a serviciului. Aceasta nu limitează răspunderea pe care legea nu permite să fie exclusă, nici drepturile la care nu se poate renunța și pe care le ai ca și consumator.</p>
+
+      <h2>12. Modificări ale acestor termeni</h2>
+      <p>Putem actualiza acești termeni. Vom publica noua versiune cu data ei și, dacă modificarea este importantă, te vom anunța în Aplicație. Dacă continui să folosești Aplicația după aceea, se consideră că accepți modificările.</p>
+
+      <h2>13. Legea aplicabilă și jurisdicția</h2>
+      <p>Acești termeni sunt guvernați de legislația spaniolă. Dacă ești consumator, se aplică în plus normele imperative de protecție a consumatorilor din țara ta de reședință și te poți adresa instanțelor care îți revin conform legii. Pentru consumatorii din UE există, de asemenea, platforma de soluționare online a litigiilor a Comisiei Europene.</p>
+
+      <h2>14. Contact</h2>
+      <p>Pentru întrebări, reclamații sau pentru a-ți exercita drepturile asupra datelor tale, scrie la <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="ru" lang="ru" data-title="Luna de Cuentos · Условия использования" hidden>
+      <p class="notice">Этот перевод приводится только для информации. При расхождениях преимущество имеет испанская версия.</p>
+      <h1>Условия использования</h1>
+      <p class="muted">Приложение «Luna de Cuentos» · Последнее обновление: 5 октября 2026 г.</p>
+
+      <h2>1. Кто мы</h2>
+      <p>«Luna de Cuentos» (далее — «Приложение») — это мобильное приложение, которое создаёт персонализированные детские сказки с помощью искусственного интеллекта. Его владелец — Roberto Sanz Fernández, проживающий в Испании (далее — «Владелец»). Контакт: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. Принятие условий</h2>
+      <p>Устанавливая или используя Приложение, вы принимаете эти условия. Если вы с ними не согласны, не пользуйтесь Приложением. Приложение предназначено для взрослых (матерей, отцов, опекунов или воспитателей), которые им управляют и решают, какие сказки читать детям. Если вам меньше 18 лет, вы можете пользоваться им только с разрешения и под присмотром матери, отца или опекуна.</p>
+
+      <h2>3. Что делает Приложение</h2>
+      <p>Взрослый создаёт один или несколько профилей ребёнка (имя и возраст), выбирает тему, длительность и язык, а Приложение выдаёт сказку. Сказки могут создаваться заново с помощью ИИ или повторно использоваться из общей библиотеки с подстановкой имени ребёнка. Вы также можете оставить тему пустой, чтобы получить сказку-сюрприз, и сохранять любимые сказки.</p>
+
+      <h2>4. Использование без учётной записи и с ней</h2>
+      <ul>
+        <li><strong>Без учётной записи.</strong> Вы можете пользоваться Приложением анонимно. К вашему устройству привязывается технический идентификатор, чтобы сохранять профили детей и историю.</li>
+        <li><strong>С учётной записью.</strong> Вы можете создать учётную запись с именем, адресом электронной почты и паролем или войти через учётную запись Google или Apple. Так вы сохраните данные при смене телефона и получите доступ с нескольких устройств.</li>
+        <li>Вы отвечаете за конфиденциальность своих учётных данных и за действия, совершаемые из вашей учётной записи. Сообщите нам, если подозреваете несанкционированное использование.</li>
+        <li>Предоставляемая вами информация должна быть достоверной. Вы не должны выдавать себя за других лиц.</li>
+      </ul>
+
+      <h2>5. Контент, созданный искусственным интеллектом</h2>
+      <ul>
+        <li>Сказки создаются системами ИИ третьих сторон (в настоящее время Google Gemini). Хотя мы даём указания, чтобы контент подходил детям, <strong>мы не можем гарантировать, что каждая сказка будет безупречной, точной или подходящей для всех детей</strong>.</li>
+        <li>Мы рекомендуем вам, как взрослому, прочитать сказку, прежде чем читать или показывать её ребёнку, особенно если вы ввели произвольную тему.</li>
+        <li>Если вы найдёте неподходящую сказку, сообщите нам по адресу <strong>lunadecuentosapp@gmail.com</strong>, и мы её проверим.</li>
+        <li>Сказки являются вымышленными произведениями и не представляют собой медицинскую, психологическую, образовательную или иную профессиональную консультацию.</li>
+        <li>Текст, который вы вводите как тему, отправляется поставщику ИИ для создания сказки. Не указывайте в теме персональные данные, контактные данные и конфиденциальную информацию.</li>
+      </ul>
+
+      <h2>6. Допустимое использование</h2>
+      <p>Вы обязуетесь не использовать Приложение для того, чтобы:</p>
+      <ul>
+        <li>Пытаться создавать незаконный, насильственный, сексуальный, дискриминационный контент, контент, разжигающий ненависть, или способный причинить вред несовершеннолетним.</li>
+        <li>Пытаться обойти технические ограничения, рекламу или запреты Приложения, а также получать к нему доступ автоматизированно (боты, скрейпинг).</li>
+        <li>Изменять, декомпилировать или нарушать работу Приложения или его серверов.</li>
+        <li>Использовать Приложение в коммерческих целях без письменного разрешения Владельца.</li>
+      </ul>
+      <p>Мы можем ограничить или приостановить доступ тем, кто нарушает эти правила.</p>
+
+      <h2>7. Бесплатный тариф, реклама и премиум-подписка</h2>
+      <ul>
+        <li><strong>Бесплатный тариф.</strong> Чтобы получить сказку, показывается реклама. Рекламу предоставляет Google AdMob, и она настроена для детской аудитории: без персонализированной рекламы и без отслеживания поведения.</li>
+        <li><strong>Премиум-подписка.</strong> Убирает рекламу и даёт доступ к премиум-возможностям, указанным в Приложении. Цена, периодичность и валюта показываются в Приложении и в магазине (Google Play или App Store) до подтверждения покупки.</li>
+        <li><strong>Оплата и продление.</strong> Оплату обрабатывает Google Play или Apple, а не Владелец. Подписка автоматически продлевается в конце каждого периода, если вы не отмените её не позднее чем за 24 часа до окончания в настройках подписок вашей учётной записи Google или Apple.</li>
+        <li><strong>Отмена.</strong> Вы можете отменить подписку в любое время. Премиум-возможности сохранятся до конца уже оплаченного периода. Удаление учётной записи в Приложении <strong>не отменяет</strong> подписку: её нужно отменить самостоятельно в магазине.</li>
+        <li><strong>Возвраты.</strong> Запросы на возврат средств рассматриваются соответствующим магазином по его собственным правилам. Если вы потребитель в Европейском союзе, за вами сохраняются права, предоставленные законом, включая право на отказ от договора в случаях и сроки, которые он устанавливает.</li>
+        <li>Мы можем изменять цены или возможности премиум-тарифа. Мы сообщим вам об этом заранее, в разумный срок, а изменение цены не будет применяться к вашей текущей подписке без уведомления от магазина и, когда это требуется, вашего согласия.</li>
+      </ul>
+
+      <h2>8. Интеллектуальная собственность</h2>
+      <ul>
+        <li>Приложение, его дизайн, логотип, код и торговая марка принадлежат Владельцу или используются по лицензии и охраняются законом.</li>
+        <li>Вы можете читать сказки для личного и семейного использования и делиться ими на некоммерческой основе с окружающими. Вы не можете продавать, массово публиковать или коммерчески использовать сказки или библиотеку Приложения.</li>
+        <li>Поскольку сказки могут повторно использоваться разными пользователями, уникальность и исключительность сказки не гарантируются.</li>
+      </ul>
+
+      <h2>9. Конфиденциальность и персональные данные</h2>
+      <p>Мы обрабатываем только данные, необходимые для работы Приложения: идентификатор устройства, имя и возраст зарегистрированных вами детей, ваши заказанные и избранные сказки и, если вы создаёте учётную запись, ваше имя, адрес электронной почты и пароль (хранится в зашифрованном виде) или основные данные вашей учётной записи Google или Apple. Мы не продаём ваши данные, не ведём рекламного отслеживания и не запрашиваем фотографии или полную дату рождения детей. Подробности приведены в нашей <a href="privacidad.html">Политике конфиденциальности</a>.</p>
+      <p>Вы можете удалить учётную запись и все связанные данные прямо в Приложении, на экране учётной записи.</p>
+
+      <h2>10. Доступность сервиса</h2>
+      <p>Мы делаем всё возможное, чтобы Приложение было доступно, но не гарантируем его работу без перерывов и ошибок. Сервис зависит от третьих сторон (сервисы ИИ, магазины приложений, подключение к интернету) и может быть ими затронут. Мы можем обновлять, изменять или убирать функции либо прекратить работу сервиса, по возможности предупреждая заранее, в разумный срок.</p>
+
+      <h2>11. Ограничение ответственности</h2>
+      <p>Приложение предоставляется «как есть». В максимальной степени, разрешённой законом, Владелец не отвечает за косвенный ущерб, возникший из-за использования Приложения или содержания сказок, созданных ИИ, а также за недоступность сервиса. Это не ограничивает ответственность, которую закон не позволяет исключить, и неотчуждаемые права, которые у вас есть как у потребителя.</p>
+
+      <h2>12. Изменения этих условий</h2>
+      <p>Мы можем обновлять эти условия. Мы опубликуем новую версию с датой и, если изменение существенное, уведомим вас в Приложении. Если вы продолжите пользоваться Приложением после этого, считается, что вы принимаете изменения.</p>
+
+      <h2>13. Применимое право и юрисдикция</h2>
+      <p>Эти условия регулируются законодательством Испании. Если вы потребитель, дополнительно применяются императивные нормы о защите прав потребителей страны вашего проживания, и вы можете обратиться в суды, которые компетентны для вас по закону. Для потребителей ЕС также доступна онлайн-платформа урегулирования споров Европейской комиссии.</p>
+
+      <h2>14. Контакт</h2>
+      <p>По вопросам, жалобам или для осуществления своих прав в отношении ваших данных пишите на <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+    <section data-lang="zh" lang="zh-Hans" data-title="Luna de Cuentos · 使用条款" hidden>
+      <p class="notice">本译文仅供参考。如有差异，以西班牙语版本为准。</p>
+      <h1>使用条款</h1>
+      <p class="muted">应用“Luna de Cuentos” · 最近更新：2026 年 10 月 5 日</p>
+
+      <h2>1. 我们是谁</h2>
+      <p>“Luna de Cuentos”（以下简称“本应用”）是一款通过人工智能生成个性化儿童故事的移动应用。其所有者是 Roberto Sanz Fernández，住所位于西班牙（以下简称“所有者”）。联系方式：<strong>lunadecuentosapp@gmail.com</strong>。</p>
+
+      <h2>2. 接受条款</h2>
+      <p>安装或使用本应用即表示您接受这些条款。如果您不同意，请不要使用本应用。本应用面向成年人（母亲、父亲、监护人或教育工作者），由他们操作并决定给孩子读哪些故事。如果您未满 18 岁，只能在您的母亲、父亲或监护人许可并监督下使用。</p>
+
+      <h2>3. 本应用的功能</h2>
+      <p>成年人创建一个或多个孩子档案（名字和年龄），选择主题、时长和语言，本应用随即提供一个故事。故事可以由 AI 重新生成，也可以从公共故事库中重复使用，并替换成孩子的名字。您还可以将主题留空以获得惊喜故事，并保存您喜爱的故事。</p>
+
+      <h2>4. 无账户与有账户的使用</h2>
+      <ul>
+        <li><strong>无账户。</strong>您可以匿名使用本应用。设备会关联一个技术标识符，用于保存孩子档案和历史记录。</li>
+        <li><strong>有账户。</strong>您可以使用姓名、电子邮箱和密码创建账户，也可以使用您的 Google 或 Apple 账户。这样您在更换手机时可以保留数据，并可在多台设备上访问。</li>
+        <li>您有责任保管好登录凭据，并对通过您账户进行的活动负责。如果您怀疑存在未经授权的使用，请告知我们。</li>
+        <li>您提供的信息必须真实。您不得冒充他人。</li>
+      </ul>
+
+      <h2>5. 由人工智能生成的内容</h2>
+      <ul>
+        <li>故事由第三方 AI 系统生成（目前为 Google Gemini）。尽管我们会给出指示以使内容适合儿童，<strong>但我们无法保证每个故事都完美、准确或适合所有孩子</strong>。</li>
+        <li>我们建议您作为成年人，在给孩子朗读或展示故事之前先阅读一遍，尤其是在您输入了自由主题的情况下。</li>
+        <li>如果您发现不适当的故事，请通过 <strong>lunadecuentosapp@gmail.com</strong> 告知我们，我们会进行审查。</li>
+        <li>故事是虚构作品，不构成医疗、心理、教育或任何其他专业意见。</li>
+        <li>您作为主题输入的文本会被发送给 AI 提供商以生成故事。请不要在主题中包含个人数据、联系方式或敏感信息。</li>
+      </ul>
+
+      <h2>6. 允许的使用</h2>
+      <p>您承诺不会将本应用用于：</p>
+      <ul>
+        <li>试图生成非法、暴力、色情、歧视性、煽动仇恨或可能伤害未成年人的内容。</li>
+        <li>试图绕过本应用的技术限制、广告或限制，也不得以自动化方式（机器人、爬取）访问本应用。</li>
+        <li>更改、反编译或干扰本应用或其服务器的运行。</li>
+        <li>未经所有者书面许可将本应用用于商业目的。</li>
+      </ul>
+      <p>我们可以限制或暂停违反这些规则者的访问。</p>
+
+      <h2>7. 免费方案、广告和高级订阅</h2>
+      <ul>
+        <li><strong>免费方案。</strong>获取故事前会显示一则广告。广告由 Google AdMob 投放，并按面向儿童的方式配置：无个性化广告，无行为跟踪。</li>
+        <li><strong>高级订阅。</strong>移除广告，并提供应用中所示的高级权益。价格、计费周期和货币会在您确认购买之前显示在应用和应用商店（Google Play 或 App Store）中。</li>
+        <li><strong>支付与续订。</strong>支付由 Google Play 或 Apple 处理，而非所有者。订阅会在每个周期结束时自动续订，除非您至少在结束前 24 小时，在您的 Google 或 Apple 账户的订阅设置中取消。</li>
+        <li><strong>取消。</strong>您可以随时取消。在已付费周期结束前，您仍可使用高级权益。在应用中删除账户<strong>不会取消</strong>订阅：您必须自行在应用商店中取消。</li>
+        <li><strong>退款。</strong>退款申请由相应的应用商店按其自身政策处理。如果您是欧盟的消费者，您保留法律赋予的权利，包括在法律规定的情形和期限内的撤回权。</li>
+        <li>我们可能更改高级方案的价格或权益。我们会在合理的期限内提前通知您，价格变更不会适用于您当前的订阅，除非应用商店通知您，并在需要时获得您的同意。</li>
+      </ul>
+
+      <h2>8. 知识产权</h2>
+      <ul>
+        <li>本应用及其设计、标志、代码和商标归所有者所有或经许可使用，并受法律保护。</li>
+        <li>您可以将故事用于个人和家庭用途，并以非营利方式与身边的人分享。您不得出售、大规模发布或商业利用故事或本应用的故事库。</li>
+        <li>由于故事可能在用户之间重复使用，因此不保证某个故事是唯一或独占的。</li>
+      </ul>
+
+      <h2>9. 隐私与个人数据</h2>
+      <p>我们只处理本应用运行所需的数据：设备标识符、您登记的孩子的名字和年龄、您请求的和收藏的故事，以及（如果您创建账户）您的姓名、电子邮箱和密码（加密存储）或您的 Google 或 Apple 账户的基本数据。我们不出售您的数据，不进行广告跟踪，也不要求提供孩子的照片或完整出生日期。详情见我们的<a href="privacidad.html">隐私政策</a>。</p>
+      <p>您可以在应用本身的账户页面中删除账户及所有相关数据。</p>
+
+      <h2>10. 服务的可用性</h2>
+      <p>我们会尽力保持本应用可用，但不保证其运行不会中断或出错。本服务依赖第三方（AI 服务、应用商店、互联网连接），并可能受到它们的影响。我们可以更新、修改或撤销功能，或终止服务，并在可能的情况下提前合理通知。</p>
+
+      <h2>11. 责任限制</h2>
+      <p>本应用按“现状”提供。在法律允许的最大范围内，所有者不对因使用本应用或 AI 生成的故事内容而产生的间接损失负责，也不对服务不可用负责。这不限制法律不允许排除的责任，也不限制您作为消费者享有的不可放弃的权利。</p>
+
+      <h2>12. 条款的变更</h2>
+      <p>我们可能更新这些条款。我们会发布带有日期的新版本，如果变更重要，会在应用中通知您。如果您此后继续使用本应用，即视为您接受这些变更。</p>
+
+      <h2>13. 适用法律与管辖</h2>
+      <p>这些条款受西班牙法律管辖。如果您是消费者，您居住国的强制性消费者保护规定也同样适用，您可以依法向对您有管辖权的法院提起诉讼。对于欧盟消费者，还可使用欧盟委员会的在线争议解决平台。</p>
+
+      <h2>14. 联系方式</h2>
+      <p>如有疑问、投诉或需要行使您对数据的权利，请发送邮件至 <strong>lunadecuentosapp@gmail.com</strong>。</p>
+    </section>
+    <section data-lang="ar" lang="ar" dir="rtl" data-title="Luna de Cuentos · شروط الاستخدام" hidden>
+      <p class="notice">هذه الترجمة لأغراض إعلامية فقط. وفي حال وجود اختلاف، تُعتمد النسخة الإسبانية.</p>
+      <h1>شروط الاستخدام</h1>
+      <p class="muted">تطبيق «Luna de Cuentos» · آخر تحديث: 5 أكتوبر 2026</p>
+
+      <h2>1. من نحن</h2>
+      <p>«Luna de Cuentos» (ويُشار إليه فيما يلي بـ«التطبيق») تطبيق للجوال ينشئ قصصًا مخصصة للأطفال باستخدام الذكاء الاصطناعي. صاحبه هو Roberto Sanz Fernández، المقيم في إسبانيا (ويُشار إليه فيما يلي بـ«المالك»). التواصل: <strong>lunadecuentosapp@gmail.com</strong>.</p>
+
+      <h2>2. قبول الشروط</h2>
+      <p>بتثبيت التطبيق أو استخدامه فإنك توافق على هذه الشروط. وإذا لم تكن موافقًا عليها فلا تستخدم التطبيق. التطبيق مخصص ليستخدمه البالغون (الأمهات والآباء والأوصياء أو المربّون)، وهم من يتعامل معه ويقرر أي القصص تُقرأ للأطفال. وإذا كان عمرك أقل من 18 عامًا فلا يجوز لك استخدامه إلا بإذن والدتك أو والدك أو وصيّك وتحت إشرافه.</p>
+
+      <h2>3. ماذا يفعل التطبيق</h2>
+      <p>ينشئ البالغ ملفًا شخصيًّا واحدًا أو أكثر للأطفال (الاسم والعمر)، ويختار موضوعًا ومدة ولغة، ويسلّم التطبيق قصة. يمكن إنشاء القصص من جديد بالذكاء الاصطناعي أو إعادة استخدامها من مكتبة مشتركة مع استبدال اسم الطفل. ويمكنك أيضًا ترك الموضوع فارغًا لتحصل على قصة مفاجئة، وحفظ قصصك المفضلة.</p>
+
+      <h2>4. الاستخدام دون حساب ومعه</h2>
+      <ul>
+        <li><strong>دون حساب.</strong> يمكنك استخدام التطبيق بشكل مجهول. يُربط بجهازك معرّف تقني لحفظ ملفات الأطفال والسجل.</li>
+        <li><strong>مع حساب.</strong> يمكنك إنشاء حساب باسمك وبريدك الإلكتروني وكلمة مرور، أو بحسابك في Google أو Apple. وبذلك تحتفظ ببياناتك عند تغيير الهاتف ويمكنك الدخول من عدة أجهزة.</li>
+        <li>أنت مسؤول عن الحفاظ على سرّية بيانات دخولك وعن النشاط الذي يجري من حسابك. أبلغنا إن اشتبهت في استخدام غير مصرّح به.</li>
+        <li>يجب أن تكون المعلومات التي تقدمها صحيحة. ولا يجوز لك انتحال شخصية الآخرين.</li>
+      </ul>
+
+      <h2>5. المحتوى المُنشأ بالذكاء الاصطناعي</h2>
+      <ul>
+        <li>تُنشأ القصص بواسطة أنظمة ذكاء اصطناعي تابعة لأطراف ثالثة (حاليًا Google Gemini). ورغم أننا نعطي تعليمات ليكون المحتوى مناسبًا للأطفال، <strong>لا يمكننا ضمان أن تكون كل قصة مثالية أو دقيقة أو مناسبة لجميع الأطفال</strong>.</li>
+        <li>نوصيك، بصفتك بالغًا، بقراءة القصة قبل أن تقرأها لطفل أو تعرضها عليه، خاصة إذا كتبت موضوعًا حرًّا.</li>
+        <li>إذا وجدت قصة غير مناسبة، فأبلغنا على <strong>lunadecuentosapp@gmail.com</strong> وسنراجعها.</li>
+        <li>القصص أعمال خيالية ولا تُعدّ نصيحة طبية أو نفسية أو تعليمية أو أي نوع آخر من النصائح المهنية.</li>
+        <li>النص الذي تكتبه موضوعًا يُرسل إلى مزوّد الذكاء الاصطناعي لإنشاء القصة. لا تضمّن الموضوع بيانات شخصية أو بيانات اتصال أو معلومات حساسة.</li>
+      </ul>
+
+      <h2>6. الاستخدام المسموح</h2>
+      <p>تتعهد بعدم استخدام التطبيق من أجل:</p>
+      <ul>
+        <li>محاولة إنشاء محتوى غير قانوني أو عنيف أو جنسي أو تمييزي أو يحرّض على الكراهية أو قد يضر بالقاصرين.</li>
+        <li>محاولة تجاوز الحدود التقنية للتطبيق أو إعلاناته أو قيوده، أو الوصول إليه بوسائل آلية (روبوتات، استخراج البيانات).</li>
+        <li>تعديل التطبيق أو خوادمه أو فكّ ترجمته أو التدخل في عمله.</li>
+        <li>استخدام التطبيق لأغراض تجارية دون إذن كتابي من المالك.</li>
+      </ul>
+      <p>يجوز لنا تقييد الوصول أو تعليقه عمّن يخالف هذه القواعد.</p>
+
+      <h2>7. الخطة المجانية والإعلانات واشتراك بريميوم</h2>
+      <ul>
+        <li><strong>الخطة المجانية.</strong> يُعرض إعلان قبل تسليم القصة. تقدّم الإعلانات Google AdMob وهي مُعدّة لجمهور الأطفال: دون إعلانات مخصصة ودون تتبع للسلوك.</li>
+        <li><strong>اشتراك بريميوم.</strong> يزيل الإعلانات ويمنح المزايا المميزة المذكورة في التطبيق. يُعرض السعر ومدة الدفع والعملة في التطبيق وفي المتجر (Google Play أو App Store) قبل تأكيد الشراء.</li>
+        <li><strong>الدفع والتجديد.</strong> يتولى الدفعَ Google Play أو Apple، وليس المالك. يتجدد الاشتراك تلقائيًّا في نهاية كل فترة ما لم تُلغِه قبل انتهائها بـ24 ساعة على الأقل من إعدادات الاشتراكات في حسابك في Google أو Apple.</li>
+        <li><strong>الإلغاء.</strong> يمكنك الإلغاء في أي وقت. وستحتفظ بمزايا بريميوم حتى نهاية الفترة المدفوعة بالفعل. حذف الحساب من التطبيق <strong>لا يلغي</strong> الاشتراك: عليك إلغاؤه بنفسك في المتجر.</li>
+        <li><strong>المبالغ المستردة.</strong> تُعالج طلبات الاسترداد مع المتجر المعني وفق سياساته الخاصة. وإذا كنت مستهلكًا في الاتحاد الأوروبي فإنك تحتفظ بالحقوق التي يمنحك إياها القانون، ومنها حق العدول في الحالات والمواعيد التي ينص عليها.</li>
+        <li>يجوز لنا تعديل أسعار خطة بريميوم أو مزاياها. سنُبلغك بمهلة معقولة، ولن يسري تغيير السعر على اشتراكك الجاري إلا بعد أن يُخطرك المتجر وتوافق عند الاقتضاء.</li>
+      </ul>
+
+      <h2>8. الملكية الفكرية</h2>
+      <ul>
+        <li>التطبيق وتصميمه وشعاره وشيفرته وعلامته مملوكة للمالك أو مستخدمة بترخيص، ومحمية بالقانون.</li>
+        <li>يمكنك قراءة القصص للاستخدام الشخصي والعائلي ومشاركتها دون هدف ربحي مع المحيطين بك. ولا يجوز لك بيع القصص أو مكتبة التطبيق أو نشرها على نطاق واسع أو استغلالها تجاريًّا.</li>
+        <li>ولأن القصص قد يُعاد استخدامها بين المستخدمين، فلا يُضمن أن تكون القصة فريدة أو حصرية.</li>
+      </ul>
+
+      <h2>9. الخصوصية والبيانات الشخصية</h2>
+      <p>لا نعالج إلا البيانات اللازمة لعمل التطبيق: معرّف الجهاز، واسم الأطفال الذين تسجّلهم وعمرهم، وقصصك المطلوبة والمفضلة، وإذا أنشأت حسابًا فاسمك وبريدك الإلكتروني وكلمة مرورك (مخزّنة مشفّرة) أو البيانات الأساسية لحسابك في Google أو Apple. لا نبيع بياناتك، ولا نجري تتبعًا إعلانيًّا، ولا نطلب صورًا أو تاريخ الميلاد الكامل للأطفال. التفاصيل في <a href="privacidad.html">سياسة الخصوصية</a>.</p>
+      <p>يمكنك حذف حسابك وجميع البيانات المرتبطة به من التطبيق نفسه، في شاشة الحساب.</p>
+
+      <h2>10. توفّر الخدمة</h2>
+      <p>نبذل قصارى جهدنا لإبقاء التطبيق متاحًا، لكننا لا نضمن عمله دون انقطاع أو أخطاء. تعتمد الخدمة على أطراف ثالثة (خدمات الذكاء الاصطناعي ومتاجر التطبيقات والاتصال بالإنترنت) وقد تتأثر بها. يجوز لنا تحديث الوظائف أو تعديلها أو سحبها، أو إيقاف الخدمة، مع إشعار بمهلة معقولة كلما أمكن.</p>
+
+      <h2>11. حدود المسؤولية</h2>
+      <p>يُقدَّم التطبيق «كما هو». وبأقصى حد يسمح به القانون، لا يتحمل المالك مسؤولية الأضرار غير المباشرة الناتجة عن استخدام التطبيق أو عن محتوى القصص المُنشأة بالذكاء الاصطناعي، ولا عن عدم توفّر الخدمة. ولا يحدّ ذلك من المسؤولية التي لا يجيز القانون استبعادها، ولا من حقوقك غير القابلة للتنازل بصفتك مستهلكًا.</p>
+
+      <h2>12. تغييرات هذه الشروط</h2>
+      <p>يجوز لنا تحديث هذه الشروط. سننشر النسخة الجديدة مع تاريخها، وإذا كان التغيير مهمًّا فسنُعلمك في التطبيق. وإذا واصلت استخدام التطبيق بعد ذلك فيُعدّ هذا قبولًا منك للتغييرات.</p>
+
+      <h2>13. القانون الواجب التطبيق والاختصاص القضائي</h2>
+      <p>تخضع هذه الشروط للقانون الإسباني. وإذا كنت مستهلكًا فتسري أيضًا القواعد الإلزامية لحماية المستهلك في بلد إقامتك، ويمكنك اللجوء إلى المحاكم المختصة بك وفق القانون. وبالنسبة إلى مستهلكي الاتحاد الأوروبي تتوافر كذلك منصة تسوية المنازعات عبر الإنترنت التابعة للمفوضية الأوروبية.</p>
+
+      <h2>14. التواصل</h2>
+      <p>للاستفسارات أو الشكاوى أو لممارسة حقوقك بشأن بياناتك، راسل <strong>lunadecuentosapp@gmail.com</strong>.</p>
+    </section>
+  </div>
 </main>
+<script>
+(function () {
+  var codes = ["es","en","de","fr","it","pt","nl","pl","ro","ru","zh","ar"];
+  var KEY = 'luna-legal-lang';
+
+  function normalize(value) {
+    var code = String(value || '').toLowerCase().split(/[-_]/)[0];
+    return codes.indexOf(code) >= 0 ? code : null;
+  }
+
+  function stored() {
+    try { return normalize(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  function initial() {
+    var fromQuery = normalize(new URLSearchParams(location.search).get('lang'));
+    if (fromQuery) return fromQuery;
+    var fromHash = normalize(location.hash.slice(1));
+    if (fromHash) return fromHash;
+    var fromStore = stored();
+    if (fromStore) return fromStore;
+    var preferred = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    for (var i = 0; i < preferred.length; i++) {
+      var fromBrowser = normalize(preferred[i]);
+      if (fromBrowser) return fromBrowser;
+    }
+    return 'es';
+  }
+
+  function show(code, remember) {
+    var sections = document.querySelectorAll('main section[data-lang]');
+    for (var i = 0; i < sections.length; i++) {
+      var section = sections[i];
+      var active = section.getAttribute('data-lang') === code;
+      section.hidden = !active;
+      if (active) {
+        document.documentElement.lang = section.getAttribute('lang');
+        document.title = section.getAttribute('data-title');
+      }
+    }
+    document.getElementById('lang').value = code;
+    var links = document.querySelectorAll('main a[href]');
+    for (var j = 0; j < links.length; j++) {
+      var href = links[j].getAttribute('href');
+      if (/^[a-z-]+\.html/.test(href)) links[j].setAttribute('href', href.split('?')[0] + '?lang=' + code);
+    }
+    if (remember) {
+      try { localStorage.setItem(KEY, code); } catch (e) {}
+      if (history.replaceState) history.replaceState(null, '', location.pathname + '?lang=' + code);
+    }
+  }
+
+  document.getElementById('lang').addEventListener('change', function (event) {
+    show(event.target.value, true);
+  });
+  show(initial(), false);
+})();
+</script>
 </body>
 </html>
