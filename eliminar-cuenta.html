@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Luna de Cuentos · Eliminar cuenta</title>
+  <title>Luna de Cuentos · Eliminar tu cuenta de Luna de Cuentos</title>
   <style>
     :root { --card: #ffffff; --fg: #1f1b2e; --muted: #5d5873; --accent: #6a3fe0; --line: #e6e0f5; }
     * { box-sizing: border-box; }
@@ -16,8 +16,13 @@
     .brand { text-align: center; padding: 8px 0 20px; }
     .brand img { width: 140px; height: auto; }
     .card { background: var(--card); border-radius: 24px; padding: 8px 28px 28px; box-shadow: 0 12px 40px rgba(20, 10, 60, .35); }
-    nav { text-align: center; margin-bottom: 8px; }
-    nav a { display: inline-block; margin: 4px 6px; padding: 6px 16px; border-radius: 999px; background: #efeaff; text-decoration: none; font-weight: 600; font-size: .9rem; }
+    .langbar { display: flex; justify-content: flex-end; padding-top: 16px; }
+    .langbar label { display: inline-flex; align-items: center; gap: 8px; }
+    select#lang { font: inherit; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: #efeaff; color: var(--fg); }
+    section[hidden] { display: none; }
+    section[dir="rtl"] { text-align: right; }
+    section[dir="rtl"] th, section[dir="rtl"] td { text-align: right; }
+    .notice { margin: 16px 0 0; padding: 10px 14px; border: 1px solid #f1d9a8; border-radius: 12px; background: #fff7e6; color: #6b4e00; font-size: .9rem; }
     h1 { font-size: 1.9rem; margin: 24px 0 4px; color: #2D1B69; }
     h2 { font-size: 1.2rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: #4b2fb0; }
     a { color: var(--accent); }
@@ -35,84 +40,521 @@
 <main>
   <header class="brand"><img src="logo.png" alt="Luna de Cuentos"></header>
   <div class="card">
-  <nav><a href="#es">Español</a><a href="#en">English</a></nav>
+    <div class="langbar"><label>🌐 <select id="lang" aria-label="Idioma / Language"><option value="es">Español</option><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="it">Italiano</option><option value="pt">Português</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Română</option><option value="ru">Русский</option><option value="zh">中文</option><option value="ar">العربية</option></select></label></div>
+    <section data-lang="es" lang="es" data-title="Luna de Cuentos · Eliminar tu cuenta de Luna de Cuentos">
+      <h1>Eliminar tu cuenta de Luna de Cuentos</h1>
+      <p class="muted">Última actualización: 15 de octubre de 2026</p>
 
-  <!-- ===================== ESPAÑOL ===================== -->
-  <section id="es">
-    <h1>Eliminar tu cuenta de Luna de Cuentos</h1>
-    <p class="muted">Última actualización: 5 de octubre de 2026</p>
+      <p>Puedes eliminar tu cuenta y todos los datos asociados tú mismo, desde la app, sin tener que escribirnos.</p>
 
-    <p>Puedes eliminar tu cuenta y todos los datos asociados tú mismo, desde la app, sin tener que escribirnos.</p>
+      <h2>Cómo eliminarla desde la app</h2>
+      <ol>
+        <li>Abre Luna de Cuentos e inicia sesión en tu cuenta.</li>
+        <li>Entra en la pantalla de <strong>Cuenta</strong>.</li>
+        <li>Pulsa <strong>Eliminar cuenta</strong>.</li>
+        <li>Confirma. Si tu cuenta usa contraseña, se te pedirá escribirla. Si entraste con Google o con Apple, se te pedirá volver a iniciar sesión con ellos.</li>
+      </ol>
+      <p>El borrado es inmediato y definitivo.</p>
 
-    <h2>Cómo eliminarla desde la app</h2>
-    <ol>
-      <li>Abre Luna de Cuentos e inicia sesión en tu cuenta.</li>
-      <li>Entra en la pantalla de <strong>Cuenta</strong>.</li>
-      <li>Pulsa <strong>Eliminar cuenta</strong>.</li>
-      <li>Confirma. Si tu cuenta usa contraseña, se te pedirá escribirla. Si entraste con Google o con Apple, se te pedirá volver a iniciar sesión con ellos.</li>
-    </ol>
-    <p>El borrado es inmediato y definitivo.</p>
+      <h2>Si ya no tienes la app instalada o no puedes entrar</h2>
+      <p>Escribe a <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> desde el correo con el que te registraste, con el asunto «Eliminar cuenta Luna de Cuentos». Confirmaremos la eliminación por correo en un plazo máximo de 30 días.</p>
 
-    <h2>Si ya no tienes la app instalada o no puedes entrar</h2>
-    <p>Escribe a <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> desde el correo con el que te registraste, con el asunto «Eliminar cuenta Luna de Cuentos». Confirmaremos la eliminación por correo en un plazo máximo de 30 días.</p>
+      <h2>Qué datos se eliminan</h2>
+      <ul>
+        <li>Tu nombre, correo electrónico y contraseña, o los datos vinculados a tu cuenta de Google o de Apple.</li>
+        <li>Los perfiles de niño (nombre y edad) de tu cuenta y de tus dispositivos.</li>
+        <li>Tu historial de cuentos pedidos y tus favoritos.</li>
+        <li>El estado de tu suscripción premium en nuestros servidores.</li>
+        <li>Los datos de tu suscripción en RevenueCat, el servicio que gestiona las suscripciones: al eliminar la cuenta le pedimos que los borre.</li>
+      </ul>
 
-    <h2>Qué datos se eliminan</h2>
-    <ul>
-      <li>Tu nombre, correo electrónico y contraseña, o los datos vinculados a tu cuenta de Google o de Apple.</li>
-      <li>Los perfiles de niño (nombre y edad) de tu cuenta y de tus dispositivos.</li>
-      <li>Tu historial de cuentos pedidos y tus favoritos.</li>
-      <li>El estado de tu suscripción premium en nuestros servidores.</li>
-    </ul>
+      <h2>Qué datos se conservan</h2>
+      <p>Los cuentos de la biblioteca común no contienen datos personales (usan marcadores en lugar de nombres), así que se conservan para otros usuarios. No se guarda ninguna copia con tus datos personales.</p>
 
-    <h2>Qué datos se conservan</h2>
-    <p>Los cuentos de la biblioteca común no contienen datos personales (usan marcadores en lugar de nombres), así que se conservan para otros usuarios. No se guarda ninguna copia con tus datos personales.</p>
+      <h2>Importante: la suscripción premium</h2>
+      <p>Eliminar la cuenta <strong>no cancela</strong> la suscripción. Cancélala en Google Play (Pagos y suscripciones) o en el App Store (Ajustes › tu nombre › Suscripciones) para que no se renueve.</p>
 
-    <h2>Importante: la suscripción premium</h2>
-    <p>Eliminar la cuenta <strong>no cancela</strong> la suscripción. Cancélala en Google Play (Pagos y suscripciones) o en el App Store (Ajustes › tu nombre › Suscripciones) para que no se renueve.</p>
+      <footer>
+        Ver también la <a href="privacidad.html">política de privacidad</a> y los <a href="terminos.html">términos y condiciones de uso</a>.
+      </footer>
+    </section>
+    <section data-lang="en" lang="en" data-title="Luna de Cuentos · Delete your Luna de Cuentos account" hidden>
+      <p class="notice">This translation is provided for information only. If there is any difference, the Spanish version prevails.</p>
+      <h1>Delete your Luna de Cuentos account</h1>
+      <p class="muted">Last updated: October 15, 2026</p>
 
-    <footer>
-      Ver también la <a href="privacidad.html">política de privacidad</a> y los <a href="terminos.html">términos y condiciones de uso</a>.
-    </footer>
-  </section>
+      <p>You can delete your account and all associated data yourself, from the app, without having to contact us.</p>
 
-  <!-- ===================== ENGLISH ===================== -->
-  <section id="en" lang="en">
-    <h1>Delete your Luna de Cuentos account</h1>
-    <p class="muted">Last updated: October 5, 2026</p>
+      <h2>How to delete it from the app</h2>
+      <ol>
+        <li>Open Luna de Cuentos and sign in to your account.</li>
+        <li>Go to the <strong>Account</strong> screen.</li>
+        <li>Tap <strong>Delete account</strong>.</li>
+        <li>Confirm. If your account uses a password, you will be asked to enter it. If you signed in with Google or Apple, you will be asked to sign in with them again.</li>
+      </ol>
+      <p>Deletion is immediate and permanent.</p>
 
-    <p>You can delete your account and all associated data yourself, from the app, without having to contact us.</p>
+      <h2>If you no longer have the app or cannot sign in</h2>
+      <p>Write to <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> from the email you registered with, with the subject “Delete Luna de Cuentos account”. We will confirm the deletion by email within 30 days at most.</p>
 
-    <h2>How to delete it from the app</h2>
-    <ol>
-      <li>Open Luna de Cuentos and sign in to your account.</li>
-      <li>Go to the <strong>Account</strong> screen.</li>
-      <li>Tap <strong>Delete account</strong>.</li>
-      <li>Confirm. If your account uses a password, you will be asked to enter it. If you signed in with Google or Apple, you will be asked to sign in with them again.</li>
-    </ol>
-    <p>Deletion is immediate and permanent.</p>
+      <h2>What data is deleted</h2>
+      <ul>
+        <li>Your name, email and password, or the data linked to your Google or Apple account.</li>
+        <li>The child profiles (name and age) of your account and your devices.</li>
+        <li>Your history of requested stories and your favorites.</li>
+        <li>Your premium subscription status on our servers.</li>
+        <li>Your subscription data at RevenueCat, the service that manages subscriptions: when you delete the account we ask it to delete them.</li>
+      </ul>
 
-    <h2>If you no longer have the app or cannot sign in</h2>
-    <p>Write to <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> from the email you registered with, with the subject “Delete Luna de Cuentos account”. We will confirm the deletion by email within 30 days at most.</p>
+      <h2>What data is kept</h2>
+      <p>Stories in the shared library contain no personal data (they use placeholders instead of names), so they are kept for other users. No copy with your personal data is retained.</p>
 
-    <h2>What data is deleted</h2>
-    <ul>
-      <li>Your name, email and password, or the data linked to your Google or Apple account.</li>
-      <li>The child profiles (name and age) of your account and your devices.</li>
-      <li>Your history of requested stories and your favorites.</li>
-      <li>Your premium subscription status on our servers.</li>
-    </ul>
+      <h2>Important: the premium subscription</h2>
+      <p>Deleting the account <strong>does not cancel</strong> the subscription. Cancel it in Google Play (Payments &amp; subscriptions) or the App Store (Settings › your name › Subscriptions) so it does not renew.</p>
 
-    <h2>What data is kept</h2>
-    <p>Stories in the shared library contain no personal data (they use placeholders instead of names), so they are kept for other users. No copy with your personal data is retained.</p>
+      <footer>
+        See also the <a href="privacidad.html">privacy policy</a> and the <a href="terminos.html">terms and conditions</a>.
+      </footer>
+    </section>
+    <section data-lang="de" lang="de" data-title="Luna de Cuentos · Ihr Luna-de-Cuentos-Konto löschen" hidden>
+      <p class="notice">Diese Übersetzung dient nur zur Information. Bei Abweichungen gilt die spanische Fassung.</p>
+      <h1>Ihr Luna-de-Cuentos-Konto löschen</h1>
+      <p class="muted">Zuletzt aktualisiert: 15. Oktober 2026</p>
 
-    <h2>Important: the premium subscription</h2>
-    <p>Deleting the account <strong>does not cancel</strong> the subscription. Cancel it in Google Play (Payments &amp; subscriptions) or the App Store (Settings › your name › Subscriptions) so it does not renew.</p>
+      <p>Sie können Ihr Konto und alle zugehörigen Daten selbst in der App löschen, ohne uns schreiben zu müssen.</p>
 
-    <footer>
-      See also the <a href="privacidad.html">privacy policy</a> and the <a href="terminos.html">terms and conditions</a>.
-    </footer>
-  </section>
-</div>
+      <h2>So löschen Sie es in der App</h2>
+      <ol>
+        <li>Öffnen Sie Luna de Cuentos und melden Sie sich in Ihrem Konto an.</li>
+        <li>Gehen Sie auf den Bildschirm <strong>Konto</strong>.</li>
+        <li>Tippen Sie auf <strong>Konto löschen</strong>.</li>
+        <li>Bestätigen Sie. Wenn Ihr Konto ein Passwort verwendet, werden Sie aufgefordert, es einzugeben. Wenn Sie sich mit Google oder Apple angemeldet haben, werden Sie aufgefordert, sich erneut damit anzumelden.</li>
+      </ol>
+      <p>Das Löschen erfolgt sofort und endgültig.</p>
+
+      <h2>Wenn Sie die App nicht mehr installiert haben oder sich nicht anmelden können</h2>
+      <p>Schreiben Sie an <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> von der E-Mail-Adresse, mit der Sie sich registriert haben, mit dem Betreff „Luna de Cuentos Konto löschen“. Wir bestätigen die Löschung per E-Mail innerhalb von höchstens 30 Tagen.</p>
+
+      <h2>Welche Daten gelöscht werden</h2>
+      <ul>
+        <li>Ihr Name, Ihre E-Mail-Adresse und Ihr Passwort oder die mit Ihrem Google- oder Apple-Konto verknüpften Daten.</li>
+        <li>Die Kinderprofile (Name und Alter) Ihres Kontos und Ihrer Geräte.</li>
+        <li>Ihr Verlauf der angefragten Geschichten und Ihre Favoriten.</li>
+        <li>Der Status Ihres Premium-Abonnements auf unseren Servern.</li>
+        <li>Ihre Abonnementdaten bei RevenueCat, dem Dienst, der die Abonnements verwaltet: Beim Löschen des Kontos bitten wir ihn, sie zu löschen.</li>
+      </ul>
+
+      <h2>Welche Daten aufbewahrt werden</h2>
+      <p>Geschichten der gemeinsamen Bibliothek enthalten keine personenbezogenen Daten (sie verwenden Platzhalter statt Namen) und bleiben daher für andere Nutzer erhalten. Es wird keine Kopie mit Ihren personenbezogenen Daten aufbewahrt.</p>
+
+      <h2>Wichtig: das Premium-Abonnement</h2>
+      <p>Das Löschen des Kontos <strong>kündigt das Abonnement nicht</strong>. Kündigen Sie es in Google Play (Zahlungen und Abos) oder im App Store (Einstellungen › Ihr Name › Abonnements), damit es sich nicht verlängert.</p>
+
+      <footer>
+        Siehe auch die <a href="privacidad.html">Datenschutzerklärung</a> und die <a href="terminos.html">Nutzungsbedingungen</a>.
+      </footer>
+    </section>
+    <section data-lang="fr" lang="fr" data-title="Luna de Cuentos · Supprimer votre compte Luna de Cuentos" hidden>
+      <p class="notice">Cette traduction est fournie à titre informatif. En cas de divergence, la version espagnole prévaut.</p>
+      <h1>Supprimer votre compte Luna de Cuentos</h1>
+      <p class="muted">Dernière mise à jour : 15 octobre 2026</p>
+
+      <p>Vous pouvez supprimer vous-même votre compte et toutes les données associées, depuis l’application, sans avoir à nous écrire.</p>
+
+      <h2>Comment le supprimer depuis l’application</h2>
+      <ol>
+        <li>Ouvrez Luna de Cuentos et connectez-vous à votre compte.</li>
+        <li>Allez sur l’écran <strong>Compte</strong>.</li>
+        <li>Appuyez sur <strong>Supprimer le compte</strong>.</li>
+        <li>Confirmez. Si votre compte utilise un mot de passe, il vous sera demandé de le saisir. Si vous vous êtes connecté avec Google ou Apple, il vous sera demandé de vous reconnecter avec eux.</li>
+      </ol>
+      <p>La suppression est immédiate et définitive.</p>
+
+      <h2>Si vous n’avez plus l’application ou ne pouvez pas vous connecter</h2>
+      <p>Écrivez à <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> depuis l’adresse e-mail avec laquelle vous vous êtes inscrit, avec l’objet « Supprimer compte Luna de Cuentos ». Nous confirmerons la suppression par e-mail dans un délai maximum de 30 jours.</p>
+
+      <h2>Quelles données sont supprimées</h2>
+      <ul>
+        <li>Votre nom, votre adresse e-mail et votre mot de passe, ou les données liées à votre compte Google ou Apple.</li>
+        <li>Les profils d’enfant (prénom et âge) de votre compte et de vos appareils.</li>
+        <li>Votre historique d’histoires demandées et vos favoris.</li>
+        <li>L’état de votre abonnement premium sur nos serveurs.</li>
+        <li>Les données de votre abonnement chez RevenueCat, le service qui gère les abonnements : lors de la suppression du compte, nous lui demandons de les supprimer.</li>
+      </ul>
+
+      <h2>Quelles données sont conservées</h2>
+      <p>Les histoires de la bibliothèque commune ne contiennent aucune donnée personnelle (elles utilisent des marqueurs à la place des prénoms) ; elles sont donc conservées pour les autres utilisateurs. Aucune copie contenant vos données personnelles n’est conservée.</p>
+
+      <h2>Important : l’abonnement premium</h2>
+      <p>Supprimer le compte <strong>n’annule pas</strong> l’abonnement. Annulez-le dans Google Play (Paiements et abonnements) ou dans l’App Store (Réglages › votre nom › Abonnements) pour qu’il ne se renouvelle pas.</p>
+
+      <footer>
+        Voir aussi la <a href="privacidad.html">politique de confidentialité</a> et les <a href="terminos.html">conditions générales d’utilisation</a>.
+      </footer>
+    </section>
+    <section data-lang="it" lang="it" data-title="Luna de Cuentos · Elimina il tuo account Luna de Cuentos" hidden>
+      <p class="notice">Questa traduzione è fornita solo a titolo informativo. In caso di differenze prevale la versione spagnola.</p>
+      <h1>Elimina il tuo account Luna de Cuentos</h1>
+      <p class="muted">Ultimo aggiornamento: 15 ottobre 2026</p>
+
+      <p>Puoi eliminare il tuo account e tutti i dati associati da solo, dall’app, senza doverci scrivere.</p>
+
+      <h2>Come eliminarlo dall’app</h2>
+      <ol>
+        <li>Apri Luna de Cuentos e accedi al tuo account.</li>
+        <li>Vai alla schermata <strong>Account</strong>.</li>
+        <li>Tocca <strong>Elimina account</strong>.</li>
+        <li>Conferma. Se il tuo account usa una password, ti verrà chiesto di inserirla. Se hai effettuato l’accesso con Google o Apple, ti verrà chiesto di accedere di nuovo con essi.</li>
+      </ol>
+      <p>L’eliminazione è immediata e definitiva.</p>
+
+      <h2>Se non hai più l’app installata o non riesci ad accedere</h2>
+      <p>Scrivi a <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> dall’email con cui ti sei registrato, con l’oggetto «Eliminare account Luna de Cuentos». Confermeremo l’eliminazione via email entro un massimo di 30 giorni.</p>
+
+      <h2>Quali dati vengono eliminati</h2>
+      <ul>
+        <li>Il tuo nome, la tua email e la tua password, oppure i dati collegati al tuo account Google o Apple.</li>
+        <li>I profili dei bambini (nome ed età) del tuo account e dei tuoi dispositivi.</li>
+        <li>La cronologia delle storie richieste e i tuoi preferiti.</li>
+        <li>Lo stato del tuo abbonamento premium sui nostri server.</li>
+        <li>I dati del tuo abbonamento presso RevenueCat, il servizio che gestisce gli abbonamenti: quando elimini l’account gli chiediamo di cancellarli.</li>
+      </ul>
+
+      <h2>Quali dati vengono conservati</h2>
+      <p>Le storie della biblioteca comune non contengono dati personali (usano segnaposto al posto dei nomi), quindi vengono conservate per gli altri utenti. Non viene conservata nessuna copia con i tuoi dati personali.</p>
+
+      <h2>Importante: l’abbonamento premium</h2>
+      <p>Eliminare l’account <strong>non annulla</strong> l’abbonamento. Annullalo su Google Play (Pagamenti e abbonamenti) o sull’App Store (Impostazioni › il tuo nome › Abbonamenti) perché non si rinnovi.</p>
+
+      <footer>
+        Vedi anche l’<a href="privacidad.html">informativa sulla privacy</a> e i <a href="terminos.html">termini e condizioni d’uso</a>.
+      </footer>
+    </section>
+    <section data-lang="pt" lang="pt" data-title="Luna de Cuentos · Eliminar a sua conta Luna de Cuentos" hidden>
+      <p class="notice">Esta tradução é apenas informativa. Em caso de diferenças, prevalece a versão em espanhol.</p>
+      <h1>Eliminar a sua conta Luna de Cuentos</h1>
+      <p class="muted">Última atualização: 15 de outubro de 2026</p>
+
+      <p>Pode eliminar a sua conta e todos os dados associados diretamente na aplicação, sem ter de nos escrever.</p>
+
+      <h2>Como eliminá-la na aplicação</h2>
+      <ol>
+        <li>Abra o Luna de Cuentos e inicie sessão na sua conta.</li>
+        <li>Entre no ecrã <strong>Conta</strong>.</li>
+        <li>Toque em <strong>Eliminar conta</strong>.</li>
+        <li>Confirme. Se a sua conta usar palavra-passe, ser-lhe-á pedido que a escreva. Se iniciou sessão com a Google ou a Apple, ser-lhe-á pedido que volte a iniciar sessão com elas.</li>
+      </ol>
+      <p>A eliminação é imediata e definitiva.</p>
+
+      <h2>Se já não tem a aplicação instalada ou não consegue entrar</h2>
+      <p>Escreva para <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> a partir do email com que se registou, com o assunto «Eliminar conta Luna de Cuentos». Confirmaremos a eliminação por email num prazo máximo de 30 dias.</p>
+
+      <h2>Que dados são eliminados</h2>
+      <ul>
+        <li>O seu nome, email e palavra-passe, ou os dados associados à sua conta Google ou Apple.</li>
+        <li>Os perfis de criança (nome e idade) da sua conta e dos seus dispositivos.</li>
+        <li>O seu histórico de histórias pedidas e as suas favoritas.</li>
+        <li>O estado da sua subscrição premium nos nossos servidores.</li>
+        <li>Os dados da sua subscrição na RevenueCat, o serviço que gere as subscrições: ao eliminar a conta, pedimos-lhe que os apague.</li>
+      </ul>
+
+      <h2>Que dados são conservados</h2>
+      <p>As histórias da biblioteca comum não contêm dados pessoais (usam marcadores em vez de nomes), por isso são conservadas para outros utilizadores. Não é guardada nenhuma cópia com os seus dados pessoais.</p>
+
+      <h2>Importante: a subscrição premium</h2>
+      <p>Eliminar a conta <strong>não cancela</strong> a subscrição. Cancele-a na Google Play (Pagamentos e subscrições) ou na App Store (Definições › o seu nome › Subscrições) para que não se renove.</p>
+
+      <footer>
+        Veja também a <a href="privacidad.html">política de privacidade</a> e os <a href="terminos.html">termos e condições de utilização</a>.
+      </footer>
+    </section>
+    <section data-lang="nl" lang="nl" data-title="Luna de Cuentos · Je Luna de Cuentos-account verwijderen" hidden>
+      <p class="notice">Deze vertaling is alleen ter informatie. Bij verschillen prevaleert de Spaanse versie.</p>
+      <h1>Je Luna de Cuentos-account verwijderen</h1>
+      <p class="muted">Laatst bijgewerkt: 15 oktober 2026</p>
+
+      <p>Je kunt je account en alle bijbehorende gegevens zelf verwijderen, vanuit de app, zonder ons te hoeven schrijven.</p>
+
+      <h2>Hoe je het in de app verwijdert</h2>
+      <ol>
+        <li>Open Luna de Cuentos en log in op je account.</li>
+        <li>Ga naar het scherm <strong>Account</strong>.</li>
+        <li>Tik op <strong>Account verwijderen</strong>.</li>
+        <li>Bevestig. Als je account een wachtwoord gebruikt, word je gevraagd het in te voeren. Als je met Google of Apple bent ingelogd, word je gevraagd opnieuw met hen in te loggen.</li>
+      </ol>
+      <p>Het verwijderen is direct en definitief.</p>
+
+      <h2>Als je de app niet meer hebt of niet kunt inloggen</h2>
+      <p>Schrijf naar <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> vanaf het e-mailadres waarmee je je hebt geregistreerd, met als onderwerp ‘Luna de Cuentos-account verwijderen’. We bevestigen de verwijdering per e-mail binnen maximaal 30 dagen.</p>
+
+      <h2>Welke gegevens worden verwijderd</h2>
+      <ul>
+        <li>Je naam, e-mailadres en wachtwoord, of de gegevens die aan je Google- of Apple-account zijn gekoppeld.</li>
+        <li>De kinderprofielen (naam en leeftijd) van je account en je apparaten.</li>
+        <li>Je geschiedenis van aangevraagde verhalen en je favorieten.</li>
+        <li>De status van je premium-abonnement op onze servers.</li>
+        <li>De gegevens van je abonnement bij RevenueCat, de dienst die de abonnementen beheert: wanneer je het account verwijdert, vragen we hen ze te wissen.</li>
+      </ul>
+
+      <h2>Welke gegevens worden bewaard</h2>
+      <p>Verhalen in de gedeelde bibliotheek bevatten geen persoonsgegevens (ze gebruiken plaatshouders in plaats van namen) en blijven dus bewaard voor andere gebruikers. Er wordt geen kopie met je persoonsgegevens bewaard.</p>
+
+      <h2>Belangrijk: het premium-abonnement</h2>
+      <p>Het verwijderen van het account <strong>zegt het abonnement niet op</strong>. Zeg het op in Google Play (Betalingen en abonnementen) of in de App Store (Instellingen › je naam › Abonnementen) zodat het niet wordt verlengd.</p>
+
+      <footer>
+        Zie ook het <a href="privacidad.html">privacybeleid</a> en de <a href="terminos.html">algemene voorwaarden</a>.
+      </footer>
+    </section>
+    <section data-lang="pl" lang="pl" data-title="Luna de Cuentos · Usuń swoje konto Luna de Cuentos" hidden>
+      <p class="notice">To tłumaczenie ma charakter wyłącznie informacyjny. W razie rozbieżności obowiązuje wersja hiszpańska.</p>
+      <h1>Usuń swoje konto Luna de Cuentos</h1>
+      <p class="muted">Ostatnia aktualizacja: 15 października 2026</p>
+
+      <p>Możesz sam usunąć konto i wszystkie powiązane dane z poziomu aplikacji, bez konieczności pisania do nas.</p>
+
+      <h2>Jak usunąć konto w aplikacji</h2>
+      <ol>
+        <li>Otwórz Luna de Cuentos i zaloguj się na swoje konto.</li>
+        <li>Wejdź na ekran <strong>Konto</strong>.</li>
+        <li>Dotknij <strong>Usuń konto</strong>.</li>
+        <li>Potwierdź. Jeśli Twoje konto ma hasło, zostaniesz poproszony o jego wpisanie. Jeśli zalogowałeś się przez Google lub Apple, zostaniesz poproszony o ponowne zalogowanie się za ich pomocą.</li>
+      </ol>
+      <p>Usunięcie jest natychmiastowe i ostateczne.</p>
+
+      <h2>Jeśli nie masz już zainstalowanej aplikacji lub nie możesz się zalogować</h2>
+      <p>Napisz na <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> z adresu e-mail, którym się zarejestrowano, z tematem „Usunięcie konta Luna de Cuentos”. Potwierdzimy usunięcie e-mailem w ciągu maksymalnie 30 dni.</p>
+
+      <h2>Jakie dane są usuwane</h2>
+      <ul>
+        <li>Twoje imię i nazwisko, e-mail i hasło lub dane powiązane z Twoim kontem Google albo Apple.</li>
+        <li>Profile dzieci (imię i wiek) z Twojego konta i urządzeń.</li>
+        <li>Historia zamówionych bajek i ulubione.</li>
+        <li>Stan Twojej subskrypcji premium na naszych serwerach.</li>
+        <li>Dane Twojej subskrypcji w RevenueCat, usłudze zarządzającej subskrypcjami: po usunięciu konta prosimy ją o ich usunięcie.</li>
+      </ul>
+
+      <h2>Jakie dane są zachowywane</h2>
+      <p>Bajki ze wspólnej biblioteki nie zawierają danych osobowych (mają znaczniki zamiast imion), więc są zachowywane dla innych użytkowników. Nie jest przechowywana żadna kopia z Twoimi danymi osobowymi.</p>
+
+      <h2>Ważne: subskrypcja premium</h2>
+      <p>Usunięcie konta <strong>nie anuluje</strong> subskrypcji. Anuluj ją w Google Play (Płatności i subskrypcje) lub w App Store (Ustawienia › Twoje imię i nazwisko › Subskrypcje), aby się nie odnowiła.</p>
+
+      <footer>
+        Zobacz także <a href="privacidad.html">politykę prywatności</a> i <a href="terminos.html">regulamin korzystania</a>.
+      </footer>
+    </section>
+    <section data-lang="ro" lang="ro" data-title="Luna de Cuentos · Șterge-ți contul Luna de Cuentos" hidden>
+      <p class="notice">Această traducere are doar scop informativ. În caz de diferențe, prevalează versiunea în spaniolă.</p>
+      <h1>Șterge-ți contul Luna de Cuentos</h1>
+      <p class="muted">Ultima actualizare: 15 octombrie 2026</p>
+
+      <p>Îți poți șterge singur contul și toate datele asociate, din aplicație, fără să trebuiască să ne scrii.</p>
+
+      <h2>Cum îl ștergi din aplicație</h2>
+      <ol>
+        <li>Deschide Luna de Cuentos și autentifică-te în contul tău.</li>
+        <li>Intră pe ecranul <strong>Cont</strong>.</li>
+        <li>Atinge <strong>Șterge contul</strong>.</li>
+        <li>Confirmă. Dacă contul tău folosește parolă, ți se va cere să o scrii. Dacă te-ai autentificat cu Google sau Apple, ți se va cere să te autentifici din nou cu ele.</li>
+      </ol>
+      <p>Ștergerea este imediată și definitivă.</p>
+
+      <h2>Dacă nu mai ai aplicația instalată sau nu poți intra</h2>
+      <p>Scrie la <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> de pe adresa de e-mail cu care te-ai înregistrat, cu subiectul „Ștergere cont Luna de Cuentos”. Vom confirma ștergerea prin e-mail într-un termen de maximum 30 de zile.</p>
+
+      <h2>Ce date se șterg</h2>
+      <ul>
+        <li>Numele, e-mailul și parola ta, sau datele legate de contul tău Google ori Apple.</li>
+        <li>Profilurile copiilor (nume și vârstă) ale contului și ale dispozitivelor tale.</li>
+        <li>Istoricul poveștilor cerute și favoritele tale.</li>
+        <li>Starea abonamentului tău premium pe serverele noastre.</li>
+        <li>Datele abonamentului tău la RevenueCat, serviciul care gestionează abonamentele: la ștergerea contului îi cerem să le șteargă.</li>
+      </ul>
+
+      <h2>Ce date se păstrează</h2>
+      <p>Poveștile din biblioteca comună nu conțin date personale (folosesc marcatori în loc de nume), așa că se păstrează pentru alți utilizatori. Nu se păstrează nicio copie cu datele tale personale.</p>
+
+      <h2>Important: abonamentul premium</h2>
+      <p>Ștergerea contului <strong>nu anulează</strong> abonamentul. Anulează-l în Google Play (Plăți și abonamente) sau în App Store (Setări › numele tău › Abonamente) pentru ca să nu se reînnoiască.</p>
+
+      <footer>
+        Vezi și <a href="privacidad.html">politica de confidențialitate</a> și <a href="terminos.html">termenii și condițiile de utilizare</a>.
+      </footer>
+    </section>
+    <section data-lang="ru" lang="ru" data-title="Luna de Cuentos · Удаление вашей учётной записи Luna de Cuentos" hidden>
+      <p class="notice">Этот перевод приводится только для информации. При расхождениях преимущество имеет испанская версия.</p>
+      <h1>Удаление вашей учётной записи Luna de Cuentos</h1>
+      <p class="muted">Последнее обновление: 15 октября 2026 г.</p>
+
+      <p>Вы можете сами удалить свою учётную запись и все связанные данные из приложения, не обращаясь к нам.</p>
+
+      <h2>Как удалить её в приложении</h2>
+      <ol>
+        <li>Откройте Luna de Cuentos и войдите в свою учётную запись.</li>
+        <li>Перейдите на экран <strong>Учётная запись</strong>.</li>
+        <li>Нажмите <strong>Удалить учётную запись</strong>.</li>
+        <li>Подтвердите. Если ваша учётная запись использует пароль, вас попросят его ввести. Если вы входили через Google или Apple, вас попросят снова войти через них.</li>
+      </ol>
+      <p>Удаление происходит немедленно и безвозвратно.</p>
+
+      <h2>Если приложение уже не установлено или вы не можете войти</h2>
+      <p>Напишите на <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> с адреса электронной почты, с которого вы регистрировались, указав тему «Удаление учётной записи Luna de Cuentos». Мы подтвердим удаление по электронной почте не позднее чем через 30 дней.</p>
+
+      <h2>Какие данные удаляются</h2>
+      <ul>
+        <li>Ваше имя, адрес электронной почты и пароль или данные, связанные с вашей учётной записью Google или Apple.</li>
+        <li>Профили детей (имя и возраст) вашей учётной записи и ваших устройств.</li>
+        <li>История заказанных сказок и ваше избранное.</li>
+        <li>Статус вашей премиум-подписки на наших серверах.</li>
+        <li>Данные вашей подписки в RevenueCat, сервисе управления подписками: при удалении учётной записи мы просим его удалить их.</li>
+      </ul>
+
+      <h2>Какие данные сохраняются</h2>
+      <p>Сказки общей библиотеки не содержат персональных данных (в них вместо имён используются метки), поэтому они сохраняются для других пользователей. Копии с вашими персональными данными не хранятся.</p>
+
+      <h2>Важно: премиум-подписка</h2>
+      <p>Удаление учётной записи <strong>не отменяет</strong> подписку. Отмените её в Google Play (Платежи и подписки) или в App Store (Настройки › ваше имя › Подписки), чтобы она не продлевалась.</p>
+
+      <footer>
+        См. также <a href="privacidad.html">политику конфиденциальности</a> и <a href="terminos.html">условия использования</a>.
+      </footer>
+    </section>
+    <section data-lang="zh" lang="zh-Hans" data-title="Luna de Cuentos · 删除您的 Luna de Cuentos 账户" hidden>
+      <p class="notice">本译文仅供参考。如有差异，以西班牙语版本为准。</p>
+      <h1>删除您的 Luna de Cuentos 账户</h1>
+      <p class="muted">最近更新：2026 年 10 月 15 日</p>
+
+      <p>您可以直接在应用中自行删除账户及所有相关数据，无需联系我们。</p>
+
+      <h2>如何在应用中删除</h2>
+      <ol>
+        <li>打开 Luna de Cuentos 并登录您的账户。</li>
+        <li>进入<strong>账户</strong>页面。</li>
+        <li>点按<strong>删除账户</strong>。</li>
+        <li>确认。如果您的账户使用密码，系统会要求您输入密码。如果您使用 Google 或 Apple 登录，系统会要求您再次使用它们登录。</li>
+      </ol>
+      <p>删除会立即生效且无法恢复。</p>
+
+      <h2>如果您已不再安装本应用或无法登录</h2>
+      <p>请使用您注册时的电子邮箱发送邮件至 <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>，主题为“删除 Luna de Cuentos 账户”。我们将在最多 30 天内通过电子邮件确认删除。</p>
+
+      <h2>哪些数据会被删除</h2>
+      <ul>
+        <li>您的姓名、电子邮箱和密码，或与您的 Google 或 Apple 账户关联的数据。</li>
+        <li>您的账户和设备上的孩子档案（名字和年龄）。</li>
+        <li>您请求的故事的历史记录和您的收藏。</li>
+        <li>您在我们服务器上的高级订阅状态。</li>
+        <li>您在 RevenueCat（管理订阅的服务）中的订阅数据：删除账户时，我们会请求其删除这些数据。</li>
+      </ul>
+
+      <h2>哪些数据会被保留</h2>
+      <p>公共故事库中的故事不包含个人数据（使用占位符而非名字），因此会为其他用户保留。我们不会保留任何包含您个人数据的副本。</p>
+
+      <h2>重要：高级订阅</h2>
+      <p>删除账户<strong>不会取消</strong>订阅。请在 Google Play（付款和订阅）或 App Store（设置 › 您的姓名 › 订阅）中取消，以免其续订。</p>
+
+      <footer>
+        另请参阅<a href="privacidad.html">隐私政策</a>和<a href="terminos.html">使用条款</a>。
+      </footer>
+    </section>
+    <section data-lang="ar" lang="ar" dir="rtl" data-title="Luna de Cuentos · حذف حسابك في Luna de Cuentos" hidden>
+      <p class="notice">هذه الترجمة لأغراض إعلامية فقط. وفي حال وجود اختلاف، تُعتمد النسخة الإسبانية.</p>
+      <h1>حذف حسابك في Luna de Cuentos</h1>
+      <p class="muted">آخر تحديث: 15 أكتوبر 2026</p>
+
+      <p>يمكنك حذف حسابك وجميع البيانات المرتبطة به بنفسك من التطبيق، دون الحاجة إلى مراسلتنا.</p>
+
+      <h2>كيف تحذفه من التطبيق</h2>
+      <ol>
+        <li>افتح Luna de Cuentos وسجّل الدخول إلى حسابك.</li>
+        <li>ادخل إلى شاشة <strong>الحساب</strong>.</li>
+        <li>اضغط على <strong>حذف الحساب</strong>.</li>
+        <li>أكّد. إذا كان حسابك يستخدم كلمة مرور فسيُطلب منك كتابتها. وإذا دخلت عبر Google أو Apple فسيُطلب منك تسجيل الدخول بهما مرة أخرى.</li>
+      </ol>
+      <p>الحذف فوري ونهائي.</p>
+
+      <h2>إذا لم يعد التطبيق مثبّتًا لديك أو لا تستطيع الدخول</h2>
+      <p>راسل <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a> من البريد الإلكتروني الذي سجّلت به، بعنوان «حذف حساب Luna de Cuentos». سنؤكد الحذف عبر البريد الإلكتروني خلال 30 يومًا على الأكثر.</p>
+
+      <h2>ما البيانات التي تُحذف</h2>
+      <ul>
+        <li>اسمك وبريدك الإلكتروني وكلمة مرورك، أو البيانات المرتبطة بحسابك في Google أو Apple.</li>
+        <li>ملفات الأطفال (الاسم والعمر) في حسابك وأجهزتك.</li>
+        <li>سجل القصص التي طلبتها وقصصك المفضلة.</li>
+        <li>حالة اشتراك بريميوم الخاص بك على خوادمنا.</li>
+        <li>بيانات اشتراكك لدى RevenueCat، الخدمة التي تدير الاشتراكات: عند حذف الحساب نطلب منها حذفها.</li>
+      </ul>
+
+      <h2>ما البيانات التي يُحتفظ بها</h2>
+      <p>القصص في المكتبة المشتركة لا تحتوي على بيانات شخصية (تستخدم رموزًا بديلة بدل الأسماء)، لذلك يُحتفظ بها للمستخدمين الآخرين. ولا يُحتفظ بأي نسخة تحتوي على بياناتك الشخصية.</p>
+
+      <h2>مهم: اشتراك بريميوم</h2>
+      <p>حذف الحساب <strong>لا يلغي</strong> الاشتراك. ألغِه في Google Play (المدفوعات والاشتراكات) أو في App Store (الإعدادات › اسمك › الاشتراكات) حتى لا يتجدد.</p>
+
+      <footer>
+        راجع أيضًا <a href="privacidad.html">سياسة الخصوصية</a> و<a href="terminos.html">شروط الاستخدام</a>.
+      </footer>
+    </section>
+  </div>
 </main>
+<script>
+(function () {
+  var codes = ["es","en","de","fr","it","pt","nl","pl","ro","ru","zh","ar"];
+  var KEY = 'luna-legal-lang';
+
+  function normalize(value) {
+    var code = String(value || '').toLowerCase().split(/[-_]/)[0];
+    return codes.indexOf(code) >= 0 ? code : null;
+  }
+
+  function stored() {
+    try { return normalize(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  function initial() {
+    var fromQuery = normalize(new URLSearchParams(location.search).get('lang'));
+    if (fromQuery) return fromQuery;
+    var fromHash = normalize(location.hash.slice(1));
+    if (fromHash) return fromHash;
+    var fromStore = stored();
+    if (fromStore) return fromStore;
+    var preferred = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    for (var i = 0; i < preferred.length; i++) {
+      var fromBrowser = normalize(preferred[i]);
+      if (fromBrowser) return fromBrowser;
+    }
+    return 'es';
+  }
+
+  function show(code, remember) {
+    var sections = document.querySelectorAll('main section[data-lang]');
+    for (var i = 0; i < sections.length; i++) {
+      var section = sections[i];
+      var active = section.getAttribute('data-lang') === code;
+      section.hidden = !active;
+      if (active) {
+        document.documentElement.lang = section.getAttribute('lang');
+        document.title = section.getAttribute('data-title');
+      }
+    }
+    document.getElementById('lang').value = code;
+    var links = document.querySelectorAll('main a[href]');
+    for (var j = 0; j < links.length; j++) {
+      var href = links[j].getAttribute('href');
+      if (/^[a-z-]+\.html/.test(href)) links[j].setAttribute('href', href.split('?')[0] + '?lang=' + code);
+    }
+    if (remember) {
+      try { localStorage.setItem(KEY, code); } catch (e) {}
+      if (history.replaceState) history.replaceState(null, '', location.pathname + '?lang=' + code);
+    }
+  }
+
+  document.getElementById('lang').addEventListener('change', function (event) {
+    show(event.target.value, true);
+  });
+  show(initial(), false);
+})();
+</script>
 </body>
 </html>
