@@ -16,8 +16,13 @@
     .brand { text-align: center; padding: 8px 0 20px; }
     .brand img { width: 140px; height: auto; }
     .card { background: var(--card); border-radius: 24px; padding: 8px 28px 28px; box-shadow: 0 12px 40px rgba(20, 10, 60, .35); }
-    nav { text-align: center; margin-bottom: 8px; }
-    nav a { display: inline-block; margin: 4px 6px; padding: 6px 16px; border-radius: 999px; background: #efeaff; text-decoration: none; font-weight: 600; font-size: .9rem; }
+    .langbar { display: flex; justify-content: flex-end; padding-top: 16px; }
+    .langbar label { display: inline-flex; align-items: center; gap: 8px; }
+    select#lang { font: inherit; font-weight: 600; padding: 6px 14px; border-radius: 999px; border: 1px solid var(--line); background: #efeaff; color: var(--fg); }
+    section[hidden] { display: none; }
+    section[dir="rtl"] { text-align: right; }
+    section[dir="rtl"] th, section[dir="rtl"] td { text-align: right; }
+    .notice { margin: 16px 0 0; padding: 10px 14px; border: 1px solid #f1d9a8; border-radius: 12px; background: #fff7e6; color: #6b4e00; font-size: .9rem; }
     h1 { font-size: 1.9rem; margin: 24px 0 4px; color: #2D1B69; }
     h2 { font-size: 1.2rem; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--line); color: #4b2fb0; }
     a { color: var(--accent); }
@@ -35,128 +40,797 @@
 <main>
   <header class="brand"><img src="logo.png" alt="Luna de Cuentos"></header>
   <div class="card">
-  <nav><a href="#es">Español</a><a href="#en">English</a></nav>
+    <div class="langbar"><label>🌐 <select id="lang" aria-label="Idioma / Language"><option value="es">Español</option><option value="en">English</option><option value="de">Deutsch</option><option value="fr">Français</option><option value="it">Italiano</option><option value="pt">Português</option><option value="nl">Nederlands</option><option value="pl">Polski</option><option value="ro">Română</option><option value="ru">Русский</option><option value="zh">中文</option><option value="ar">العربية</option></select></label></div>
+    <section data-lang="es" lang="es" data-title="Luna de Cuentos · Política de privacidad">
+      <h1>Política de privacidad</h1>
+      <p class="muted">Aplicación «Luna de Cuentos» · Última actualización: 15 de octubre de 2026</p>
 
-  <!-- ===================== ESPAÑOL ===================== -->
-  <section id="es">
-    <h1>Política de privacidad</h1>
-    <p class="muted">Aplicación «Luna de Cuentos» · Última actualización: 5 de octubre de 2026</p>
+      <p>Luna de Cuentos genera cuentos infantiles personalizados con IA. Está pensada para que la usen personas adultas con niños, y por eso recogemos los datos mínimos imprescindibles. Esta política explica qué datos tratamos, para qué, con quién los compartimos y qué derechos tienes.</p>
+      <p><strong>Responsable del tratamiento:</strong> Roberto Sanz Fernández, España. Contacto: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
 
-    <p>Luna de Cuentos genera cuentos infantiles personalizados con IA. Está pensada para que la usen personas adultas con niños, y por eso recogemos los datos mínimos imprescindibles. Esta política explica qué datos tratamos, para qué, con quién los compartimos y qué derechos tienes.</p>
-    <p><strong>Responsable del tratamiento:</strong> Roberto Sanz Fernández, España. Contacto: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+      <h2>1. Qué datos tratamos</h2>
+      <table>
+        <tr><th>Dato</th><th>Para qué</th></tr>
+        <tr><td>Identificador técnico del dispositivo (un código aleatorio que genera la app, no es el IMEI ni el identificador publicitario)</td><td>Reconocer tu dispositivo sin pedirte una cuenta y guardar tus perfiles de niño e historial</td></tr>
+        <tr><td>Nombre y edad de los niños que añadas (perfiles)</td><td>Personalizar los cuentos y elegir el contenido adecuado a la edad. No pedimos fecha de nacimiento ni fotos</td></tr>
+        <tr><td>Temática, duración e idioma de los cuentos que pides, cuentos recibidos y favoritos</td><td>Entregarte el cuento, mostrar tu historial y evitar repetirte cuentos</td></tr>
+        <tr><td>Nombre, correo electrónico y contraseña (opcional, solo si creas cuenta)</td><td>Iniciar sesión, recuperar la contraseña y conservar tus datos al cambiar de móvil. La contraseña se guarda cifrada, nunca en texto plano</td></tr>
+        <tr><td>Datos básicos de tu cuenta de Google o de Apple: identificador, nombre y correo (opcional, solo si inicias sesión con ellos)</td><td>Crear tu cuenta e iniciar sesión. Si usas Apple, puedes ocultar tu correo real</td></tr>
+        <tr><td>Estado de la suscripción premium (activa o no)</td><td>Quitar los anuncios mientras la suscripción esté activa. Los datos de pago los gestiona la tienda, nosotros no los vemos</td></tr>
+        <tr><td>Identificador de tu cuenta (un número, sin tu nombre ni tu correo) o un identificador anónimo si aún no tienes cuenta, datos técnicos básicos del dispositivo (como el sistema operativo y la versión de la app) y los datos de la compra de la suscripción (producto, fechas y estado)</td><td>Gestionar la suscripción con RevenueCat, que comprueba la compra con Google Play o Apple y nos confirma si está activa</td></tr>
+      </table>
+      <p>No recogemos ubicación, contactos, fotos, micrófono ni cámara. No usamos tu identificador publicitario.</p>
 
-    <h2>1. Qué datos tratamos</h2>
-    <table>
-      <tr><th>Dato</th><th>Para qué</th></tr>
-      <tr><td>Identificador técnico del dispositivo (un código aleatorio que genera la app, no es el IMEI ni el identificador publicitario)</td><td>Reconocer tu dispositivo sin pedirte una cuenta y guardar tus perfiles de niño e historial</td></tr>
-      <tr><td>Nombre y edad de los niños que añadas (perfiles)</td><td>Personalizar los cuentos y elegir el contenido adecuado a la edad. No pedimos fecha de nacimiento ni fotos</td></tr>
-      <tr><td>Temática, duración e idioma de los cuentos que pides, cuentos recibidos y favoritos</td><td>Entregarte el cuento, mostrar tu historial y evitar repetirte cuentos</td></tr>
-      <tr><td>Nombre, correo electrónico y contraseña (opcional, solo si creas cuenta)</td><td>Iniciar sesión, recuperar la contraseña y conservar tus datos al cambiar de móvil. La contraseña se guarda cifrada, nunca en texto plano</td></tr>
-      <tr><td>Datos básicos de tu cuenta de Google o de Apple: identificador, nombre y correo (opcional, solo si inicias sesión con ellos)</td><td>Crear tu cuenta e iniciar sesión. Si usas Apple, puedes ocultar tu correo real</td></tr>
-      <tr><td>Estado de la suscripción premium (activa o no)</td><td>Quitar los anuncios mientras la suscripción esté activa. Los datos de pago los gestiona la tienda, nosotros no los vemos</td></tr>
-    </table>
-    <p>No recogemos ubicación, contactos, fotos, micrófono ni cámara. No usamos tu identificador publicitario.</p>
+      <h2>2. Cuentos generados con IA</h2>
+      <p>Para crear un cuento enviamos a Google Gemini la temática, la duración, el idioma y el rango de edad. <strong>El nombre de los niños no se envía</strong>: el cuento se genera con marcadores y el nombre se pone después, dentro de tu dispositivo y de nuestros servidores. Si escribes una temática libre, ese texto sí llega al proveedor de IA, así que no incluyas en ella datos personales.</p>
 
-    <h2>2. Cuentos generados con IA</h2>
-    <p>Para crear un cuento enviamos a Google Gemini la temática, la duración, el idioma y el rango de edad. <strong>El nombre de los niños no se envía</strong>: el cuento se genera con marcadores y el nombre se pone después, dentro de tu dispositivo y de nuestros servidores. Si escribes una temática libre, ese texto sí llega al proveedor de IA, así que no incluyas en ella datos personales.</p>
+      <h2>3. Anuncios</h2>
+      <p>En el plan gratuito se muestran anuncios de Google AdMob. Como la app está dirigida a un público familiar, los anuncios están configurados para tratamiento infantil: <strong>sin publicidad personalizada, sin seguimiento del comportamiento y sin uso del identificador publicitario</strong>. No hacemos seguimiento (tracking) entre apps o sitios web.</p>
 
-    <h2>3. Anuncios</h2>
-    <p>En el plan gratuito se muestran anuncios de Google AdMob. Como la app está dirigida a un público familiar, los anuncios están configurados para tratamiento infantil: <strong>sin publicidad personalizada, sin seguimiento del comportamiento y sin uso del identificador publicitario</strong>. No hacemos seguimiento (tracking) entre apps o sitios web.</p>
+      <h2>4. Con quién compartimos los datos</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> generación de los cuentos, según el punto 2.</li>
+        <li><strong>Google AdMob:</strong> mostrar anuncios no personalizados en el plan gratuito.</li>
+        <li><strong>Google Play / Apple App Store:</strong> gestión de la suscripción y del pago.</li>
+        <li><strong>RevenueCat, Inc. (Estados Unidos):</strong> servicio que gestiona y valida las suscripciones. Recibe el identificador de tu cuenta (o uno anónimo), datos técnicos básicos del dispositivo y los datos de la compra; no recibe tu nombre, tu correo ni los datos de los niños. Las transferencias fuera del Espacio Económico Europeo se amparan en garantías adecuadas, como las cláusulas contractuales tipo de la Comisión Europea.</li>
+        <li><strong>Proveedor de alojamiento del servidor:</strong> almacena los datos de la app en la Unión Europea.</li>
+        <li><strong>Servicio de correo:</strong> para enviarte los mensajes de la cuenta, como la recuperación de la contraseña.</li>
+      </ul>
+      <p>No vendemos tus datos ni los cedemos a terceros con fines publicitarios.</p>
 
-    <h2>4. Con quién compartimos los datos</h2>
-    <ul>
-      <li><strong>Google (Gemini):</strong> generación de los cuentos, según el punto 2.</li>
-      <li><strong>Google AdMob:</strong> mostrar anuncios no personalizados en el plan gratuito.</li>
-      <li><strong>Google Play / Apple App Store:</strong> gestión de la suscripción y del pago.</li>
-      <li><strong>Proveedor de alojamiento del servidor:</strong> almacena los datos de la app en la Unión Europea.</li>
-      <li><strong>Servicio de correo:</strong> para enviarte los mensajes de la cuenta, como la recuperación de la contraseña.</li>
-    </ul>
-    <p>No vendemos tus datos ni los cedemos a terceros con fines publicitarios.</p>
+      <h2>5. Base legal</h2>
+      <p>Tratamos los datos para cumplir el servicio que nos pides (ejecución del contrato), por nuestro interés legítimo en mantenerlo seguro y, cuando proceda, con tu consentimiento. La app está dirigida a adultos: los datos de los niños los introduce y controla la persona adulta responsable.</p>
 
-    <h2>5. Base legal</h2>
-    <p>Tratamos los datos para cumplir el servicio que nos pides (ejecución del contrato), por nuestro interés legítimo en mantenerlo seguro y, cuando proceda, con tu consentimiento. La app está dirigida a adultos: los datos de los niños los introduce y controla la persona adulta responsable.</p>
+      <h2>6. Cuánto tiempo guardamos los datos</h2>
+      <p>Mientras uses la app o tengas la cuenta activa. Si borras tu cuenta, eliminamos tus datos personales, tus perfiles de niño y tu historial. Los cuentos de la biblioteca común no contienen datos personales (llevan marcadores en vez de nombres) y pueden conservarse. Al eliminar tu cuenta también pedimos a RevenueCat que borre los datos que tiene sobre ti.</p>
 
-    <h2>6. Cuánto tiempo guardamos los datos</h2>
-    <p>Mientras uses la app o tengas la cuenta activa. Si borras tu cuenta, eliminamos tus datos personales, tus perfiles de niño y tu historial. Los cuentos de la biblioteca común no contienen datos personales (llevan marcadores en vez de nombres) y pueden conservarse.</p>
+      <h2>7. Tus derechos y cómo eliminar tu cuenta</h2>
+      <p>Tienes derecho a acceder a tus datos, rectificarlos, suprimirlos, limitar u oponerte a su tratamiento y a la portabilidad. Para ejercerlos, escribe a <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. También puedes reclamar ante la autoridad de control (en España, la Agencia Española de Protección de Datos, <a href="https://www.aepd.es">aepd.es</a>).</p>
+      <p><strong>Puedes eliminar tu cuenta y todos tus datos tú mismo desde la app</strong>, en la pantalla de cuenta. Los pasos están en la página <a href="eliminar-cuenta.html">Eliminar cuenta</a>. Borrar la cuenta no cancela la suscripción premium: debes cancelarla en Google Play o en el App Store.</p>
 
-    <h2>7. Tus derechos y cómo eliminar tu cuenta</h2>
-    <p>Tienes derecho a acceder a tus datos, rectificarlos, suprimirlos, limitar u oponerte a su tratamiento y a la portabilidad. Para ejercerlos, escribe a <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. También puedes reclamar ante la autoridad de control (en España, la Agencia Española de Protección de Datos, <a href="https://www.aepd.es">aepd.es</a>).</p>
-    <p><strong>Puedes eliminar tu cuenta y todos tus datos tú mismo desde la app</strong>, en la pantalla de cuenta. Los pasos están en la página <a href="eliminar-cuenta.html">Eliminar cuenta</a>. Borrar la cuenta no cancela la suscripción premium: debes cancelarla en Google Play o en el App Store.</p>
+      <h2>8. Menores de edad</h2>
+      <p>La app está pensada para que la usen madres, padres, tutores o educadores con los niños, no para que los niños se registren por su cuenta. No pedimos a los niños datos de contacto ni los contactamos. Si crees que un menor ha creado una cuenta sin permiso, escríbenos y la eliminaremos.</p>
 
-    <h2>8. Menores de edad</h2>
-    <p>La app está pensada para que la usen madres, padres, tutores o educadores con los niños, no para que los niños se registren por su cuenta. No pedimos a los niños datos de contacto ni los contactamos. Si crees que un menor ha creado una cuenta sin permiso, escríbenos y la eliminaremos.</p>
+      <h2>9. Seguridad</h2>
+      <p>Las comunicaciones entre la app y el servidor van cifradas, las contraseñas se guardan cifradas y limitamos el acceso a los datos. Ningún sistema es infalible, pero trabajamos para protegerlos.</p>
 
-    <h2>9. Seguridad</h2>
-    <p>Las comunicaciones entre la app y el servidor van cifradas, las contraseñas se guardan cifradas y limitamos el acceso a los datos. Ningún sistema es infalible, pero trabajamos para protegerlos.</p>
+      <h2>10. Cambios en esta política</h2>
+      <p>Si la política cambia de forma importante, lo avisaremos dentro de la app y actualizaremos la fecha de arriba.</p>
 
-    <h2>10. Cambios en esta política</h2>
-    <p>Si la política cambia de forma importante, lo avisaremos dentro de la app y actualizaremos la fecha de arriba.</p>
+      <footer>
+        Ver también los <a href="terminos.html">términos y condiciones de uso</a> y cómo <a href="eliminar-cuenta.html">eliminar tu cuenta</a>.
+      </footer>
+    </section>
+    <section data-lang="en" lang="en" data-title="Luna de Cuentos · Privacy Policy" hidden>
+      <p class="notice">This translation is provided for information only. If there is any difference, the Spanish version prevails.</p>
+      <h1>Privacy Policy</h1>
+      <p class="muted">“Luna de Cuentos” app · Last updated: October 15, 2026</p>
 
-    <footer>
-      Ver también los <a href="terminos.html">términos y condiciones de uso</a> y cómo <a href="eliminar-cuenta.html">eliminar tu cuenta</a>.
-    </footer>
-  </section>
+      <p>Luna de Cuentos generates personalized children’s stories with AI. It is meant to be used by adults together with children, so we collect only the minimum data needed. This policy explains what data we process, why, who we share it with and what rights you have.</p>
+      <p><strong>Data controller:</strong> Roberto Sanz Fernández, Spain. Contact: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
 
-  <!-- ===================== ENGLISH ===================== -->
-  <section id="en" lang="en">
-    <h1>Privacy Policy</h1>
-    <p class="muted">“Luna de Cuentos” app · Last updated: October 5, 2026</p>
+      <h2>1. What data we process</h2>
+      <table>
+        <tr><th>Data</th><th>Purpose</th></tr>
+        <tr><td>Technical device identifier (a random code generated by the app; not the IMEI or the advertising ID)</td><td>Recognize your device without requiring an account and keep your child profiles and history</td></tr>
+        <tr><td>Name and age of the children you add (profiles)</td><td>Personalize stories and choose age-appropriate content. We do not ask for dates of birth or photos</td></tr>
+        <tr><td>Theme, length and language of the stories you request, stories received and favorites</td><td>Deliver the story, show your history and avoid repeating stories</td></tr>
+        <tr><td>Name, email and password (optional, only if you create an account)</td><td>Sign in, recover your password and keep your data when changing phones. The password is stored encrypted, never in plain text</td></tr>
+        <tr><td>Basic data from your Google or Apple account: identifier, name and email (optional, only if you sign in with them)</td><td>Create your account and sign in. With Apple you can hide your real email</td></tr>
+        <tr><td>Premium subscription status (active or not)</td><td>Remove ads while the subscription is active. Payment details are handled by the store; we do not see them</td></tr>
+        <tr><td>Your account identifier (a number, without your name or email) or an anonymous identifier if you do not have an account yet, basic technical device data (such as the operating system and app version) and the subscription purchase data (product, dates and status)</td><td>Manage the subscription with RevenueCat, which checks the purchase with Google Play or Apple and confirms to us whether it is active</td></tr>
+      </table>
+      <p>We do not collect location, contacts, photos, microphone or camera data. We do not use your advertising identifier.</p>
 
-    <p>Luna de Cuentos generates personalized children’s stories with AI. It is meant to be used by adults together with children, so we collect only the minimum data needed. This policy explains what data we process, why, who we share it with and what rights you have.</p>
-    <p><strong>Data controller:</strong> Roberto Sanz Fernández, Spain. Contact: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+      <h2>2. AI-generated stories</h2>
+      <p>To create a story we send Google Gemini the theme, length, language and age range. <strong>Children’s names are not sent</strong>: the story is generated with placeholders and the name is inserted afterwards, on your device and on our servers. If you type a free-form theme, that text does reach the AI provider, so do not include personal data in it.</p>
 
-    <h2>1. What data we process</h2>
-    <table>
-      <tr><th>Data</th><th>Purpose</th></tr>
-      <tr><td>Technical device identifier (a random code generated by the app; not the IMEI or the advertising ID)</td><td>Recognize your device without requiring an account and keep your child profiles and history</td></tr>
-      <tr><td>Name and age of the children you add (profiles)</td><td>Personalize stories and choose age-appropriate content. We do not ask for dates of birth or photos</td></tr>
-      <tr><td>Theme, length and language of the stories you request, stories received and favorites</td><td>Deliver the story, show your history and avoid repeating stories</td></tr>
-      <tr><td>Name, email and password (optional, only if you create an account)</td><td>Sign in, recover your password and keep your data when changing phones. The password is stored encrypted, never in plain text</td></tr>
-      <tr><td>Basic data from your Google or Apple account: identifier, name and email (optional, only if you sign in with them)</td><td>Create your account and sign in. With Apple you can hide your real email</td></tr>
-      <tr><td>Premium subscription status (active or not)</td><td>Remove ads while the subscription is active. Payment details are handled by the store; we do not see them</td></tr>
-    </table>
-    <p>We do not collect location, contacts, photos, microphone or camera data. We do not use your advertising identifier.</p>
+      <h2>3. Ads</h2>
+      <p>The free plan shows Google AdMob ads. Because the app is aimed at a family audience, ads are configured for child-directed treatment: <strong>no personalized advertising, no behavioral tracking and no use of the advertising identifier</strong>. We do not track you across apps or websites.</p>
 
-    <h2>2. AI-generated stories</h2>
-    <p>To create a story we send Google Gemini the theme, length, language and age range. <strong>Children’s names are not sent</strong>: the story is generated with placeholders and the name is inserted afterwards, on your device and on our servers. If you type a free-form theme, that text does reach the AI provider, so do not include personal data in it.</p>
+      <h2>4. Who we share data with</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> story generation, as described in section 2.</li>
+        <li><strong>Google AdMob:</strong> showing non-personalized ads on the free plan.</li>
+        <li><strong>Google Play / Apple App Store:</strong> subscription and payment handling.</li>
+        <li><strong>RevenueCat, Inc. (United States):</strong> service that manages and validates subscriptions. It receives your account identifier (or an anonymous one), basic technical device data and the purchase data; it does not receive your name, your email or the children’s data. Transfers outside the European Economic Area rely on appropriate safeguards, such as the European Commission’s standard contractual clauses.</li>
+        <li><strong>Server hosting provider:</strong> stores the app’s data in the European Union.</li>
+        <li><strong>Email service:</strong> to send you account messages, such as password recovery.</li>
+      </ul>
+      <p>We do not sell your data or hand it to third parties for advertising purposes.</p>
 
-    <h2>3. Ads</h2>
-    <p>The free plan shows Google AdMob ads. Because the app is aimed at a family audience, ads are configured for child-directed treatment: <strong>no personalized advertising, no behavioral tracking and no use of the advertising identifier</strong>. We do not track you across apps or websites.</p>
+      <h2>5. Legal basis</h2>
+      <p>We process data to provide the service you ask for (performance of a contract), for our legitimate interest in keeping it secure and, where applicable, with your consent. The app is aimed at adults: children’s data is entered and controlled by the responsible adult.</p>
 
-    <h2>4. Who we share data with</h2>
-    <ul>
-      <li><strong>Google (Gemini):</strong> story generation, as described in section 2.</li>
-      <li><strong>Google AdMob:</strong> showing non-personalized ads on the free plan.</li>
-      <li><strong>Google Play / Apple App Store:</strong> subscription and payment handling.</li>
-      <li><strong>Server hosting provider:</strong> stores the app’s data in the European Union.</li>
-      <li><strong>Email service:</strong> to send you account messages, such as password recovery.</li>
-    </ul>
-    <p>We do not sell your data or hand it to third parties for advertising purposes.</p>
+      <h2>6. How long we keep data</h2>
+      <p>While you use the app or keep your account active. If you delete your account, we delete your personal data, child profiles and history. Stories in the shared library contain no personal data (they use placeholders instead of names) and may be kept. When you delete your account we also ask RevenueCat to delete the data it holds about you.</p>
 
-    <h2>5. Legal basis</h2>
-    <p>We process data to provide the service you ask for (performance of a contract), for our legitimate interest in keeping it secure and, where applicable, with your consent. The app is aimed at adults: children’s data is entered and controlled by the responsible adult.</p>
+      <h2>7. Your rights and how to delete your account</h2>
+      <p>You have the right to access, rectify and erase your data, restrict or object to its processing, and data portability. To exercise them, write to <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. You may also complain to your data protection authority (in Spain, the Spanish Data Protection Agency, <a href="https://www.aepd.es">aepd.es</a>).</p>
+      <p><strong>You can delete your account and all your data yourself from the app</strong>, on the account screen. The steps are on the <a href="eliminar-cuenta.html">Delete account</a> page. Deleting the account does not cancel the premium subscription: you must cancel it in Google Play or the App Store.</p>
 
-    <h2>6. How long we keep data</h2>
-    <p>While you use the app or keep your account active. If you delete your account, we delete your personal data, child profiles and history. Stories in the shared library contain no personal data (they use placeholders instead of names) and may be kept.</p>
+      <h2>8. Children</h2>
+      <p>The app is meant for parents, guardians or educators to use with children, not for children to sign up on their own. We do not ask children for contact details and we do not contact them. If you believe a minor has created an account without permission, write to us and we will delete it.</p>
 
-    <h2>7. Your rights and how to delete your account</h2>
-    <p>You have the right to access, rectify and erase your data, restrict or object to its processing, and data portability. To exercise them, write to <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. You may also complain to your data protection authority (in Spain, the Spanish Data Protection Agency, <a href="https://www.aepd.es">aepd.es</a>).</p>
-    <p><strong>You can delete your account and all your data yourself from the app</strong>, on the account screen. The steps are on the <a href="eliminar-cuenta.html">Delete account</a> page. Deleting the account does not cancel the premium subscription: you must cancel it in Google Play or the App Store.</p>
+      <h2>9. Security</h2>
+      <p>Communication between the app and the server is encrypted, passwords are stored encrypted and we limit access to data. No system is infallible, but we work to protect it.</p>
 
-    <h2>8. Children</h2>
-    <p>The app is meant for parents, guardians or educators to use with children, not for children to sign up on their own. We do not ask children for contact details and we do not contact them. If you believe a minor has created an account without permission, write to us and we will delete it.</p>
+      <h2>10. Changes to this policy</h2>
+      <p>If this policy changes significantly, we will tell you in the app and update the date above.</p>
 
-    <h2>9. Security</h2>
-    <p>Communication between the app and the server is encrypted, passwords are stored encrypted and we limit access to data. No system is infallible, but we work to protect it.</p>
+      <footer>
+        See also the <a href="terminos.html">terms and conditions</a> and how to <a href="eliminar-cuenta.html">delete your account</a>.
+      </footer>
+    </section>
+    <section data-lang="de" lang="de" data-title="Luna de Cuentos · Datenschutzerklärung" hidden>
+      <p class="notice">Diese Übersetzung dient nur zur Information. Bei Abweichungen gilt die spanische Fassung.</p>
+      <h1>Datenschutzerklärung</h1>
+      <p class="muted">App „Luna de Cuentos“ · Zuletzt aktualisiert: 15. Oktober 2026</p>
 
-    <h2>10. Changes to this policy</h2>
-    <p>If this policy changes significantly, we will tell you in the app and update the date above.</p>
+      <p>Luna de Cuentos erstellt mit KI personalisierte Kindergeschichten. Die App ist für Erwachsene gedacht, die sie gemeinsam mit Kindern nutzen, deshalb erheben wir nur die unbedingt notwendigen Daten. Diese Erklärung beschreibt, welche Daten wir verarbeiten, wofür, mit wem wir sie teilen und welche Rechte Sie haben.</p>
+      <p><strong>Verantwortlicher:</strong> Roberto Sanz Fernández, Spanien. Kontakt: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
 
-    <footer>
-      See also the <a href="terminos.html">terms and conditions</a> and how to <a href="eliminar-cuenta.html">delete your account</a>.
-    </footer>
-  </section>
-</div>
+      <h2>1. Welche Daten wir verarbeiten</h2>
+      <table>
+        <tr><th>Daten</th><th>Zweck</th></tr>
+        <tr><td>Technische Gerätekennung (ein von der App erzeugter Zufallscode; weder IMEI noch Werbe-ID)</td><td>Ihr Gerät erkennen, ohne dass ein Konto nötig ist, und Ihre Kinderprofile und Ihren Verlauf speichern</td></tr>
+        <tr><td>Name und Alter der Kinder, die Sie hinzufügen (Profile)</td><td>Geschichten personalisieren und altersgerechte Inhalte auswählen. Wir fragen weder nach Geburtsdaten noch nach Fotos</td></tr>
+        <tr><td>Thema, Länge und Sprache der angefragten Geschichten, erhaltene Geschichten und Favoriten</td><td>Die Geschichte liefern, Ihren Verlauf anzeigen und Wiederholungen vermeiden</td></tr>
+        <tr><td>Name, E-Mail-Adresse und Passwort (optional, nur wenn Sie ein Konto erstellen)</td><td>Anmelden, das Passwort wiederherstellen und Ihre Daten beim Handywechsel behalten. Das Passwort wird verschlüsselt gespeichert, nie im Klartext</td></tr>
+        <tr><td>Grunddaten Ihres Google- oder Apple-Kontos: Kennung, Name und E-Mail-Adresse (optional, nur wenn Sie sich damit anmelden)</td><td>Ihr Konto erstellen und sich anmelden. Mit Apple können Sie Ihre echte E-Mail-Adresse verbergen</td></tr>
+        <tr><td>Status des Premium-Abonnements (aktiv oder nicht)</td><td>Werbung entfernen, solange das Abonnement aktiv ist. Die Zahlungsdaten verwaltet der Store, wir sehen sie nicht</td></tr>
+        <tr><td>Kennung Ihres Kontos (eine Nummer, ohne Ihren Namen oder Ihre E-Mail-Adresse) oder eine anonyme Kennung, falls Sie noch kein Konto haben, technische Grunddaten des Geräts (wie Betriebssystem und App-Version) und die Kaufdaten des Abonnements (Produkt, Daten und Status)</td><td>Das Abonnement mit RevenueCat verwalten, das den Kauf bei Google Play oder Apple prüft und uns bestätigt, ob er aktiv ist</td></tr>
+      </table>
+      <p>Wir erheben keine Standortdaten, Kontakte, Fotos und keine Mikrofon- oder Kameradaten. Wir verwenden Ihre Werbekennung nicht.</p>
+
+      <h2>2. Mit KI erstellte Geschichten</h2>
+      <p>Um eine Geschichte zu erstellen, senden wir Thema, Länge, Sprache und Altersbereich an Google Gemini. <strong>Die Namen der Kinder werden nicht gesendet</strong>: Die Geschichte wird mit Platzhaltern erzeugt, und der Name wird danach auf Ihrem Gerät und auf unseren Servern eingesetzt. Wenn Sie ein freies Thema eingeben, gelangt dieser Text an den KI-Anbieter. Geben Sie darin daher keine personenbezogenen Daten an.</p>
+
+      <h2>3. Werbung</h2>
+      <p>Im kostenlosen Tarif wird Werbung von Google AdMob angezeigt. Da die App sich an ein Familienpublikum richtet, ist die Werbung für kindgerechte Behandlung konfiguriert: <strong>keine personalisierte Werbung, kein Verhaltens-Tracking und keine Verwendung der Werbekennung</strong>. Wir verfolgen Sie nicht über Apps oder Websites hinweg.</p>
+
+      <h2>4. Mit wem wir Daten teilen</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> Erstellung der Geschichten, wie in Punkt 2 beschrieben.</li>
+        <li><strong>Google AdMob:</strong> Anzeige nicht personalisierter Werbung im kostenlosen Tarif.</li>
+        <li><strong>Google Play / Apple App Store:</strong> Verwaltung des Abonnements und der Zahlung.</li>
+        <li><strong>RevenueCat, Inc. (Vereinigte Staaten):</strong> Dienst, der Abonnements verwaltet und prüft. Er erhält die Kennung Ihres Kontos (oder eine anonyme), technische Grunddaten des Geräts und die Kaufdaten; er erhält weder Ihren Namen noch Ihre E-Mail-Adresse noch die Daten der Kinder. Übermittlungen außerhalb des Europäischen Wirtschaftsraums stützen sich auf geeignete Garantien, etwa die Standardvertragsklauseln der Europäischen Kommission.</li>
+        <li><strong>Hosting-Anbieter des Servers:</strong> speichert die Daten der App in der Europäischen Union.</li>
+        <li><strong>E-Mail-Dienst:</strong> um Ihnen Nachrichten zum Konto zu senden, etwa zur Passwortwiederherstellung.</li>
+      </ul>
+      <p>Wir verkaufen Ihre Daten nicht und geben sie nicht zu Werbezwecken an Dritte weiter.</p>
+
+      <h2>5. Rechtsgrundlage</h2>
+      <p>Wir verarbeiten die Daten, um den von Ihnen gewünschten Dienst zu erbringen (Vertragserfüllung), aufgrund unseres berechtigten Interesses an dessen Sicherheit und gegebenenfalls mit Ihrer Einwilligung. Die App richtet sich an Erwachsene: Die Daten der Kinder werden von der verantwortlichen erwachsenen Person eingegeben und kontrolliert.</p>
+
+      <h2>6. Wie lange wir Daten speichern</h2>
+      <p>Solange Sie die App nutzen oder Ihr Konto aktiv ist. Wenn Sie Ihr Konto löschen, löschen wir Ihre personenbezogenen Daten, Ihre Kinderprofile und Ihren Verlauf. Geschichten der gemeinsamen Bibliothek enthalten keine personenbezogenen Daten (sie verwenden Platzhalter statt Namen) und können aufbewahrt werden. Wenn Sie Ihr Konto löschen, bitten wir außerdem RevenueCat, die über Sie gespeicherten Daten zu löschen.</p>
+
+      <h2>7. Ihre Rechte und wie Sie Ihr Konto löschen</h2>
+      <p>Sie haben das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten, auf Einschränkung oder Widerspruch gegen deren Verarbeitung sowie auf Datenübertragbarkeit. Um diese Rechte auszuüben, schreiben Sie an <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Sie können sich außerdem bei Ihrer Datenschutzaufsichtsbehörde beschweren (in Spanien die Spanische Datenschutzbehörde, <a href="https://www.aepd.es">aepd.es</a>).</p>
+      <p><strong>Sie können Ihr Konto und alle Ihre Daten selbst in der App löschen</strong>, auf dem Konto-Bildschirm. Die Schritte finden Sie auf der Seite <a href="eliminar-cuenta.html">Konto löschen</a>. Das Löschen des Kontos kündigt das Premium-Abonnement nicht: Sie müssen es in Google Play oder im App Store kündigen.</p>
+
+      <h2>8. Minderjährige</h2>
+      <p>Die App ist dafür gedacht, dass Eltern, Erziehungsberechtigte oder Pädagogen sie mit Kindern nutzen, nicht dass Kinder sich selbstständig registrieren. Wir fragen Kinder nicht nach Kontaktdaten und kontaktieren sie nicht. Wenn Sie glauben, dass ein Minderjähriger ohne Erlaubnis ein Konto erstellt hat, schreiben Sie uns, und wir löschen es.</p>
+
+      <h2>9. Sicherheit</h2>
+      <p>Die Kommunikation zwischen App und Server ist verschlüsselt, Passwörter werden verschlüsselt gespeichert, und wir beschränken den Zugriff auf die Daten. Kein System ist unfehlbar, aber wir arbeiten daran, sie zu schützen.</p>
+
+      <h2>10. Änderungen dieser Erklärung</h2>
+      <p>Wenn sich die Erklärung wesentlich ändert, teilen wir dies in der App mit und aktualisieren das obige Datum.</p>
+
+      <footer>
+        Siehe auch die <a href="terminos.html">Nutzungsbedingungen</a> und wie Sie <a href="eliminar-cuenta.html">Ihr Konto löschen</a>.
+      </footer>
+    </section>
+    <section data-lang="fr" lang="fr" data-title="Luna de Cuentos · Politique de confidentialité" hidden>
+      <p class="notice">Cette traduction est fournie à titre informatif. En cas de divergence, la version espagnole prévaut.</p>
+      <h1>Politique de confidentialité</h1>
+      <p class="muted">Application « Luna de Cuentos » · Dernière mise à jour : 15 octobre 2026</p>
+
+      <p>Luna de Cuentos génère des histoires pour enfants personnalisées grâce à l’IA. Elle est conçue pour être utilisée par des adultes avec des enfants ; nous ne collectons donc que les données strictement nécessaires. Cette politique explique quelles données nous traitons, pourquoi, avec qui nous les partageons et quels droits vous avez.</p>
+      <p><strong>Responsable du traitement :</strong> Roberto Sanz Fernández, Espagne. Contact : <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. Quelles données nous traitons</h2>
+      <table>
+        <tr><th>Donnée</th><th>Finalité</th></tr>
+        <tr><td>Identifiant technique de l’appareil (un code aléatoire généré par l’application ; ce n’est ni l’IMEI ni l’identifiant publicitaire)</td><td>Reconnaître votre appareil sans vous demander de compte et conserver vos profils d’enfant et votre historique</td></tr>
+        <tr><td>Prénom et âge des enfants que vous ajoutez (profils)</td><td>Personnaliser les histoires et choisir un contenu adapté à l’âge. Nous ne demandons ni date de naissance ni photo</td></tr>
+        <tr><td>Thème, durée et langue des histoires demandées, histoires reçues et favoris</td><td>Vous remettre l’histoire, afficher votre historique et éviter de vous répéter des histoires</td></tr>
+        <tr><td>Nom, adresse e-mail et mot de passe (facultatif, uniquement si vous créez un compte)</td><td>Vous connecter, récupérer votre mot de passe et conserver vos données en changeant de téléphone. Le mot de passe est stocké chiffré, jamais en clair</td></tr>
+        <tr><td>Données de base de votre compte Google ou Apple : identifiant, nom et adresse e-mail (facultatif, uniquement si vous vous connectez avec eux)</td><td>Créer votre compte et vous connecter. Avec Apple, vous pouvez masquer votre véritable adresse e-mail</td></tr>
+        <tr><td>État de l’abonnement premium (actif ou non)</td><td>Supprimer les publicités tant que l’abonnement est actif. Les données de paiement sont gérées par la boutique ; nous ne les voyons pas</td></tr>
+        <tr><td>Identifiant de votre compte (un numéro, sans votre nom ni votre e-mail) ou un identifiant anonyme si vous n’avez pas encore de compte, données techniques de base de l’appareil (comme le système d’exploitation et la version de l’application) et données d’achat de l’abonnement (produit, dates et état)</td><td>Gérer l’abonnement avec RevenueCat, qui vérifie l’achat auprès de Google Play ou d’Apple et nous confirme s’il est actif</td></tr>
+      </table>
+      <p>Nous ne collectons ni la localisation, ni les contacts, ni les photos, ni les données du micro ou de l’appareil photo. Nous n’utilisons pas votre identifiant publicitaire.</p>
+
+      <h2>2. Histoires générées par IA</h2>
+      <p>Pour créer une histoire, nous envoyons à Google Gemini le thème, la durée, la langue et la tranche d’âge. <strong>Le prénom des enfants n’est pas envoyé</strong> : l’histoire est générée avec des marqueurs et le prénom est inséré ensuite, sur votre appareil et sur nos serveurs. Si vous saisissez un thème libre, ce texte parvient bien au fournisseur d’IA ; n’y incluez donc pas de données personnelles.</p>
+
+      <h2>3. Publicités</h2>
+      <p>L’offre gratuite affiche des publicités Google AdMob. L’application s’adressant à un public familial, les publicités sont configurées pour un traitement destiné aux enfants : <strong>pas de publicité personnalisée, pas de suivi du comportement et pas d’utilisation de l’identifiant publicitaire</strong>. Nous ne vous suivons pas d’une application ou d’un site web à l’autre.</p>
+
+      <h2>4. Avec qui nous partageons les données</h2>
+      <ul>
+        <li><strong>Google (Gemini) :</strong> génération des histoires, comme indiqué au point 2.</li>
+        <li><strong>Google AdMob :</strong> affichage de publicités non personnalisées dans l’offre gratuite.</li>
+        <li><strong>Google Play / Apple App Store :</strong> gestion de l’abonnement et du paiement.</li>
+        <li><strong>RevenueCat, Inc. (États-Unis) :</strong> service qui gère et valide les abonnements. Il reçoit l’identifiant de votre compte (ou un identifiant anonyme), des données techniques de base de l’appareil et les données d’achat ; il ne reçoit ni votre nom, ni votre e-mail, ni les données des enfants. Les transferts en dehors de l’Espace économique européen reposent sur des garanties appropriées, comme les clauses contractuelles types de la Commission européenne.</li>
+        <li><strong>Hébergeur du serveur :</strong> stocke les données de l’application dans l’Union européenne.</li>
+        <li><strong>Service de messagerie :</strong> pour vous envoyer les messages liés au compte, comme la récupération du mot de passe.</li>
+      </ul>
+      <p>Nous ne vendons pas vos données et ne les cédons pas à des tiers à des fins publicitaires.</p>
+
+      <h2>5. Base juridique</h2>
+      <p>Nous traitons les données pour fournir le service que vous demandez (exécution du contrat), pour notre intérêt légitime à le maintenir sûr et, le cas échéant, avec votre consentement. L’application s’adresse aux adultes : les données des enfants sont saisies et contrôlées par l’adulte responsable.</p>
+
+      <h2>6. Durée de conservation des données</h2>
+      <p>Tant que vous utilisez l’application ou que votre compte est actif. Si vous supprimez votre compte, nous supprimons vos données personnelles, vos profils d’enfant et votre historique. Les histoires de la bibliothèque commune ne contiennent aucune donnée personnelle (elles utilisent des marqueurs à la place des prénoms) et peuvent être conservées. Lorsque vous supprimez votre compte, nous demandons aussi à RevenueCat de supprimer les données qu’il détient sur vous.</p>
+
+      <h2>7. Vos droits et comment supprimer votre compte</h2>
+      <p>Vous avez le droit d’accéder à vos données, de les rectifier, de les supprimer, de limiter leur traitement ou de vous y opposer, ainsi qu’à la portabilité. Pour les exercer, écrivez à <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Vous pouvez aussi déposer une réclamation auprès de l’autorité de contrôle (en Espagne, l’Agence espagnole de protection des données, <a href="https://www.aepd.es">aepd.es</a> ; en France, la CNIL).</p>
+      <p><strong>Vous pouvez supprimer vous-même votre compte et toutes vos données depuis l’application</strong>, sur l’écran du compte. Les étapes figurent sur la page <a href="eliminar-cuenta.html">Supprimer le compte</a>. Supprimer le compte n’annule pas l’abonnement premium : vous devez l’annuler dans Google Play ou dans l’App Store.</p>
+
+      <h2>8. Mineurs</h2>
+      <p>L’application est conçue pour que des parents, tuteurs ou éducateurs l’utilisent avec les enfants, et non pour que les enfants s’inscrivent seuls. Nous ne demandons pas de coordonnées aux enfants et ne les contactons pas. Si vous pensez qu’un mineur a créé un compte sans autorisation, écrivez-nous et nous le supprimerons.</p>
+
+      <h2>9. Sécurité</h2>
+      <p>Les communications entre l’application et le serveur sont chiffrées, les mots de passe sont stockés chiffrés et nous limitons l’accès aux données. Aucun système n’est infaillible, mais nous travaillons à les protéger.</p>
+
+      <h2>10. Modifications de cette politique</h2>
+      <p>Si la politique change de manière importante, nous vous en informerons dans l’application et nous mettrons à jour la date ci-dessus.</p>
+
+      <footer>
+        Voir aussi les <a href="terminos.html">conditions générales d’utilisation</a> et comment <a href="eliminar-cuenta.html">supprimer votre compte</a>.
+      </footer>
+    </section>
+    <section data-lang="it" lang="it" data-title="Luna de Cuentos · Informativa sulla privacy" hidden>
+      <p class="notice">Questa traduzione è fornita solo a titolo informativo. In caso di differenze prevale la versione spagnola.</p>
+      <h1>Informativa sulla privacy</h1>
+      <p class="muted">App «Luna de Cuentos» · Ultimo aggiornamento: 15 ottobre 2026</p>
+
+      <p>Luna de Cuentos genera storie per bambini personalizzate con l’IA. È pensata per essere usata da adulti insieme ai bambini, per questo raccogliamo solo i dati strettamente necessari. Questa informativa spiega quali dati trattiamo, per quale scopo, con chi li condividiamo e quali diritti hai.</p>
+      <p><strong>Titolare del trattamento:</strong> Roberto Sanz Fernández, Spagna. Contatto: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. Quali dati trattiamo</h2>
+      <table>
+        <tr><th>Dato</th><th>Scopo</th></tr>
+        <tr><td>Identificativo tecnico del dispositivo (un codice casuale generato dall’app; non è l’IMEI né l’identificativo pubblicitario)</td><td>Riconoscere il tuo dispositivo senza chiederti un account e conservare i tuoi profili dei bambini e la cronologia</td></tr>
+        <tr><td>Nome ed età dei bambini che aggiungi (profili)</td><td>Personalizzare le storie e scegliere contenuti adatti all’età. Non chiediamo la data di nascita né foto</td></tr>
+        <tr><td>Tema, durata e lingua delle storie richieste, storie ricevute e preferiti</td><td>Consegnarti la storia, mostrare la tua cronologia ed evitare di ripeterti le storie</td></tr>
+        <tr><td>Nome, indirizzo email e password (facoltativi, solo se crei un account)</td><td>Accedere, recuperare la password e conservare i tuoi dati quando cambi telefono. La password è memorizzata cifrata, mai in chiaro</td></tr>
+        <tr><td>Dati di base del tuo account Google o Apple: identificativo, nome ed email (facoltativi, solo se accedi con essi)</td><td>Creare il tuo account e accedere. Con Apple puoi nascondere la tua email reale</td></tr>
+        <tr><td>Stato dell’abbonamento premium (attivo o no)</td><td>Rimuovere la pubblicità finché l’abbonamento è attivo. I dati di pagamento sono gestiti dallo store, noi non li vediamo</td></tr>
+        <tr><td>Identificativo del tuo account (un numero, senza il tuo nome né la tua email) o un identificativo anonimo se non hai ancora un account, dati tecnici di base del dispositivo (come il sistema operativo e la versione dell’app) e i dati dell’acquisto dell’abbonamento (prodotto, date e stato)</td><td>Gestire l’abbonamento con RevenueCat, che verifica l’acquisto con Google Play o Apple e ci conferma se è attivo</td></tr>
+      </table>
+      <p>Non raccogliamo posizione, contatti, foto, microfono né fotocamera. Non usiamo il tuo identificativo pubblicitario.</p>
+
+      <h2>2. Storie generate con l’IA</h2>
+      <p>Per creare una storia inviamo a Google Gemini il tema, la durata, la lingua e la fascia d’età. <strong>Il nome dei bambini non viene inviato</strong>: la storia viene generata con segnaposto e il nome viene inserito dopo, sul tuo dispositivo e sui nostri server. Se scrivi un tema libero, quel testo arriva al fornitore di IA, quindi non includervi dati personali.</p>
+
+      <h2>3. Pubblicità</h2>
+      <p>Il piano gratuito mostra annunci di Google AdMob. Poiché l’app è rivolta a un pubblico familiare, gli annunci sono configurati per il trattamento destinato ai minori: <strong>nessuna pubblicità personalizzata, nessun tracciamento del comportamento e nessun uso dell’identificativo pubblicitario</strong>. Non ti tracciamo tra app o siti web.</p>
+
+      <h2>4. Con chi condividiamo i dati</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> generazione delle storie, come descritto al punto 2.</li>
+        <li><strong>Google AdMob:</strong> mostrare annunci non personalizzati nel piano gratuito.</li>
+        <li><strong>Google Play / Apple App Store:</strong> gestione dell’abbonamento e del pagamento.</li>
+        <li><strong>RevenueCat, Inc. (Stati Uniti):</strong> servizio che gestisce e convalida gli abbonamenti. Riceve l’identificativo del tuo account (o uno anonimo), dati tecnici di base del dispositivo e i dati dell’acquisto; non riceve il tuo nome, la tua email né i dati dei bambini. I trasferimenti al di fuori dello Spazio economico europeo si basano su garanzie adeguate, come le clausole contrattuali tipo della Commissione europea.</li>
+        <li><strong>Fornitore di hosting del server:</strong> conserva i dati dell’app nell’Unione europea.</li>
+        <li><strong>Servizio di posta elettronica:</strong> per inviarti i messaggi dell’account, come il recupero della password.</li>
+      </ul>
+      <p>Non vendiamo i tuoi dati né li cediamo a terzi per finalità pubblicitarie.</p>
+
+      <h2>5. Base giuridica</h2>
+      <p>Trattiamo i dati per fornire il servizio che ci richiedi (esecuzione del contratto), per il nostro legittimo interesse a mantenerlo sicuro e, quando necessario, con il tuo consenso. L’app è rivolta agli adulti: i dati dei bambini sono inseriti e controllati dall’adulto responsabile.</p>
+
+      <h2>6. Per quanto tempo conserviamo i dati</h2>
+      <p>Finché usi l’app o il tuo account è attivo. Se elimini il tuo account, cancelliamo i tuoi dati personali, i profili dei bambini e la cronologia. Le storie della biblioteca comune non contengono dati personali (usano segnaposto al posto dei nomi) e possono essere conservate. Quando elimini il tuo account chiediamo anche a RevenueCat di cancellare i dati che ha su di te.</p>
+
+      <h2>7. I tuoi diritti e come eliminare il tuo account</h2>
+      <p>Hai il diritto di accedere ai tuoi dati, rettificarli, cancellarli, limitarne il trattamento od opporti, e il diritto alla portabilità. Per esercitarli, scrivi a <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Puoi anche presentare reclamo all’autorità di controllo (in Spagna, l’Agenzia spagnola per la protezione dei dati, <a href="https://www.aepd.es">aepd.es</a>; in Italia, il Garante per la protezione dei dati personali).</p>
+      <p><strong>Puoi eliminare tu stesso il tuo account e tutti i tuoi dati dall’app</strong>, nella schermata dell’account. I passaggi sono nella pagina <a href="eliminar-cuenta.html">Elimina account</a>. Eliminare l’account non annulla l’abbonamento premium: devi annullarlo su Google Play o sull’App Store.</p>
+
+      <h2>8. Minori</h2>
+      <p>L’app è pensata perché genitori, tutori o educatori la usino con i bambini, non perché i bambini si registrino da soli. Non chiediamo ai bambini dati di contatto né li contattiamo. Se ritieni che un minore abbia creato un account senza permesso, scrivici e lo elimineremo.</p>
+
+      <h2>9. Sicurezza</h2>
+      <p>Le comunicazioni tra l’app e il server sono cifrate, le password sono memorizzate cifrate e limitiamo l’accesso ai dati. Nessun sistema è infallibile, ma lavoriamo per proteggerli.</p>
+
+      <h2>10. Modifiche a questa informativa</h2>
+      <p>Se l’informativa cambia in modo rilevante, lo comunicheremo nell’app e aggiorneremo la data qui sopra.</p>
+
+      <footer>
+        Vedi anche i <a href="terminos.html">termini e condizioni d’uso</a> e come <a href="eliminar-cuenta.html">eliminare il tuo account</a>.
+      </footer>
+    </section>
+    <section data-lang="pt" lang="pt" data-title="Luna de Cuentos · Política de privacidade" hidden>
+      <p class="notice">Esta tradução é apenas informativa. Em caso de diferenças, prevalece a versão em espanhol.</p>
+      <h1>Política de privacidade</h1>
+      <p class="muted">Aplicação «Luna de Cuentos» · Última atualização: 15 de outubro de 2026</p>
+
+      <p>O Luna de Cuentos gera histórias infantis personalizadas com IA. Foi pensado para ser usado por adultos com crianças, por isso recolhemos apenas os dados estritamente necessários. Esta política explica que dados tratamos, para quê, com quem os partilhamos e que direitos tem.</p>
+      <p><strong>Responsável pelo tratamento:</strong> Roberto Sanz Fernández, Espanha. Contacto: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. Que dados tratamos</h2>
+      <table>
+        <tr><th>Dado</th><th>Finalidade</th></tr>
+        <tr><td>Identificador técnico do dispositivo (um código aleatório gerado pela aplicação; não é o IMEI nem o identificador publicitário)</td><td>Reconhecer o seu dispositivo sem lhe pedir uma conta e guardar os seus perfis de criança e o histórico</td></tr>
+        <tr><td>Nome e idade das crianças que adicionar (perfis)</td><td>Personalizar as histórias e escolher conteúdo adequado à idade. Não pedimos data de nascimento nem fotografias</td></tr>
+        <tr><td>Tema, duração e idioma das histórias pedidas, histórias recebidas e favoritas</td><td>Entregar-lhe a história, mostrar o seu histórico e evitar repetir histórias</td></tr>
+        <tr><td>Nome, endereço de email e palavra-passe (opcional, apenas se criar uma conta)</td><td>Iniciar sessão, recuperar a palavra-passe e manter os seus dados ao mudar de telemóvel. A palavra-passe é guardada cifrada, nunca em texto simples</td></tr>
+        <tr><td>Dados básicos da sua conta Google ou Apple: identificador, nome e email (opcional, apenas se iniciar sessão com eles)</td><td>Criar a sua conta e iniciar sessão. Com a Apple pode ocultar o seu email real</td></tr>
+        <tr><td>Estado da subscrição premium (ativa ou não)</td><td>Retirar os anúncios enquanto a subscrição estiver ativa. Os dados de pagamento são geridos pela loja, nós não os vemos</td></tr>
+        <tr><td>Identificador da sua conta (um número, sem o seu nome nem o seu email) ou um identificador anónimo se ainda não tiver conta, dados técnicos básicos do dispositivo (como o sistema operativo e a versão da aplicação) e os dados da compra da subscrição (produto, datas e estado)</td><td>Gerir a subscrição com a RevenueCat, que verifica a compra com a Google Play ou a Apple e nos confirma se está ativa</td></tr>
+      </table>
+      <p>Não recolhemos localização, contactos, fotografias, microfone nem câmara. Não usamos o seu identificador publicitário.</p>
+
+      <h2>2. Histórias geradas com IA</h2>
+      <p>Para criar uma história, enviamos ao Google Gemini o tema, a duração, o idioma e a faixa etária. <strong>O nome das crianças não é enviado</strong>: a história é gerada com marcadores e o nome é inserido depois, no seu dispositivo e nos nossos servidores. Se escrever um tema livre, esse texto chega ao fornecedor de IA, por isso não inclua nele dados pessoais.</p>
+
+      <h2>3. Anúncios</h2>
+      <p>O plano gratuito mostra anúncios do Google AdMob. Como a aplicação se destina a um público familiar, os anúncios estão configurados para tratamento infantil: <strong>sem publicidade personalizada, sem seguimento do comportamento e sem uso do identificador publicitário</strong>. Não fazemos seguimento entre aplicações ou sites.</p>
+
+      <h2>4. Com quem partilhamos os dados</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> geração das histórias, conforme o ponto 2.</li>
+        <li><strong>Google AdMob:</strong> mostrar anúncios não personalizados no plano gratuito.</li>
+        <li><strong>Google Play / Apple App Store:</strong> gestão da subscrição e do pagamento.</li>
+        <li><strong>RevenueCat, Inc. (Estados Unidos):</strong> serviço que gere e valida as subscrições. Recebe o identificador da sua conta (ou um anónimo), dados técnicos básicos do dispositivo e os dados da compra; não recebe o seu nome, o seu email nem os dados das crianças. As transferências para fora do Espaço Económico Europeu baseiam-se em garantias adequadas, como as cláusulas contratuais-tipo da Comissão Europeia.</li>
+        <li><strong>Fornecedor de alojamento do servidor:</strong> guarda os dados da aplicação na União Europeia.</li>
+        <li><strong>Serviço de email:</strong> para lhe enviar as mensagens da conta, como a recuperação da palavra-passe.</li>
+      </ul>
+      <p>Não vendemos os seus dados nem os cedemos a terceiros para fins publicitários.</p>
+
+      <h2>5. Base legal</h2>
+      <p>Tratamos os dados para prestar o serviço que nos pede (execução do contrato), pelo nosso interesse legítimo em mantê-lo seguro e, quando aplicável, com o seu consentimento. A aplicação destina-se a adultos: os dados das crianças são introduzidos e controlados pelo adulto responsável.</p>
+
+      <h2>6. Durante quanto tempo guardamos os dados</h2>
+      <p>Enquanto usar a aplicação ou tiver a conta ativa. Se eliminar a sua conta, apagamos os seus dados pessoais, os perfis de criança e o histórico. As histórias da biblioteca comum não contêm dados pessoais (usam marcadores em vez de nomes) e podem ser conservadas. Quando eliminar a sua conta, pedimos também à RevenueCat que apague os dados que tem sobre si.</p>
+
+      <h2>7. Os seus direitos e como eliminar a sua conta</h2>
+      <p>Tem direito a aceder aos seus dados, retificá-los, apagá-los, limitar ou opor-se ao seu tratamento e à portabilidade. Para os exercer, escreva para <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Pode também apresentar reclamação à autoridade de controlo (em Espanha, a Agência Espanhola de Proteção de Dados, <a href="https://www.aepd.es">aepd.es</a>; em Portugal, a CNPD).</p>
+      <p><strong>Pode eliminar a sua conta e todos os seus dados diretamente na aplicação</strong>, no ecrã da conta. Os passos estão na página <a href="eliminar-cuenta.html">Eliminar conta</a>. Eliminar a conta não cancela a subscrição premium: tem de a cancelar na Google Play ou na App Store.</p>
+
+      <h2>8. Menores</h2>
+      <p>A aplicação foi pensada para ser usada por pais, tutores ou educadores com as crianças, e não para que as crianças se registem sozinhas. Não pedimos dados de contacto às crianças nem as contactamos. Se acreditar que um menor criou uma conta sem autorização, escreva-nos e eliminá-la-emos.</p>
+
+      <h2>9. Segurança</h2>
+      <p>As comunicações entre a aplicação e o servidor são cifradas, as palavras-passe são guardadas cifradas e limitamos o acesso aos dados. Nenhum sistema é infalível, mas trabalhamos para os proteger.</p>
+
+      <h2>10. Alterações a esta política</h2>
+      <p>Se a política mudar de forma importante, avisaremos na aplicação e atualizaremos a data acima.</p>
+
+      <footer>
+        Veja também os <a href="terminos.html">termos e condições de utilização</a> e como <a href="eliminar-cuenta.html">eliminar a sua conta</a>.
+      </footer>
+    </section>
+    <section data-lang="nl" lang="nl" data-title="Luna de Cuentos · Privacybeleid" hidden>
+      <p class="notice">Deze vertaling is alleen ter informatie. Bij verschillen prevaleert de Spaanse versie.</p>
+      <h1>Privacybeleid</h1>
+      <p class="muted">App ‘Luna de Cuentos’ · Laatst bijgewerkt: 15 oktober 2026</p>
+
+      <p>Luna de Cuentos maakt met AI gepersonaliseerde kinderverhalen. De app is bedoeld voor volwassenen die haar samen met kinderen gebruiken, daarom verzamelen we alleen de strikt noodzakelijke gegevens. Dit beleid legt uit welke gegevens we verwerken, waarvoor, met wie we ze delen en welke rechten je hebt.</p>
+      <p><strong>Verwerkingsverantwoordelijke:</strong> Roberto Sanz Fernández, Spanje. Contact: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. Welke gegevens we verwerken</h2>
+      <table>
+        <tr><th>Gegeven</th><th>Doel</th></tr>
+        <tr><td>Technische apparaat-ID (een willekeurige code die de app aanmaakt; niet het IMEI en niet de advertentie-ID)</td><td>Je apparaat herkennen zonder een account te vragen en je kinderprofielen en geschiedenis bewaren</td></tr>
+        <tr><td>Naam en leeftijd van de kinderen die je toevoegt (profielen)</td><td>De verhalen personaliseren en inhoud kiezen die bij de leeftijd past. We vragen niet om geboortedatum of foto’s</td></tr>
+        <tr><td>Thema, lengte en taal van de aangevraagde verhalen, ontvangen verhalen en favorieten</td><td>Het verhaal leveren, je geschiedenis tonen en voorkomen dat je verhalen herhaald krijgt</td></tr>
+        <tr><td>Naam, e-mailadres en wachtwoord (optioneel, alleen als je een account aanmaakt)</td><td>Inloggen, je wachtwoord herstellen en je gegevens behouden als je van telefoon wisselt. Het wachtwoord wordt versleuteld opgeslagen, nooit als gewone tekst</td></tr>
+        <tr><td>Basisgegevens van je Google- of Apple-account: ID, naam en e-mailadres (optioneel, alleen als je daarmee inlogt)</td><td>Je account aanmaken en inloggen. Met Apple kun je je echte e-mailadres verbergen</td></tr>
+        <tr><td>Status van het premium-abonnement (actief of niet)</td><td>De advertenties verwijderen zolang het abonnement actief is. De betaalgegevens worden door de winkel beheerd, wij zien ze niet</td></tr>
+        <tr><td>ID van je account (een nummer, zonder je naam of e-mailadres) of een anonieme ID als je nog geen account hebt, technische basisgegevens van het apparaat (zoals het besturingssysteem en de appversie) en de aankoopgegevens van het abonnement (product, data en status)</td><td>Het abonnement beheren met RevenueCat, dat de aankoop controleert bij Google Play of Apple en ons bevestigt of die actief is</td></tr>
+      </table>
+      <p>We verzamelen geen locatie, contacten, foto’s, microfoon of camera. We gebruiken je advertentie-ID niet.</p>
+
+      <h2>2. Met AI gemaakte verhalen</h2>
+      <p>Om een verhaal te maken sturen we Google Gemini het thema, de lengte, de taal en de leeftijdscategorie. <strong>De namen van de kinderen worden niet verzonden</strong>: het verhaal wordt met plaatshouders gemaakt en de naam wordt daarna ingevoegd, op je apparaat en op onze servers. Als je een vrij thema typt, komt die tekst wel bij de AI-aanbieder terecht, neem daarin dus geen persoonsgegevens op.</p>
+
+      <h2>3. Advertenties</h2>
+      <p>Het gratis abonnement toont advertenties van Google AdMob. Omdat de app op een gezinspubliek is gericht, zijn de advertenties ingesteld voor kindgerichte behandeling: <strong>geen gepersonaliseerde advertenties, geen gedragstracking en geen gebruik van de advertentie-ID</strong>. We volgen je niet over apps of websites heen.</p>
+
+      <h2>4. Met wie we gegevens delen</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> het maken van de verhalen, zoals beschreven in punt 2.</li>
+        <li><strong>Google AdMob:</strong> niet-gepersonaliseerde advertenties tonen in het gratis abonnement.</li>
+        <li><strong>Google Play / Apple App Store:</strong> beheer van het abonnement en de betaling.</li>
+        <li><strong>RevenueCat, Inc. (Verenigde Staten):</strong> dienst die abonnementen beheert en valideert. Ontvangt de ID van je account (of een anonieme), technische basisgegevens van het apparaat en de aankoopgegevens; ontvangt niet je naam, je e-mailadres of de gegevens van de kinderen. Doorgiften buiten de Europese Economische Ruimte steunen op passende waarborgen, zoals de modelcontractbepalingen van de Europese Commissie.</li>
+        <li><strong>Hostingprovider van de server:</strong> slaat de gegevens van de app op in de Europese Unie.</li>
+        <li><strong>E-maildienst:</strong> om je berichten over je account te sturen, zoals het herstellen van je wachtwoord.</li>
+      </ul>
+      <p>We verkopen je gegevens niet en geven ze niet voor reclamedoeleinden door aan derden.</p>
+
+      <h2>5. Rechtsgrond</h2>
+      <p>We verwerken de gegevens om de dienst te leveren waar je om vraagt (uitvoering van de overeenkomst), vanwege ons gerechtvaardigd belang om hem veilig te houden en, waar van toepassing, met je toestemming. De app is gericht op volwassenen: de gegevens van kinderen worden ingevoerd en beheerd door de verantwoordelijke volwassene.</p>
+
+      <h2>6. Hoelang we gegevens bewaren</h2>
+      <p>Zolang je de app gebruikt of je account actief is. Als je je account verwijdert, wissen we je persoonsgegevens, kinderprofielen en geschiedenis. Verhalen in de gedeelde bibliotheek bevatten geen persoonsgegevens (ze gebruiken plaatshouders in plaats van namen) en kunnen worden bewaard. Wanneer je je account verwijdert, vragen we ook RevenueCat om de gegevens die het over jou heeft te wissen.</p>
+
+      <h2>7. Je rechten en hoe je je account verwijdert</h2>
+      <p>Je hebt het recht op inzage, rectificatie en wissing van je gegevens, op beperking van of bezwaar tegen de verwerking en op overdraagbaarheid. Schrijf om ze uit te oefenen naar <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Je kunt ook een klacht indienen bij de toezichthoudende autoriteit (in Spanje de Spaanse gegevensbeschermingsautoriteit, <a href="https://www.aepd.es">aepd.es</a>; in Nederland de Autoriteit Persoonsgegevens).</p>
+      <p><strong>Je kunt je account en al je gegevens zelf verwijderen in de app</strong>, op het accountscherm. De stappen staan op de pagina <a href="eliminar-cuenta.html">Account verwijderen</a>. Het verwijderen van het account zegt het premium-abonnement niet op: je moet het opzeggen in Google Play of de App Store.</p>
+
+      <h2>8. Minderjarigen</h2>
+      <p>De app is bedoeld voor ouders, voogden of opvoeders om met kinderen te gebruiken, niet voor kinderen om zich zelfstandig te registreren. We vragen kinderen niet om contactgegevens en nemen geen contact met hen op. Als je denkt dat een minderjarige zonder toestemming een account heeft aangemaakt, schrijf ons dan en we verwijderen het.</p>
+
+      <h2>9. Beveiliging</h2>
+      <p>De communicatie tussen de app en de server is versleuteld, wachtwoorden worden versleuteld opgeslagen en we beperken de toegang tot de gegevens. Geen enkel systeem is onfeilbaar, maar we werken eraan om ze te beschermen.</p>
+
+      <h2>10. Wijzigingen in dit beleid</h2>
+      <p>Als het beleid ingrijpend verandert, laten we dat weten in de app en werken we de datum hierboven bij.</p>
+
+      <footer>
+        Zie ook de <a href="terminos.html">algemene voorwaarden</a> en hoe je <a href="eliminar-cuenta.html">je account verwijdert</a>.
+      </footer>
+    </section>
+    <section data-lang="pl" lang="pl" data-title="Luna de Cuentos · Polityka prywatności" hidden>
+      <p class="notice">To tłumaczenie ma charakter wyłącznie informacyjny. W razie rozbieżności obowiązuje wersja hiszpańska.</p>
+      <h1>Polityka prywatności</h1>
+      <p class="muted">Aplikacja „Luna de Cuentos” · Ostatnia aktualizacja: 15 października 2026</p>
+
+      <p>Luna de Cuentos tworzy spersonalizowane bajki dla dzieci z pomocą AI. Aplikacja jest przeznaczona dla dorosłych, którzy korzystają z niej razem z dziećmi, dlatego zbieramy tylko dane absolutnie niezbędne. Ta polityka wyjaśnia, jakie dane przetwarzamy, w jakim celu, z kim je udostępniamy i jakie masz prawa.</p>
+      <p><strong>Administrator danych:</strong> Roberto Sanz Fernández, Hiszpania. Kontakt: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. Jakie dane przetwarzamy</h2>
+      <table>
+        <tr><th>Dane</th><th>Cel</th></tr>
+        <tr><td>Techniczny identyfikator urządzenia (losowy kod generowany przez aplikację; to nie jest IMEI ani identyfikator reklamowy)</td><td>Rozpoznanie Twojego urządzenia bez wymagania konta oraz zachowanie profili dzieci i historii</td></tr>
+        <tr><td>Imię i wiek dzieci, które dodasz (profile)</td><td>Personalizacja bajek i wybór treści odpowiednich do wieku. Nie prosimy o datę urodzenia ani zdjęcia</td></tr>
+        <tr><td>Temat, długość i język zamawianych bajek, otrzymane bajki i ulubione</td><td>Dostarczenie bajki, wyświetlenie historii i unikanie powtarzania bajek</td></tr>
+        <tr><td>Imię i nazwisko, adres e-mail i hasło (opcjonalnie, tylko jeśli założysz konto)</td><td>Logowanie, odzyskiwanie hasła i zachowanie danych po zmianie telefonu. Hasło jest przechowywane w formie zaszyfrowanej, nigdy jako zwykły tekst</td></tr>
+        <tr><td>Podstawowe dane Twojego konta Google lub Apple: identyfikator, imię i nazwisko oraz e-mail (opcjonalnie, tylko jeśli logujesz się za ich pomocą)</td><td>Utworzenie konta i logowanie. Z Apple możesz ukryć swój prawdziwy e-mail</td></tr>
+        <tr><td>Stan subskrypcji premium (aktywna lub nie)</td><td>Usunięcie reklam, dopóki subskrypcja jest aktywna. Dane płatnicze obsługuje sklep, my ich nie widzimy</td></tr>
+        <tr><td>Identyfikator Twojego konta (numer, bez imienia i nazwiska ani e-maila) lub anonimowy identyfikator, jeśli nie masz jeszcze konta, podstawowe dane techniczne urządzenia (takie jak system operacyjny i wersja aplikacji) oraz dane zakupu subskrypcji (produkt, daty i stan)</td><td>Zarządzanie subskrypcją przez RevenueCat, które weryfikuje zakup w Google Play lub Apple i potwierdza nam, czy jest aktywny</td></tr>
+      </table>
+      <p>Nie zbieramy lokalizacji, kontaktów, zdjęć, danych z mikrofonu ani aparatu. Nie używamy Twojego identyfikatora reklamowego.</p>
+
+      <h2>2. Bajki generowane przez AI</h2>
+      <p>Aby stworzyć bajkę, wysyłamy do Google Gemini temat, długość, język i przedział wiekowy. <strong>Imiona dzieci nie są wysyłane</strong>: bajka jest generowana ze znacznikami, a imię jest wstawiane później, na Twoim urządzeniu i na naszych serwerach. Jeśli wpiszesz dowolny temat, ten tekst trafi do dostawcy AI, dlatego nie umieszczaj w nim danych osobowych.</p>
+
+      <h2>3. Reklamy</h2>
+      <p>Plan bezpłatny wyświetla reklamy Google AdMob. Ponieważ aplikacja jest skierowana do odbiorców rodzinnych, reklamy są skonfigurowane do traktowania jako skierowane do dzieci: <strong>bez reklam spersonalizowanych, bez śledzenia zachowania i bez użycia identyfikatora reklamowego</strong>. Nie śledzimy Cię między aplikacjami ani witrynami.</p>
+
+      <h2>4. Z kim udostępniamy dane</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> generowanie bajek, zgodnie z punktem 2.</li>
+        <li><strong>Google AdMob:</strong> wyświetlanie niespersonalizowanych reklam w planie bezpłatnym.</li>
+        <li><strong>Google Play / Apple App Store:</strong> obsługa subskrypcji i płatności.</li>
+        <li><strong>RevenueCat, Inc. (Stany Zjednoczone):</strong> usługa zarządzająca subskrypcjami i je weryfikująca. Otrzymuje identyfikator Twojego konta (lub anonimowy), podstawowe dane techniczne urządzenia i dane zakupu; nie otrzymuje Twojego imienia i nazwiska, e-maila ani danych dzieci. Przekazywanie poza Europejski Obszar Gospodarczy opiera się na odpowiednich zabezpieczeniach, takich jak standardowe klauzule umowne Komisji Europejskiej.</li>
+        <li><strong>Dostawca hostingu serwera:</strong> przechowuje dane aplikacji w Unii Europejskiej.</li>
+        <li><strong>Usługa poczty elektronicznej:</strong> do wysyłania Ci wiadomości dotyczących konta, takich jak odzyskiwanie hasła.</li>
+      </ul>
+      <p>Nie sprzedajemy Twoich danych ani nie przekazujemy ich osobom trzecim w celach reklamowych.</p>
+
+      <h2>5. Podstawa prawna</h2>
+      <p>Przetwarzamy dane, aby świadczyć usługę, o którą prosisz (wykonanie umowy), w naszym uzasadnionym interesie utrzymania jej bezpieczeństwa oraz, w stosownych przypadkach, za Twoją zgodą. Aplikacja jest skierowana do dorosłych: dane dzieci wprowadza i kontroluje odpowiedzialna osoba dorosła.</p>
+
+      <h2>6. Jak długo przechowujemy dane</h2>
+      <p>Dopóki korzystasz z aplikacji lub masz aktywne konto. Jeśli usuniesz konto, usuniemy Twoje dane osobowe, profile dzieci i historię. Bajki we wspólnej bibliotece nie zawierają danych osobowych (mają znaczniki zamiast imion) i mogą być zachowane. Gdy usuniesz konto, prosimy również RevenueCat o usunięcie danych, które ma o Tobie.</p>
+
+      <h2>7. Twoje prawa i jak usunąć konto</h2>
+      <p>Masz prawo dostępu do swoich danych, ich sprostowania, usunięcia, ograniczenia przetwarzania lub sprzeciwu wobec niego oraz do przenoszenia danych. Aby z nich skorzystać, napisz na <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Możesz też złożyć skargę do organu nadzorczego (w Hiszpanii do Hiszpańskiej Agencji Ochrony Danych, <a href="https://www.aepd.es">aepd.es</a>; w Polsce do Prezesa Urzędu Ochrony Danych Osobowych).</p>
+      <p><strong>Możesz sam usunąć konto i wszystkie swoje dane w aplikacji</strong>, na ekranie konta. Kroki znajdziesz na stronie <a href="eliminar-cuenta.html">Usuwanie konta</a>. Usunięcie konta nie anuluje subskrypcji premium: musisz ją anulować w Google Play lub App Store.</p>
+
+      <h2>8. Osoby niepełnoletnie</h2>
+      <p>Aplikacja jest przeznaczona dla rodziców, opiekunów lub wychowawców, którzy korzystają z niej z dziećmi, a nie po to, by dzieci rejestrowały się samodzielnie. Nie prosimy dzieci o dane kontaktowe ani się z nimi nie kontaktujemy. Jeśli uważasz, że osoba niepełnoletnia założyła konto bez zgody, napisz do nas, a je usuniemy.</p>
+
+      <h2>9. Bezpieczeństwo</h2>
+      <p>Komunikacja między aplikacją a serwerem jest szyfrowana, hasła są przechowywane w formie zaszyfrowanej, a dostęp do danych ograniczamy. Żaden system nie jest niezawodny, ale dbamy o ich ochronę.</p>
+
+      <h2>10. Zmiany w tej polityce</h2>
+      <p>Jeśli polityka zmieni się w istotny sposób, poinformujemy o tym w aplikacji i zaktualizujemy powyższą datę.</p>
+
+      <footer>
+        Zobacz także <a href="terminos.html">regulamin korzystania</a> oraz jak <a href="eliminar-cuenta.html">usunąć konto</a>.
+      </footer>
+    </section>
+    <section data-lang="ro" lang="ro" data-title="Luna de Cuentos · Politica de confidențialitate" hidden>
+      <p class="notice">Această traducere are doar scop informativ. În caz de diferențe, prevalează versiunea în spaniolă.</p>
+      <h1>Politica de confidențialitate</h1>
+      <p class="muted">Aplicația „Luna de Cuentos” · Ultima actualizare: 15 octombrie 2026</p>
+
+      <p>Luna de Cuentos generează povești personalizate pentru copii cu ajutorul IA. Este gândită pentru a fi folosită de adulți împreună cu copiii, de aceea colectăm doar datele strict necesare. Această politică explică ce date prelucrăm, în ce scop, cu cine le împărtășim și ce drepturi ai.</p>
+      <p><strong>Operator de date:</strong> Roberto Sanz Fernández, Spania. Contact: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. Ce date prelucrăm</h2>
+      <table>
+        <tr><th>Dată</th><th>Scop</th></tr>
+        <tr><td>Identificator tehnic al dispozitivului (un cod aleatoriu generat de aplicație; nu este IMEI și nici identificatorul de publicitate)</td><td>Să îți recunoaștem dispozitivul fără a-ți cere un cont și să păstrăm profilurile copiilor și istoricul</td></tr>
+        <tr><td>Numele și vârsta copiilor pe care îi adaugi (profiluri)</td><td>Personalizarea poveștilor și alegerea unui conținut potrivit vârstei. Nu cerem data nașterii și nici fotografii</td></tr>
+        <tr><td>Tema, durata și limba poveștilor cerute, poveștile primite și favoritele</td><td>Livrarea poveștii, afișarea istoricului și evitarea repetării poveștilor</td></tr>
+        <tr><td>Nume, adresă de e-mail și parolă (opțional, doar dacă îți creezi un cont)</td><td>Autentificare, recuperarea parolei și păstrarea datelor la schimbarea telefonului. Parola este stocată criptat, niciodată în text simplu</td></tr>
+        <tr><td>Datele de bază ale contului tău Google sau Apple: identificator, nume și e-mail (opțional, doar dacă te autentifici cu ele)</td><td>Crearea contului și autentificarea. Cu Apple îți poți ascunde adresa de e-mail reală</td></tr>
+        <tr><td>Starea abonamentului premium (activ sau nu)</td><td>Eliminarea reclamelor cât timp abonamentul este activ. Datele de plată sunt gestionate de magazin, noi nu le vedem</td></tr>
+        <tr><td>Identificatorul contului tău (un număr, fără numele sau e-mailul tău) sau un identificator anonim dacă nu ai încă un cont, date tehnice de bază ale dispozitivului (precum sistemul de operare și versiunea aplicației) și datele achiziției abonamentului (produs, date și stare)</td><td>Gestionarea abonamentului cu RevenueCat, care verifică achiziția la Google Play sau Apple și ne confirmă dacă este activă</td></tr>
+      </table>
+      <p>Nu colectăm locația, contactele, fotografiile, microfonul sau camera. Nu folosim identificatorul tău de publicitate.</p>
+
+      <h2>2. Povești generate cu IA</h2>
+      <p>Pentru a crea o poveste, trimitem către Google Gemini tema, durata, limba și intervalul de vârstă. <strong>Numele copiilor nu este trimis</strong>: povestea este generată cu marcatori, iar numele este introdus după aceea, pe dispozitivul tău și pe serverele noastre. Dacă scrii o temă liberă, acel text ajunge la furnizorul de IA, deci nu include în el date personale.</p>
+
+      <h2>3. Reclame</h2>
+      <p>Planul gratuit afișează reclame Google AdMob. Deoarece aplicația se adresează unui public de familie, reclamele sunt configurate pentru tratament destinat copiilor: <strong>fără publicitate personalizată, fără urmărirea comportamentului și fără folosirea identificatorului de publicitate</strong>. Nu te urmărim între aplicații sau site-uri web.</p>
+
+      <h2>4. Cu cine împărtășim datele</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> generarea poveștilor, conform punctului 2.</li>
+        <li><strong>Google AdMob:</strong> afișarea de reclame nepersonalizate în planul gratuit.</li>
+        <li><strong>Google Play / Apple App Store:</strong> gestionarea abonamentului și a plății.</li>
+        <li><strong>RevenueCat, Inc. (Statele Unite):</strong> serviciu care gestionează și validează abonamentele. Primește identificatorul contului tău (sau unul anonim), date tehnice de bază ale dispozitivului și datele achiziției; nu primește numele tău, e-mailul tău și nici datele copiilor. Transferurile în afara Spațiului Economic European se bazează pe garanții adecvate, precum clauzele contractuale standard ale Comisiei Europene.</li>
+        <li><strong>Furnizorul de găzduire al serverului:</strong> stochează datele aplicației în Uniunea Europeană.</li>
+        <li><strong>Serviciul de e-mail:</strong> pentru a-ți trimite mesajele contului, precum recuperarea parolei.</li>
+      </ul>
+      <p>Nu îți vindem datele și nu le cedăm unor terți în scopuri publicitare.</p>
+
+      <h2>5. Temei juridic</h2>
+      <p>Prelucrăm datele pentru a presta serviciul pe care ni-l ceri (executarea contractului), pentru interesul nostru legitim de a-l menține sigur și, atunci când este cazul, cu consimțământul tău. Aplicația se adresează adulților: datele copiilor sunt introduse și controlate de adultul responsabil.</p>
+
+      <h2>6. Cât timp păstrăm datele</h2>
+      <p>Cât timp folosești aplicația sau ai contul activ. Dacă îți ștergi contul, ștergem datele tale personale, profilurile copiilor și istoricul. Poveștile din biblioteca comună nu conțin date personale (folosesc marcatori în loc de nume) și pot fi păstrate. Când îți ștergi contul, îi cerem și RevenueCat să șteargă datele pe care le are despre tine.</p>
+
+      <h2>7. Drepturile tale și cum îți ștergi contul</h2>
+      <p>Ai dreptul de acces la datele tale, de rectificare, de ștergere, de restricționare a prelucrării sau de opoziție, precum și dreptul la portabilitate. Pentru a le exercita, scrie la <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Poți depune și o plângere la autoritatea de supraveghere (în Spania, Agenția Spaniolă pentru Protecția Datelor, <a href="https://www.aepd.es">aepd.es</a>; în România, ANSPDCP).</p>
+      <p><strong>Îți poți șterge singur contul și toate datele din aplicație</strong>, pe ecranul contului. Pașii se găsesc pe pagina <a href="eliminar-cuenta.html">Ștergerea contului</a>. Ștergerea contului nu anulează abonamentul premium: trebuie să îl anulezi în Google Play sau în App Store.</p>
+
+      <h2>8. Minori</h2>
+      <p>Aplicația este gândită pentru ca părinții, tutorii sau educatorii să o folosească împreună cu copiii, nu pentru ca aceștia să se înregistreze singuri. Nu cerem copiilor date de contact și nu îi contactăm. Dacă crezi că un minor și-a creat un cont fără permisiune, scrie-ne și îl vom șterge.</p>
+
+      <h2>9. Securitate</h2>
+      <p>Comunicațiile dintre aplicație și server sunt criptate, parolele sunt stocate criptat, iar accesul la date este limitat. Niciun sistem nu este infailibil, dar lucrăm pentru a le proteja.</p>
+
+      <h2>10. Modificări ale acestei politici</h2>
+      <p>Dacă politica se schimbă într-un mod important, te vom anunța în aplicație și vom actualiza data de mai sus.</p>
+
+      <footer>
+        Vezi și <a href="terminos.html">termenii și condițiile de utilizare</a> și cum să <a href="eliminar-cuenta.html">îți ștergi contul</a>.
+      </footer>
+    </section>
+    <section data-lang="ru" lang="ru" data-title="Luna de Cuentos · Политика конфиденциальности" hidden>
+      <p class="notice">Этот перевод приводится только для информации. При расхождениях преимущество имеет испанская версия.</p>
+      <h1>Политика конфиденциальности</h1>
+      <p class="muted">Приложение «Luna de Cuentos» · Последнее обновление: 15 октября 2026 г.</p>
+
+      <p>Luna de Cuentos создаёт персонализированные детские сказки с помощью ИИ. Приложение предназначено для взрослых, которые пользуются им вместе с детьми, поэтому мы собираем только необходимый минимум данных. В этой политике объясняется, какие данные мы обрабатываем, для чего, с кем делимся ими и какие у вас есть права.</p>
+      <p><strong>Оператор данных:</strong> Roberto Sanz Fernández, Испания. Контакт: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. Какие данные мы обрабатываем</h2>
+      <table>
+        <tr><th>Данные</th><th>Цель</th></tr>
+        <tr><td>Технический идентификатор устройства (случайный код, который создаёт приложение; это не IMEI и не рекламный идентификатор)</td><td>Распознавать ваше устройство, не требуя учётной записи, и сохранять профили детей и историю</td></tr>
+        <tr><td>Имя и возраст детей, которых вы добавляете (профили)</td><td>Персонализировать сказки и выбирать контент, подходящий по возрасту. Мы не запрашиваем дату рождения и фотографии</td></tr>
+        <tr><td>Тема, длительность и язык заказанных сказок, полученные сказки и избранное</td><td>Доставить сказку, показать вашу историю и не повторять сказки</td></tr>
+        <tr><td>Имя, адрес электронной почты и пароль (по желанию, только если вы создаёте учётную запись)</td><td>Входить в учётную запись, восстанавливать пароль и сохранять данные при смене телефона. Пароль хранится в зашифрованном виде, никогда в открытом</td></tr>
+        <tr><td>Основные данные вашей учётной записи Google или Apple: идентификатор, имя и адрес электронной почты (по желанию, только если вы входите через них)</td><td>Создать учётную запись и войти. С Apple можно скрыть настоящий адрес электронной почты</td></tr>
+        <tr><td>Статус премиум-подписки (активна или нет)</td><td>Убирать рекламу, пока подписка активна. Платёжными данными управляет магазин, мы их не видим</td></tr>
+        <tr><td>Идентификатор вашей учётной записи (число, без имени и адреса электронной почты) или анонимный идентификатор, если учётной записи ещё нет, основные технические данные устройства (например, операционная система и версия приложения) и данные о покупке подписки (продукт, даты и статус)</td><td>Управлять подпиской через RevenueCat, который проверяет покупку в Google Play или Apple и подтверждает нам, активна ли она</td></tr>
+      </table>
+      <p>Мы не собираем данные о местоположении, контакты, фотографии, данные микрофона или камеры. Мы не используем ваш рекламный идентификатор.</p>
+
+      <h2>2. Сказки, созданные с помощью ИИ</h2>
+      <p>Чтобы создать сказку, мы отправляем в Google Gemini тему, длительность, язык и возрастную группу. <strong>Имена детей не отправляются</strong>: сказка создаётся с метками-заполнителями, а имя подставляется позже, на вашем устройстве и на наших серверах. Если вы вводите произвольную тему, этот текст попадает к поставщику ИИ, поэтому не указывайте в нём персональные данные.</p>
+
+      <h2>3. Реклама</h2>
+      <p>В бесплатном тарифе показывается реклама Google AdMob. Поскольку приложение рассчитано на семейную аудиторию, реклама настроена для обработки, ориентированной на детей: <strong>без персонализированной рекламы, без отслеживания поведения и без использования рекламного идентификатора</strong>. Мы не отслеживаем вас между приложениями и сайтами.</p>
+
+      <h2>4. С кем мы делимся данными</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> создание сказок, как описано в пункте 2.</li>
+        <li><strong>Google AdMob:</strong> показ неперсонализированной рекламы в бесплатном тарифе.</li>
+        <li><strong>Google Play / Apple App Store:</strong> управление подпиской и платежом.</li>
+        <li><strong>RevenueCat, Inc. (США):</strong> сервис, который управляет подписками и проверяет их. Получает идентификатор вашей учётной записи (или анонимный), основные технические данные устройства и данные о покупке; не получает ваше имя, адрес электронной почты и данные детей. Передача данных за пределы Европейской экономической зоны опирается на надлежащие гарантии, такие как стандартные договорные условия Европейской комиссии.</li>
+        <li><strong>Хостинг-провайдер сервера:</strong> хранит данные приложения в Европейском союзе.</li>
+        <li><strong>Почтовый сервис:</strong> чтобы отправлять вам сообщения об учётной записи, например для восстановления пароля.</li>
+      </ul>
+      <p>Мы не продаём ваши данные и не передаём их третьим лицам в рекламных целях.</p>
+
+      <h2>5. Правовое основание</h2>
+      <p>Мы обрабатываем данные, чтобы оказывать запрошенную вами услугу (исполнение договора), в наших законных интересах по обеспечению её безопасности и, когда это применимо, с вашего согласия. Приложение предназначено для взрослых: данные детей вводит и контролирует ответственный взрослый.</p>
+
+      <h2>6. Как долго мы храним данные</h2>
+      <p>Пока вы пользуетесь приложением или ваша учётная запись активна. Если вы удалите учётную запись, мы удалим ваши персональные данные, профили детей и историю. Сказки общей библиотеки не содержат персональных данных (в них вместо имён используются метки) и могут сохраняться. Когда вы удаляете учётную запись, мы также просим RevenueCat удалить данные, которые у него есть о вас.</p>
+
+      <h2>7. Ваши права и как удалить учётную запись</h2>
+      <p>Вы имеете право на доступ к своим данным, их исправление, удаление, ограничение обработки или возражение против неё, а также на переносимость данных. Чтобы воспользоваться этими правами, напишите на <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. Вы также можете подать жалобу в надзорный орган (в Испании — Испанское агентство по защите данных, <a href="https://www.aepd.es">aepd.es</a>).</p>
+      <p><strong>Вы можете сами удалить учётную запись и все свои данные в приложении</strong>, на экране учётной записи. Порядок действий описан на странице <a href="eliminar-cuenta.html">Удаление учётной записи</a>. Удаление учётной записи не отменяет премиум-подписку: её нужно отменить в Google Play или App Store.</p>
+
+      <h2>8. Несовершеннолетние</h2>
+      <p>Приложение предназначено для того, чтобы родители, опекуны или воспитатели пользовались им вместе с детьми, а не для самостоятельной регистрации детей. Мы не запрашиваем у детей контактные данные и не связываемся с ними. Если вы считаете, что несовершеннолетний создал учётную запись без разрешения, напишите нам, и мы её удалим.</p>
+
+      <h2>9. Безопасность</h2>
+      <p>Обмен данными между приложением и сервером зашифрован, пароли хранятся в зашифрованном виде, а доступ к данным ограничен. Ни одна система не является безошибочной, но мы работаем над их защитой.</p>
+
+      <h2>10. Изменения в этой политике</h2>
+      <p>Если политика существенно изменится, мы сообщим об этом в приложении и обновим дату выше.</p>
+
+      <footer>
+        См. также <a href="terminos.html">условия использования</a> и как <a href="eliminar-cuenta.html">удалить учётную запись</a>.
+      </footer>
+    </section>
+    <section data-lang="zh" lang="zh-Hans" data-title="Luna de Cuentos · 隐私政策" hidden>
+      <p class="notice">本译文仅供参考。如有差异，以西班牙语版本为准。</p>
+      <h1>隐私政策</h1>
+      <p class="muted">应用“Luna de Cuentos” · 最近更新：2026 年 10 月 15 日</p>
+
+      <p>Luna de Cuentos 借助 AI 生成个性化儿童故事。本应用面向成年人与孩子一起使用，因此我们只收集绝对必要的最少数据。本政策说明我们处理哪些数据、用于什么目的、与谁共享以及您拥有哪些权利。</p>
+      <p><strong>数据控制者：</strong>Roberto Sanz Fernández，西班牙。联系方式：<a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>。</p>
+
+      <h2>1. 我们处理哪些数据</h2>
+      <table>
+        <tr><th>数据</th><th>用途</th></tr>
+        <tr><td>设备的技术标识符（由应用生成的随机代码，不是 IMEI，也不是广告标识符）</td><td>无需账户即可识别您的设备，并保存孩子档案和历史记录</td></tr>
+        <tr><td>您添加的孩子的名字和年龄（档案）</td><td>使故事个性化，并选择适合年龄的内容。我们不要求出生日期或照片</td></tr>
+        <tr><td>您请求的故事的主题、时长和语言，收到的故事和收藏</td><td>为您提供故事、显示您的历史记录并避免重复故事</td></tr>
+        <tr><td>姓名、电子邮箱和密码（可选，仅在您创建账户时）</td><td>登录、找回密码，并在更换手机时保留您的数据。密码以加密方式存储，绝不以明文保存</td></tr>
+        <tr><td>您的 Google 或 Apple 账户的基本数据：标识符、姓名和电子邮箱（可选，仅在您使用它们登录时）</td><td>创建您的账户并登录。使用 Apple 时，您可以隐藏真实的电子邮箱</td></tr>
+        <tr><td>高级订阅状态（有效或无效）</td><td>订阅有效期间移除广告。支付信息由应用商店管理，我们看不到</td></tr>
+        <tr><td>您的账户标识符（一个数字，不含您的姓名或电子邮箱），或在您尚无账户时的匿名标识符、设备的基本技术数据（如操作系统和应用版本）以及订阅的购买数据（产品、日期和状态）</td><td>通过 RevenueCat 管理订阅，它会向 Google Play 或 Apple 核实购买，并向我们确认订阅是否有效</td></tr>
+      </table>
+      <p>我们不收集位置、联系人、照片、麦克风或摄像头数据。我们不使用您的广告标识符。</p>
+
+      <h2>2. 由 AI 生成的故事</h2>
+      <p>为了创作故事，我们会向 Google Gemini 发送主题、时长、语言和年龄段。<strong>孩子的名字不会被发送</strong>：故事使用占位符生成，名字随后在您的设备和我们的服务器上填入。如果您输入自由主题，该文本确实会到达 AI 提供商，因此请不要在其中包含个人数据。</p>
+
+      <h2>3. 广告</h2>
+      <p>免费方案会显示 Google AdMob 广告。由于本应用面向家庭用户，广告已按面向儿童的方式配置：<strong>无个性化广告、无行为跟踪，也不使用广告标识符</strong>。我们不会在不同应用或网站之间跟踪您。</p>
+
+      <h2>4. 我们与谁共享数据</h2>
+      <ul>
+        <li><strong>Google（Gemini）：</strong>按第 2 条所述生成故事。</li>
+        <li><strong>Google AdMob：</strong>在免费方案中显示非个性化广告。</li>
+        <li><strong>Google Play / Apple App Store：</strong>管理订阅和支付。</li>
+        <li><strong>RevenueCat, Inc.（美国）：</strong>管理并验证订阅的服务。它会收到您的账户标识符（或匿名标识符）、设备的基本技术数据和购买数据；它不会收到您的姓名、电子邮箱或孩子的数据。向欧洲经济区以外的传输依据适当的保障措施，例如欧盟委员会的标准合同条款。</li>
+        <li><strong>服务器托管提供商：</strong>在欧盟境内存储应用数据。</li>
+        <li><strong>电子邮件服务：</strong>用于向您发送账户邮件，例如找回密码。</li>
+      </ul>
+      <p>我们不出售您的数据，也不为广告目的将其提供给第三方。</p>
+
+      <h2>5. 法律依据</h2>
+      <p>我们处理数据是为了提供您所要求的服务（履行合同）、基于我们保障服务安全的合法利益，并在适用时基于您的同意。本应用面向成年人：孩子的数据由负责的成年人输入并控制。</p>
+
+      <h2>6. 数据保存多久</h2>
+      <p>在您使用本应用或账户处于有效状态期间。如果您删除账户，我们会删除您的个人数据、孩子档案和历史记录。公共故事库中的故事不包含个人数据（使用占位符而非名字），可能会被保留。当您删除账户时，我们也会请求 RevenueCat 删除其持有的关于您的数据。</p>
+
+      <h2>7. 您的权利以及如何删除账户</h2>
+      <p>您有权访问、更正、删除您的数据，限制或反对其处理，以及数据可携带权。如需行使这些权利，请发送邮件至 <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>。您也可以向监管机构投诉（在西班牙为西班牙数据保护局，<a href="https://www.aepd.es">aepd.es</a>）。</p>
+      <p><strong>您可以在应用中自行删除账户及所有数据</strong>，位置在账户页面。步骤见<a href="eliminar-cuenta.html">删除账户</a>页面。删除账户不会取消高级订阅：您必须在 Google Play 或 App Store 中取消。</p>
+
+      <h2>8. 未成年人</h2>
+      <p>本应用供父母、监护人或教育工作者与孩子一起使用，而不是供孩子自行注册。我们不向孩子索要联系方式，也不联系他们。如果您认为有未成年人未经许可创建了账户，请写信给我们，我们会将其删除。</p>
+
+      <h2>9. 安全</h2>
+      <p>应用与服务器之间的通信经过加密，密码以加密方式存储，并且我们限制对数据的访问。没有任何系统是万无一失的，但我们会努力保护数据。</p>
+
+      <h2>10. 本政策的变更</h2>
+      <p>如果本政策发生重大变化，我们会在应用内通知您，并更新上方的日期。</p>
+
+      <footer>
+        另请参阅<a href="terminos.html">使用条款</a>以及如何<a href="eliminar-cuenta.html">删除您的账户</a>。
+      </footer>
+    </section>
+    <section data-lang="ar" lang="ar" dir="rtl" data-title="Luna de Cuentos · سياسة الخصوصية" hidden>
+      <p class="notice">هذه الترجمة لأغراض إعلامية فقط. وفي حال وجود اختلاف، تُعتمد النسخة الإسبانية.</p>
+      <h1>سياسة الخصوصية</h1>
+      <p class="muted">تطبيق «Luna de Cuentos» · آخر تحديث: 15 أكتوبر 2026</p>
+
+      <p>ينشئ Luna de Cuentos قصصًا مخصصة للأطفال بمساعدة الذكاء الاصطناعي. التطبيق مخصص للبالغين الذين يستخدمونه مع الأطفال، ولذلك لا نجمع إلا الحد الأدنى الضروري من البيانات. توضح هذه السياسة ما البيانات التي نعالجها، ولأي غرض، ومع من نشاركها، وما الحقوق التي تتمتع بها.</p>
+      <p><strong>المسؤول عن معالجة البيانات:</strong> Roberto Sanz Fernández، إسبانيا. التواصل: <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>.</p>
+
+      <h2>1. ما البيانات التي نعالجها</h2>
+      <table>
+        <tr><th>البيانات</th><th>الغرض</th></tr>
+        <tr><td>معرّف تقني للجهاز (رمز عشوائي ينشئه التطبيق، وليس IMEI ولا المعرّف الإعلاني)</td><td>التعرف على جهازك دون طلب حساب، وحفظ ملفات الأطفال والسجل</td></tr>
+        <tr><td>اسم الأطفال الذين تضيفهم وعمرهم (الملفات الشخصية)</td><td>تخصيص القصص واختيار المحتوى المناسب للعمر. لا نطلب تاريخ الميلاد ولا الصور</td></tr>
+        <tr><td>موضوع القصص التي تطلبها ومدتها ولغتها، والقصص المستلمة والمفضلة</td><td>تسليمك القصة، وعرض سجلك، وتجنب تكرار القصص عليك</td></tr>
+        <tr><td>الاسم والبريد الإلكتروني وكلمة المرور (اختياري، فقط إذا أنشأت حسابًا)</td><td>تسجيل الدخول، واستعادة كلمة المرور، والاحتفاظ ببياناتك عند تغيير الهاتف. تُخزَّن كلمة المرور مشفّرة، ولا تُحفظ أبدًا كنص عادي</td></tr>
+        <tr><td>البيانات الأساسية لحسابك في Google أو Apple: المعرّف والاسم والبريد الإلكتروني (اختياري، فقط إذا سجلت الدخول بهما)</td><td>إنشاء حسابك وتسجيل الدخول. مع Apple يمكنك إخفاء بريدك الإلكتروني الحقيقي</td></tr>
+        <tr><td>حالة اشتراك بريميوم (نشط أو لا)</td><td>إزالة الإعلانات ما دام الاشتراك نشطًا. يتولى المتجر إدارة بيانات الدفع، ولا نراها نحن</td></tr>
+        <tr><td>معرّف حسابك (رقم، دون اسمك أو بريدك الإلكتروني) أو معرّف مجهول إذا لم يكن لديك حساب بعد، وبيانات تقنية أساسية عن الجهاز (مثل نظام التشغيل وإصدار التطبيق) وبيانات شراء الاشتراك (المنتج والتواريخ والحالة)</td><td>إدارة الاشتراك عبر RevenueCat، الذي يتحقق من الشراء لدى Google Play أو Apple ويؤكد لنا ما إذا كان نشطًا</td></tr>
+      </table>
+      <p>لا نجمع الموقع ولا جهات الاتصال ولا الصور ولا بيانات الميكروفون أو الكاميرا. ولا نستخدم معرّفك الإعلاني.</p>
+
+      <h2>2. القصص المُنشأة بالذكاء الاصطناعي</h2>
+      <p>لإنشاء قصة، نرسل إلى Google Gemini الموضوع والمدة واللغة والفئة العمرية. <strong>لا يُرسل اسم الأطفال</strong>: تُنشأ القصة برموز بديلة ثم يُدرج الاسم لاحقًا على جهازك وعلى خوادمنا. إذا كتبت موضوعًا حرًّا، فإن هذا النص يصل إلى مزوّد الذكاء الاصطناعي، لذا لا تضمّنه بيانات شخصية.</p>
+
+      <h2>3. الإعلانات</h2>
+      <p>تعرض الخطة المجانية إعلانات Google AdMob. ولأن التطبيق موجّه لجمهور عائلي، فقد أُعدّت الإعلانات لمعاملة خاصة بالأطفال: <strong>دون إعلانات مخصصة، ودون تتبع للسلوك، ودون استخدام المعرّف الإعلاني</strong>. لا نتتبعك عبر التطبيقات أو المواقع.</p>
+
+      <h2>4. مع من نشارك البيانات</h2>
+      <ul>
+        <li><strong>Google (Gemini):</strong> إنشاء القصص، كما في البند 2.</li>
+        <li><strong>Google AdMob:</strong> عرض إعلانات غير مخصصة في الخطة المجانية.</li>
+        <li><strong>Google Play / Apple App Store:</strong> إدارة الاشتراك والدفع.</li>
+        <li><strong>RevenueCat, Inc. (الولايات المتحدة):</strong> خدمة تدير الاشتراكات وتتحقق منها. تتلقى معرّف حسابك (أو معرّفًا مجهولًا) وبيانات تقنية أساسية عن الجهاز وبيانات الشراء؛ ولا تتلقى اسمك ولا بريدك الإلكتروني ولا بيانات الأطفال. تستند عمليات النقل خارج المنطقة الاقتصادية الأوروبية إلى ضمانات مناسبة، مثل البنود التعاقدية النموذجية للمفوضية الأوروبية.</li>
+        <li><strong>مزوّد استضافة الخادم:</strong> يخزّن بيانات التطبيق داخل الاتحاد الأوروبي.</li>
+        <li><strong>خدمة البريد الإلكتروني:</strong> لإرسال رسائل الحساب إليك، مثل استعادة كلمة المرور.</li>
+      </ul>
+      <p>لا نبيع بياناتك ولا نتنازل عنها لأطراف ثالثة لأغراض إعلانية.</p>
+
+      <h2>5. الأساس القانوني</h2>
+      <p>نعالج البيانات لتقديم الخدمة التي تطلبها (تنفيذ العقد)، ولمصلحتنا المشروعة في إبقائها آمنة، وعند الاقتضاء بموافقتك. التطبيق موجّه للبالغين: يُدخل بيانات الأطفال البالغُ المسؤول ويتحكم فيها.</p>
+
+      <h2>6. مدة الاحتفاظ بالبيانات</h2>
+      <p>طالما تستخدم التطبيق أو يكون حسابك نشطًا. إذا حذفت حسابك، نحذف بياناتك الشخصية وملفات الأطفال والسجل. القصص في المكتبة المشتركة لا تحتوي على بيانات شخصية (تستخدم رموزًا بديلة بدل الأسماء) وقد يُحتفظ بها. عند حذف حسابك، نطلب أيضًا من RevenueCat حذف البيانات التي لديها عنك.</p>
+
+      <h2>7. حقوقك وكيفية حذف حسابك</h2>
+      <p>لديك الحق في الوصول إلى بياناتك وتصحيحها وحذفها، وتقييد معالجتها أو الاعتراض عليها، وفي نقلها. لممارسة هذه الحقوق، راسل <a href="mailto:lunadecuentosapp@gmail.com">lunadecuentosapp@gmail.com</a>. ويمكنك أيضًا تقديم شكوى إلى سلطة الرقابة (في إسبانيا، الوكالة الإسبانية لحماية البيانات، <a href="https://www.aepd.es">aepd.es</a>).</p>
+      <p><strong>يمكنك حذف حسابك وجميع بياناتك بنفسك من التطبيق</strong>، في شاشة الحساب. الخطوات في صفحة <a href="eliminar-cuenta.html">حذف الحساب</a>. حذف الحساب لا يلغي اشتراك بريميوم: عليك إلغاؤه في Google Play أو App Store.</p>
+
+      <h2>8. القاصرون</h2>
+      <p>صُمم التطبيق ليستخدمه الآباء أو الأوصياء أو المربّون مع الأطفال، وليس ليسجّل الأطفال بأنفسهم. لا نطلب من الأطفال بيانات اتصال ولا نتواصل معهم. إذا كنت تعتقد أن قاصرًا أنشأ حسابًا دون إذن، فراسلنا وسنحذفه.</p>
+
+      <h2>9. الأمان</h2>
+      <p>الاتصالات بين التطبيق والخادم مشفّرة، وكلمات المرور تُخزَّن مشفّرة، ونقيّد الوصول إلى البيانات. لا يوجد نظام معصوم من الخطأ، لكننا نعمل على حمايتها.</p>
+
+      <h2>10. تغييرات هذه السياسة</h2>
+      <p>إذا تغيّرت السياسة تغييرًا مهمًّا، فسنُعلمك داخل التطبيق ونحدّث التاريخ أعلاه.</p>
+
+      <footer>
+        راجع أيضًا <a href="terminos.html">شروط الاستخدام</a> وكيفية <a href="eliminar-cuenta.html">حذف حسابك</a>.
+      </footer>
+    </section>
+  </div>
 </main>
+<script>
+(function () {
+  var codes = ["es","en","de","fr","it","pt","nl","pl","ro","ru","zh","ar"];
+  var KEY = 'luna-legal-lang';
+
+  function normalize(value) {
+    var code = String(value || '').toLowerCase().split(/[-_]/)[0];
+    return codes.indexOf(code) >= 0 ? code : null;
+  }
+
+  function stored() {
+    try { return normalize(localStorage.getItem(KEY)); } catch (e) { return null; }
+  }
+
+  function initial() {
+    var fromQuery = normalize(new URLSearchParams(location.search).get('lang'));
+    if (fromQuery) return fromQuery;
+    var fromHash = normalize(location.hash.slice(1));
+    if (fromHash) return fromHash;
+    var fromStore = stored();
+    if (fromStore) return fromStore;
+    var preferred = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language];
+    for (var i = 0; i < preferred.length; i++) {
+      var fromBrowser = normalize(preferred[i]);
+      if (fromBrowser) return fromBrowser;
+    }
+    return 'es';
+  }
+
+  function show(code, remember) {
+    var sections = document.querySelectorAll('main section[data-lang]');
+    for (var i = 0; i < sections.length; i++) {
+      var section = sections[i];
+      var active = section.getAttribute('data-lang') === code;
+      section.hidden = !active;
+      if (active) {
+        document.documentElement.lang = section.getAttribute('lang');
+        document.title = section.getAttribute('data-title');
+      }
+    }
+    document.getElementById('lang').value = code;
+    var links = document.querySelectorAll('main a[href]');
+    for (var j = 0; j < links.length; j++) {
+      var href = links[j].getAttribute('href');
+      if (/^[a-z-]+\.html/.test(href)) links[j].setAttribute('href', href.split('?')[0] + '?lang=' + code);
+    }
+    if (remember) {
+      try { localStorage.setItem(KEY, code); } catch (e) {}
+      if (history.replaceState) history.replaceState(null, '', location.pathname + '?lang=' + code);
+    }
+  }
+
+  document.getElementById('lang').addEventListener('change', function (event) {
+    show(event.target.value, true);
+  });
+  show(initial(), false);
+})();
+</script>
 </body>
 </html>
